@@ -1,0 +1,262 @@
+@import "kouto-swiss"
+
+.header
+  .subheader
+    background-color color-background-subheader
+    color color-elements-subheader
+    line-height 5.6em
+    &__mail
+      border-left 1px solid color-border-subheader
+      border-right 1px solid color-border-subheader
+      padding 0 2em
+      white-space nowrap
+      margin-left 4.4em
+      &__item
+        font-size 1.27em
+        transition trans
+        &:focus
+        &:hover
+          color color-elements-subheader - 20%
+          transition trans
+        &:before
+          content "\e918";
+          font-family glyphs
+          font-size: 1.3em
+          position: relative
+          top .14em
+          line-height 0
+          padding-right 0.882em
+    &__lang
+      padding 0 2em
+      border-right 1px solid color-border-subheader
+      &__item
+        font-size 1.27em
+        transition trans
+        &:focus
+        &:hover
+          color color-elements-subheader - 20%
+          transition trans
+        &:nth-child(2):after
+        &:nth-child(2):before
+          content " - "
+        &:nth-child(3):after
+          content ""
+        &--active
+          font-weight bold
+    &__form
+      padding 0 .7em 0 2em
+      border-right 1px solid color-border-subheader
+      &__label
+        display none
+      &__search
+        background-color color-background-subheader
+        border none
+        font-size: 1.27em
+        width 7.2em
+        color white
+        line-height 2em
+      &__submit
+        margin-right .5em
+    &__social
+      text-align right
+      &__link
+        height: 6em;
+        margin-left: 1.5em;
+        padding-left: 2.5em;
+        display: inline-block;
+        position: relative;
+        max-width: 2.5em;
+        overflow hidden
+        transition: 0.7s;
+      &__logo
+        position: absolute;
+        left: 0;
+      &__text
+        font-size: 1.27em
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        color color-main-yellow
+        margin-left .3em
+      &__logo:before
+        font-family glyphs
+        font-size: 2.4em
+      &__logo-fb:before
+        content "\e91e"
+      &__logo-tw:before
+        content "\e91d"
+      &__logo-inst:before
+        content "\e921"
+      &__logo-vi:before
+        content "\e91f"
+      &__logo-yout:before
+        content "\e920"
+      &__link:hover
+        max-width 100%
+        color color-main-yellow
+        text-align left
+
+
+/************************************\
+  NAV PRINCPALE
+\************************************/
+
+.header
+  &__logo
+    retina-image( "../img/png/Baobab_logo.png", 80px 64px, "@2x" );
+    background-repeat no-repeat
+    background-position center center
+    color transparent
+
+.header-main > .menu
+  background-color rgba(46, 65, 87, 0.8)
+.menu
+  &__link
+    margin-right 3em
+  &__link:nth-child(8)
+    margin-right 0
+  &__item
+    color color-white
+    font-size 1.82em
+    text-align center
+    margin-top .8em
+    &:before
+      font-family glyphs
+      font-size 1.3em
+      display block
+      margin-bottom .5em
+      transition trans
+    &-home:before
+      content "\e917";
+    &-projet:before
+      content "\e900";
+    &-news:before
+      content "\e904";
+    &-prod:before
+      content "\e903";
+    &-pics:before
+      content "\e902";
+    &-tutos:before
+      content "\e901";
+    &-contact:before
+      content "\e91c";
+    &:hover:before
+      transition trans
+      color color-main-yellow
+
+/************************************\
+    HEADER IMG
+\************************************/
+
+.header-main
+  background url("../img/png/pattern.png") repeat, url("../img/jpg/background_home_header.jpg") no-repeat center center/cover
+
+.header__title
+  &__main
+    font-size: 4.85em
+    font-weight: bold
+    color color-white
+    text-shadow: 0px 1px 1px rgba(0,0,0,0.80);
+  &__sub
+    font-size: 2.33em
+    color color-white
+    &:before
+      content "";
+      display block
+      width 10.511em
+      height 0.05em
+      background-color white
+      margin 0 auto
+      margin-top .3em
+      margin-bottom .3em
+
+/************************************\
+    BOTTOM HEADER
+\************************************/
+
+.bottom-header
+  background: rgba(0,0,0,0.65);
+  &__button
+    color color-white
+    border 1px solid color-main-yellow
+    border-radius 3px
+    padding 0.467em 0.701em
+    font-size: 1.3em
+    transition trans
+    &:nth-child(1)
+      margin-left 2.5em
+    &:nth-child(2)
+      margin-left 1.460em
+    &:hover
+    &:focus
+      background-color color-main-yellow
+      transition trans
+  &__text
+    color color-white
+    font-size: 1.3em
+    margin-left 1.753em
+    line-height 1.25em
+
+
+
+/************************************\
+    MOUSE ANIMATION
+\************************************/
+
+@keyframes scroll-animation
+  0%{
+    opacity 1;
+    top 29%;
+  }
+  65%{
+    opacity 1;
+    top 50%;
+  }
+  75%{
+    opacity 0
+    top 50%
+  }
+  100%{
+    opacity 0
+    top 29%
+  }
+
+.scroll
+  display inline-block;
+  line-height 1.385em
+  font-size 1.3em
+  font-weight normal
+  color #7F8C8D
+  color #FFF
+  letter-spacing 0.154em
+  text-decoration: none;
+  overflow: hidden;
+  &__mouse
+    position: relative;
+    display: block;
+    width: 2.569em
+    height: 4.185em
+    margin: 0 auto 1em
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 2px solid #FFF;
+    border-radius: 1.769em
+    &__mouvement
+      position absolute;
+      display block;
+      top 29%;
+      left 50%;
+      width 0.538em
+      height 0.538em
+      margin: -4px 0 0 -3.5px;
+      background: #FFF;
+      border-radius: 50%;
+      animation: scroll-animation 3s linear infinite;
+  &__message
+    color transparent
+    transition trans
+
+.scroll:hover .scroll__message
+  color white
+  transition trans

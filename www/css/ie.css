@@ -256,8 +256,7 @@ body {
   display: inline-block;
 }
 .header-main {
-  height: 80em;
-  height: 100vh;
+  height: 800px;
   position: relative;
 }
 .header__title {
@@ -291,17 +290,6 @@ body {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-.intro-img {
-  height: 56em;
-}
-.intro-img__title {
-  display: inline-block;
-  margin-top: 4.8em;
-}
-.intro-img__button {
-  display: inline-block;
-  margin-top: 1.527em;
 }
 .header .subheader {
   background-color: #2d2d2d;
@@ -441,7 +429,7 @@ body {
   }
 }
 .header-main > .menu {
-  background-color: rgba(46,65,87,0.8);
+  background-color: #2E4157
 }
 .menu__link {
   margin-right: 3em;
@@ -490,7 +478,7 @@ body {
   color: #d9a613;
 }
 .header-main {
-  background: url("../img/png/pattern.png") repeat, url("../img/jpg/background_home_header.jpg") no-repeat center center/cover;
+  background: url("../img/jpg/background_home_header.jpg") no-repeat;
 }
 .header__title__main {
   font-size: 4.85em;
@@ -541,140 +529,4 @@ body {
   font-size: 1.3em;
   margin-left: 1.753em;
   line-height: 1.25em;
-}
-.scroll {
-  display: inline-block;
-  line-height: 1.385em;
-  font-size: 1.3em;
-  font-weight: normal;
-  color: #7f8c8d;
-  color: #fff;
-  text-decoration: none;
-  overflow: hidden;
-}
-.scroll__mouse {
-  position: relative;
-  display: block;
-  width: 2.569em;
-  height: 4.185em;
-  margin: 0 auto 1em;
-  -webkit-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  border: 2px solid #fff;
-  border-radius: 1.769em;
-}
-.scroll__mouse__mouvement {
-  position: absolute;
-  display: block;
-  top: 29%;
-  left: 50%;
-  width: 0.538em;
-  height: 0.538em;
-  margin: -4px 0 0 -3.5px;
-  background: #fff;
-  border-radius: 50%;
-  -webkit-animation: scroll-animation 3s linear infinite;
-  animation: scroll-animation 3s linear infinite;
-}
-.scroll__message {
-  color: transparent;
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
-}
-.scroll:hover .scroll__message {
-  color: #fff;
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
-}
-@-webkit-keyframes scroll-animation {
-  0% {
-    -ms-filter: none;
-    -webkit-filter: none;
-            filter: none;
-    opacity: 1;
-    top: 29%;
-  }
-  65% {
-    -ms-filter: none;
-    -webkit-filter: none;
-            filter: none;
-    opacity: 1;
-    top: 50%;
-  }
-  75% {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    opacity: 0;
-    top: 50%;
-  }
-  100% {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    opacity: 0;
-    top: 29%;
-  }
-}
-@keyframes scroll-animation {
-  0% {
-    -ms-filter: none;
-    -webkit-filter: none;
-            filter: none;
-    opacity: 1;
-    top: 29%;
-  }
-  65% {
-    -ms-filter: none;
-    -webkit-filter: none;
-            filter: none;
-    opacity: 1;
-    top: 50%;
-  }
-  75% {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    opacity: 0;
-    top: 50%;
-  }
-  100% {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    opacity: 0;
-    top: 29%;
-  }
-}
-.intro-img {
-  background-image: url("../img/jpg/baobab_about4.jpg");
-  background-position: center center;
-  text-align: center;
-  padding: 1.5em 2.5em;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (-webkit-min-device-pixel-ratio: 1.3020833333333333), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-  .intro-img {
-    background-image: url("../img/jpg/baobab_about4@2x.jpg");
-    background-size: cover;
-  }
-}
-.intro-img__title {
-  font-weight: bold;
-  font-size: 3.33em;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  border: 1px solid #fff;
-  padding: 1.742em 1.9em;
-}
-.intro-img__button {
-  font-size: 2.62em;
-  color: #fff;
-  padding: 0.458em 1.145em;
-  border: 2px solid #d9a613;
-  border-radius: 3px;
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
-}
-.intro-img__button:hover {
-  background-color: #d9a613;
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
 }

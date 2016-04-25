@@ -27,3 +27,103 @@
     &:hover
       background-color color-main-yellow
       transition trans
+
+
+/************************************\
+    TEXT INTRO - Rencontrer,animer…
+\************************************/
+
+.intro-text
+  &__title
+    font-weight bold
+    font-size 4.24em
+    color color-main-yellow
+    margin-top: 1.769em
+    text-align center
+    &:after
+      content "";
+      display block
+      width 615px
+      height 24px
+      retina-image("../img/png/text-intro_geometric_subtitle.png", 615px 24px, "@2x" )
+      background-repeat no-repeat
+      margin 0.236em auto 0.849em auto
+  &__paragraph
+    font-size: 2.62em
+    max-width 20.344em
+    margin-bottom 0.763em
+
+/************************************\
+  IMGS SurunBaobab
+\************************************/
+
+.img-baobab
+  retina-image("../img/jpg/img_deco.jpg", cover,"@2x" )
+  background-position center center
+  &__title
+    background-color rgba(224, 195, 49, .9);
+    padding 0 5em
+    &__img
+      retina-image("../img/png/baobab_text.png", contain, "@2x")
+      background-repeat no-repeat
+      background-position center 35%
+      height: 100%
+
+/************************************\
+  ARTICLES NEWS
+\************************************/
+
+.last-news
+  background-color color-grey-background
+  &__title
+    font-weight: bold
+    font-size: 3.76em
+    color color-title-article
+    padding-top 3.290em
+  &__newsletters
+    display block
+    font-size: 1.62em
+    text-transform uppercase
+    margin-left 6em
+    margin-top .1em
+    margin-bottom 1.852em
+    & a
+      text-decoration underline
+
+.last-news__articles
+  padding 0 2em
+  &__top
+    background-color color-white
+    &__title
+      font-weight: bold
+      color color-title-article
+      font-size: 2.62em
+      text-align right
+      &:after
+        content ""
+        display inline-block
+        width 8.015em
+        height 1px
+        background-color #979797
+        margin 1.049em 0
+        text-align right
+    &__intro
+      font-size: 1.43em
+      color #000
+      text-align right
+      display block
+      line-height 1.3em
+    &__link
+      font-size: 1.27em
+      padding 0.551em 2.520em
+      border 2px solid color-main-yellow
+      border-radius 2px
+      letter-spacing .5px
+      transition trans
+      &:hover
+      &:focus
+        background-color color-main-yellow
+        transition trans
+        color color-white
+  &__container-text
+    padding 2em

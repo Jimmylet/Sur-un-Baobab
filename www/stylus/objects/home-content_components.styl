@@ -81,3 +81,43 @@
   width 44.9em
   position: relative
   height: 100%
+
+.last-news__articles__top img
+  transition .3s ease-out
+.last-news__articles__top:hover img
+  transform scale(1.05)
+  transition .3s ease-in-out
+
+.article__vignette
+  width 27.7em
+  height 23.6em
+  position: relative
+  overflow hidden
+  &__img
+    position: relative
+    z-index 1
+  &__container
+    position absolute
+    z-index 2;
+    width 80%
+    height: 80%
+    top: 0
+    margin 2.5em 1em 1em 2.8em
+    transition .3s ease
+  &__more
+    display inline-block
+    margin-top 3em
+    padding .8em
+
+.last-news__container-bottom-articles
+  width 90em
+  margin 2.5em auto 0
+  &:after
+    content: "";
+    display: block;
+    clear: both;
+
+.last-news__bottom-link:nth-child(1)
+  float left
+.last-news__bottom-link:nth-child(3)
+  float right

@@ -389,6 +389,57 @@ body {
   position: relative;
   height: 100%;
 }
+.last-news__articles__top img {
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.last-news__articles__top:hover img {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.article__vignette {
+  width: 27.7em;
+  height: 23.6em;
+  position: relative;
+  overflow: hidden;
+}
+.article__vignette__img {
+  position: relative;
+  z-index: 1;
+}
+.article__vignette__container {
+  position: absolute;
+  z-index: 2;
+  width: 80%;
+  height: 80%;
+  top: 0;
+  margin: 2.5em 1em 1em 2.8em;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.article__vignette__more {
+  display: inline-block;
+  margin-top: 3em;
+  padding: 0.8em;
+}
+.last-news__container-bottom-articles {
+  width: 90em;
+  margin: 2.5em auto 0;
+}
+.last-news__container-bottom-articles:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.last-news__bottom-link:nth-child(1) {
+  float: left;
+}
+.last-news__bottom-link:nth-child(3) {
+  float: right;
+}
 .header .subheader {
   background-color: #2d2d2d;
   color: #ccc;
@@ -883,4 +934,53 @@ body {
 }
 .last-news__articles__container-text {
   padding: 2em;
+}
+.article__vignette {
+  display: inline-block;
+}
+.article__vignette__title {
+  color: #fff;
+  font-size: 1.62em;
+  font-weight: bold;
+  line-height: 1.15em;
+}
+.article__vignette__container {
+  background-color: rgba(0,0,0,0.5);
+  padding: 2em;
+}
+.article__vignette__more {
+  background-color: rgba(181,181,181,0.5);
+}
+.article__vignette__img {
+  width: 100%;
+  object-fit: cover;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.article__vignette svg {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.article__vignette:hover .article__vignette__more svg {
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+  -webkit-transform: 0.3s ease-out;
+  -ms-transform: 0.3s ease-out;
+  transform: 0.3s ease-out;
+}
+.article__vignette:hover .article__vignette__more svg g {
+  stroke: #f1f1f1;
+}
+.article__vignette:hover img {
+  -webkit-transform: scale(1.2) rotate(2deg);
+  -ms-transform: scale(1.2) rotate(2deg);
+  transform: scale(1.2) rotate(2deg);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
 }

@@ -2,76 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="627774d4-d48a-4bcb-b619-5a045e6d845e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/fonts/Raleway/stylesheet.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/actualités_menu.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/arrow_page_left.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/arrow_page_right.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/ateliers_menu.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/attachment.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/calendar.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/cart.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/clock.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/diffuser_film.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/eye_view_film.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/facebook_subheader.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/fichetechnique_film.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/home.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/home_menu.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/instagram_subheader.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/mail_footer.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/mail_subheader.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/makingof_film.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/newsletters_footer.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/photo_left.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/photo_menu.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/photo_right.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/play.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/position.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/presse_film.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/project_film.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/projet.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/projet_menu.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/réalisation_menu.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/sort.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/tel_footer.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/twitter_subheader.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/user.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/vimeo_subheader.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/whatsapp_footer.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/svg/youtube_subheader.svg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Bold.eot" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Bold.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Bold.ttf" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Bold.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Bold.woff" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Bold.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Bold.woff2" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Bold.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Italic.eot" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Italic.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Italic.ttf" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Italic.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Italic.woff" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Italic.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Italic.woff2" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Italic.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Medium.eot" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Medium.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Medium.ttf" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Medium.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Medium.woff" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Medium.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Medium.woff2" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Medium.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Regular.eot" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Regular.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Regular.ttf" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Regular.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Regular.woff" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Regular.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Regular.woff2" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Regular.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-SemiBold.eot" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-SemiBold.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-SemiBold.ttf" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-SemiBold.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-SemiBold.woff" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-SemiBold.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-SemiBold.woff2" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-SemiBold.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/styles.css" afterPath="$PROJECT_DIR$/www/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Bold.svg" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Bold.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Italic.svg" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Italic.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Medium.svg" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Medium.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Regular.svg" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-Regular.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-SemiBold.svg" afterPath="$PROJECT_DIR$/www/fonts/Raleway/Raleway-SemiBold.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/stylus/base/base.styl" afterPath="$PROJECT_DIR$/www/stylus/base/base.styl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/stylus/components/home-content_components.styl" afterPath="$PROJECT_DIR$/www/stylus/components/home-content_components.styl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/stylus/objects/home-content_components.styl" afterPath="$PROJECT_DIR$/www/stylus/objects/home-content_components.styl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/stylus/settings/colors.styl" afterPath="$PROJECT_DIR$/www/stylus/settings/colors.styl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/stylus/settings/fonts.styl" afterPath="$PROJECT_DIR$/www/stylus/settings/fonts.styl" />
     </list>
     <ignored path="Sur un Baobab.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -106,9 +40,13 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.769231">
-              <caret line="147" column="56" selection-start-line="147" selection-start-column="40" selection-end-line="147" selection-end-column="56" />
-              <folding />
+            <state vertical-scroll-proportion="-11.615385">
+              <caret line="172" column="80" selection-start-line="172" selection-start-column="44" selection-end-line="172" selection-end-column="80" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#section#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#a#1;n#div#0;n#div#0;n#section#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#a#2;n#div#0;n#div#0;n#section#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,8 +54,8 @@
       <file leaf-file-name="home-content_components.styl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/stylus/components/home-content_components.styl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.8867927">
-              <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
+            <state vertical-scroll-proportion="-15.153846">
+              <caret line="142" column="30" selection-start-line="142" selection-start-column="30" selection-end-line="142" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -126,8 +64,8 @@
       <file leaf-file-name="home-content_components.styl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/stylus/objects/home-content_components.styl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55409837">
-              <caret line="55" column="11" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.6009852">
+              <caret line="113" column="21" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -175,7 +113,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="1" />
     <option name="y" value="23" />
-    <option name="width" value="694" />
+    <option name="width" value="1034" />
     <option name="height" value="832" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -416,10 +354,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="23" width="694" height="832" extended-state="0" />
+    <frame x="1" y="23" width="1034" height="832" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30674848" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2016129" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -479,7 +417,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="131" column="56" selection-start-line="131" selection-start-column="56" selection-end-line="131" selection-end-column="56" />
-          <folding />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#section#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#a#1;n#div#0;n#div#0;n#section#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#a#2;n#div#0;n#div#0;n#section#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -533,7 +475,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#section#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#a#1;n#div#0;n#div#0;n#section#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#a#2;n#div#0;n#div#0;n#section#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -549,7 +495,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="38" column="68" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="68" />
-          <folding />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#section#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#a#1;n#div#0;n#div#0;n#section#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#a#2;n#div#0;n#div#0;n#section#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -587,7 +537,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#section#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#a#1;n#div#0;n#div#0;n#section#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#a#2;n#div#0;n#div#0;n#section#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -667,24 +621,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/stylus/components/home-content_components.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.8867927">
-          <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
+        <state vertical-scroll-proportion="-15.153846">
+          <caret line="142" column="30" selection-start-line="142" selection-start-column="30" selection-end-line="142" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.769231">
-          <caret line="147" column="56" selection-start-line="147" selection-start-column="40" selection-end-line="147" selection-end-column="56" />
-          <folding />
+        <state vertical-scroll-proportion="-11.615385">
+          <caret line="172" column="80" selection-start-line="172" selection-start-column="44" selection-end-line="172" selection-end-column="80" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#section#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#a#1;n#div#0;n#div#0;n#section#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#a#2;n#div#0;n#div#0;n#section#2;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/stylus/objects/home-content_components.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55409837">
-          <caret line="55" column="11" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.6009852">
+          <caret line="113" column="21" selection-start-line="113" selection-start-column="21" selection-end-line="113" selection-end-column="21" />
           <folding />
         </state>
       </provider>

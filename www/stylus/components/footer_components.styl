@@ -1,0 +1,75 @@
+.footer
+  background url("../img/svg/footer_background.svg") no-repeat, color-background-footer
+  color color-white
+  padding-top 8.5em
+  &__section
+    &__title
+      font-size: 2.62em
+      font-weight 500
+      margin-bottom 0.847em
+  &__help-us
+    &__link
+      font-size: 2.06em
+      border 2px solid color-main-yellow
+      border-radius 3px
+      margin-bottom 0.971em
+      padding 0.345em 0.991em
+      transition trans
+      &:focus
+      &:hover
+        background-color color-main-yellow
+  &__contact-us
+    &__item
+      font-size: 2.06em
+      margin-bottom 0.971em
+      &:before
+        font-family: glyphs
+        font-size: 1em
+        margin-right 0.485em
+      &-tel:before
+        content "\e91b"
+      &-wa:before
+        content "\e91a"
+      &-form:before
+        content "\e91c"
+        font-size: .8em
+  &__section
+    &__newsletter-label
+      display none
+    &__newsletter-input
+      background-color #243445
+      border none
+      outline none
+      font-size: 2.1em
+      color #A6ACB3
+      letter-spacing .67px
+      font-weight: 300
+      padding 0.388em .826em 0.3888em 0.647em
+    &__newsletter-submit
+      position: relative
+      top 1.10em
+      right: .3em
+  &__social
+    &__item:before
+      color color-white
+      font-size: 4.2em
+      font-family: glyphs
+      margin-right 0.357em
+    &__item-fb:before
+      content "\e91e"
+    &__item-tw:before
+      content "\e91d"
+    &__item-inst:before
+      content "\e900"
+    &__item-vim:before
+      content "\e91f"
+    &__item-yout:before
+      content "\e920"
+      margin-right 0
+
+.footer__newsletter__title
+  margin-bottom .2em
+
+.visuallyhidden
+  color transparent
+

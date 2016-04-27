@@ -2,26 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="627774d4-d48a-4bcb-b619-5a045e6d845e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/jpg/SafidinIPela_Poster_FR.jpg" afterPath="$PROJECT_DIR$/www/img/jpg/SafidinIPela_Poster_FR.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/jpg/Tongasoa_Poster_FR.jpg" afterPath="$PROJECT_DIR$/www/img/jpg/Tongasoa_Poster_FR.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/jpg/article_top_min.jpg" afterPath="$PROJECT_DIR$/www/img/jpg/article_top_min.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/jpg/baobab_about3.jpg" afterPath="$PROJECT_DIR$/www/img/jpg/baobab_about3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/jpg/img_deco.jpg" afterPath="$PROJECT_DIR$/www/img/jpg/img_deco.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/jpg/img_deco@2x.jpg" afterPath="$PROJECT_DIR$/www/img/jpg/img_deco@2x.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/jpg/preview_article1.jpg" afterPath="$PROJECT_DIR$/www/img/jpg/preview_article1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/jpg/preview_article2.jpg" afterPath="$PROJECT_DIR$/www/img/jpg/preview_article2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/jpg/preview_article3.2.jpg" afterPath="$PROJECT_DIR$/www/img/jpg/preview_article3.2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/jpg/preview_article3.jpg" afterPath="$PROJECT_DIR$/www/img/jpg/preview_article3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/png/boabab_text_deco.png" afterPath="$PROJECT_DIR$/www/img/png/boabab_text_deco.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/png/boabab_text_deco@2x.png" afterPath="$PROJECT_DIR$/www/img/png/boabab_text_deco@2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/png/pattern.png" afterPath="$PROJECT_DIR$/www/img/png/pattern.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/styles.css" afterPath="$PROJECT_DIR$/www/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/stylus/base/base.styl" afterPath="$PROJECT_DIR$/www/stylus/base/base.styl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/stylus/components/header_components.styl" afterPath="$PROJECT_DIR$/www/stylus/components/header_components.styl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/stylus/objects/footer_objects.styl" afterPath="$PROJECT_DIR$/www/stylus/objects/footer_objects.styl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/stylus/settings/colors.styl" afterPath="$PROJECT_DIR$/www/stylus/settings/colors.styl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/stylus/components/home-content_components.styl" afterPath="$PROJECT_DIR$/www/stylus/components/home-content_components.styl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/stylus/objects/home-content_components.styl" afterPath="$PROJECT_DIR$/www/stylus/objects/home-content_components.styl" />
     </list>
     <ignored path="Sur un Baobab.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,31 +38,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37480316">
-              <caret line="75" column="65" selection-start-line="75" selection-start-column="65" selection-end-line="75" selection-end-column="65" />
+            <state vertical-scroll-proportion="-4.075472">
+              <caret line="163" column="82" selection-start-line="163" selection-start-column="63" selection-end-line="163" selection-end-column="82" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header_components.styl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/stylus/components/header_components.styl">
+      <file leaf-file-name="home-content_components.styl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/stylus/components/home-content_components.styl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.26415095">
-              <caret line="284" column="20" selection-start-line="284" selection-start-column="20" selection-end-line="284" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.48976377">
+              <caret line="194" column="8" selection-start-line="194" selection-start-column="8" selection-end-line="194" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu-res.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/scripts/menu-res.js">
+      <file leaf-file-name="home-content_components.styl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/stylus/objects/home-content_components.styl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+            <state vertical-scroll-proportion="-4.4905663">
+              <caret line="77" column="2" selection-start-line="77" selection-start-column="2" selection-end-line="77" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -114,16 +99,16 @@
         <option value="$PROJECT_DIR$/www/css/ie.css" />
         <option value="$PROJECT_DIR$/www/stylus/settings/fonts.styl" />
         <option value="$PROJECT_DIR$/www/img/svg/baobab_text.svg" />
-        <option value="$PROJECT_DIR$/www/stylus/objects/home-content_components.styl" />
         <option value="$PROJECT_DIR$/www/stylus/styles.styl" />
-        <option value="$PROJECT_DIR$/www/stylus/components/home-content_components.styl" />
         <option value="$PROJECT_DIR$/www/stylus/components/footer_components.styl" />
         <option value="$PROJECT_DIR$/www/stylus/objects/footer_objects.styl" />
         <option value="$PROJECT_DIR$/www/stylus/base/base.styl" />
         <option value="$PROJECT_DIR$/www/stylus/settings/colors.styl" />
         <option value="$PROJECT_DIR$/www/scripts/menu-res.js" />
+        <option value="$PROJECT_DIR$/www/stylus/objects/home-content_components.styl" />
         <option value="$PROJECT_DIR$/www/stylus/components/header_components.styl" />
         <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/stylus/components/home-content_components.styl" />
       </list>
     </option>
   </component>
@@ -654,22 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/stylus/objects/home-content_components.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.6538463">
-          <caret line="137" column="18" selection-start-line="137" selection-start-column="18" selection-end-line="137" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/stylus/components/home-content_components.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33228347">
-          <caret line="244" column="14" selection-start-line="244" selection-start-column="14" selection-end-line="244" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/stylus/styles.styl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.68429005">
@@ -702,22 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/stylus/objects/header_objects.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55135953">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/stylus/settings/colors.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.038462">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/stylus/base/base.styl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.884615">
@@ -734,18 +687,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/stylus/objects/header_objects.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.957704">
+          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/stylus/components/header_components.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.26415095">
-          <caret line="284" column="20" selection-start-line="284" selection-start-column="20" selection-end-line="284" selection-end-column="20" />
+        <state vertical-scroll-proportion="-0.39055118">
+          <caret line="277" column="23" selection-start-line="277" selection-start-column="23" selection-end-line="277" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/stylus/settings/colors.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.038462">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37480316">
-          <caret line="75" column="65" selection-start-line="75" selection-start-column="65" selection-end-line="75" selection-end-column="65" />
+        <state vertical-scroll-proportion="-4.075472">
+          <caret line="163" column="82" selection-start-line="163" selection-start-column="63" selection-end-line="163" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/stylus/objects/home-content_components.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.4905663">
+          <caret line="77" column="2" selection-start-line="77" selection-start-column="2" selection-end-line="77" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/stylus/components/home-content_components.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48976377">
+          <caret line="194" column="8" selection-start-line="194" selection-start-column="8" selection-end-line="194" selection-end-column="8" />
           <folding />
         </state>
       </provider>

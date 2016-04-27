@@ -63,18 +63,25 @@
 						<h1 class="header__title__main" aria-level="1">Sur un Baobab</h1>
 						<span class="header__title__sub">Animation Workshop</span>
 					</div>
-					<!--<input type="checkbox" class="header__icon" id="header__icon">
-					<label for="header__icon" class="header__icon__label">Menu</label>-->
 					<nav class="menu">
 						<a href="#" class="header__logo">Mon logo</a>
+							<input type="checkbox" class="menu__icon" id="menu__icon">
+							<label for="menu__icon" class="menu__icon__label" id="menu__icon__label">Menu
+								<span></span>
+							</label>
 						<div class="menu__container">
 							<h2 class="menu__title" aria-level="2">Menu de navigation</h2>
-							<a href="index.html" class="menu__link">
-								<span class="menu__item menu__item-home">Accueil</span>
-							</a>
-							<a href="index.html" class="menu__link">
-								<span class="menu__item menu__item-projet">Projet</span>
-							</a>
+							<div class="menu__lang">
+								<a href="" class="menu__lang__item"></a>
+								<a href="" class="menu__lang__item"></a>
+								<a href="" class="menu__lang__item"></a>
+							</div>
+								<a href="index.html" class="menu__link">
+									<span class="menu__item menu__item-home">Accueil</span>
+								</a>
+								<a href="index.html" class="menu__link">
+									<span class="menu__item menu__item-projet">Projet</span>
+								</a>
 							<a href="index.html" class="menu__link">
 								<span class="menu__item menu__item-news">Actualités</span>
 							</a>
@@ -87,10 +94,11 @@
 							<a href="index.html" class="menu__link">
 								<span class="menu__item menu__item-tutos">Ateliers</span>
 							</a>
-							<a href="index.html" class="menu__link">
+							<a href="index.html" class="menu__link menu__link--last">
 								<span class="menu__item menu__item-contact">Contact</span>
 							</a>
 						</div>
+						<span aria-hidden="true" class="menu__icon-bg"></span>
 					</nav>
 					<div class="scroll">
 						<span class="scroll__mouse mouse">
@@ -113,7 +121,7 @@
 							<br>
 							<a class="intro-img__button" href="#">En savoir plus</a>
 						</section>
-						<section class="intro-text">
+						<!--<section class="intro-text">
 							<h2 class="intro-text__title">Rencontrer. Animer. Aider.</h2>
 							<div class="intro-text__container">
 								<img class="intro-text__img" src="./img/svg/baobab_logo_svg.svg" alt="Logo Surunbaobab"
@@ -128,7 +136,7 @@
 									s’inscrivent dans le soutien d’une cause sociale.
 								</p>
 							</div>
-						</section>
+						</section>-->
 						<div class="img-baobab">
 							<div class="img-baobab__title">
 								<div class="img-baobab__title__img"></div>
@@ -143,7 +151,7 @@
 							</svg>
 
 						</div>
-						<section class="last-news">
+						<!--<section class="last-news">
 							<h2 class="last-news__title" aria-level="2">Nos dernières nouvelles</h2>
 							<span class="last-news__newsletters">
 								Ne manquez plus rien, <a href="#" class="last-news__newsletters__link">abonnez-vous
@@ -366,15 +374,13 @@
 									Jimmy Letecheur</a>
 								</div>
 							</div>
-						</footer>
+						</footer>-->
 					</div>
 				</div>
 				<div class="site-cache" id="site-cache"></div>
 			</div>
 		</div>
-		<script src="scripts/vivus.min.js" type="text/javascript"></script>
-		<script type="text/javascript">
-			new Vivus('img-baobab__deco', {duration: 200});
-		</script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+		<script type="text/javascript" src="scripts/menu-res.js"></script>
 	</body>
 </html>

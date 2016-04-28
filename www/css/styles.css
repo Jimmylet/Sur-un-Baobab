@@ -658,9 +658,6 @@ body {
 .header-main > .menu {
   background-color: rgba(46,65,87,0.8);
 }
-.menu__lang {
-  display: none;
-}
 .menu__bloc {
   display: inline-block;
 }
@@ -769,6 +766,51 @@ body {
   margin-left: 1.753em;
   line-height: 1.25em;
 }
+.scroll {
+  display: inline-block;
+  line-height: 1.385em;
+  font-size: 1.3em;
+  font-weight: normal;
+  color: #7f8c8d;
+  color: #fff;
+  text-decoration: none;
+  overflow: hidden;
+}
+.scroll__mouse {
+  position: relative;
+  display: block;
+  width: 2.569em;
+  height: 4.185em;
+  margin: 0 auto 1em;
+  -webkit-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  border-radius: 1.769em;
+}
+.scroll__mouse__mouvement {
+  position: absolute;
+  display: block;
+  top: 29%;
+  left: 50%;
+  width: 0.538em;
+  height: 0.538em;
+  margin: -4px 0 0 -3.5px;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-animation: scroll-animation 3s linear infinite;
+  animation: scroll-animation 3s linear infinite;
+}
+.scroll__message {
+  color: transparent;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.scroll:hover .scroll__message {
+  color: #fff;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
 @media only screen and (max-width: 995px) {
   .header .subheader__social__text {
     display: none;
@@ -821,7 +863,7 @@ body {
     display: none;
   }
   .header__logo {
-    margin-left: 2.4em;
+    margin-left: 4.4em;
   }
   .menu {
     position: relative;
@@ -891,24 +933,6 @@ body {
     -webkit-transform: translateY(6px);
     -ms-transform: translateY(6px);
     transform: translateY(6px);
-  }
-  .menu__lang {
-    display: inline-block;
-    color: #fff;
-    margin-top: 10px;
-  }
-  .menu__lang__item {
-    background-color: #202e3d;
-    font-size: 1.4em;
-    padding: 5px 5px;
-    -webkit-transition: 0.3s ease-out;
-    transition: 0.3s ease-out;
-  }
-  .menu__lang__item:hover,
-  .menu__lang__item:focus {
-    background-color: #2e4157;
-    -webkit-transition: 0.3s ease-out;
-    transition: 0.3s ease-out;
   }
   .menu__container {
     position: relative;
@@ -1003,6 +1027,62 @@ body {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+@-webkit-keyframes scroll-animation {
+  0% {
+    -ms-filter: none;
+    -webkit-filter: none;
+            filter: none;
+    opacity: 1;
+    top: 29%;
+  }
+  65% {
+    -ms-filter: none;
+    -webkit-filter: none;
+            filter: none;
+    opacity: 1;
+    top: 50%;
+  }
+  75% {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    top: 29%;
+  }
+}
+@keyframes scroll-animation {
+  0% {
+    -ms-filter: none;
+    -webkit-filter: none;
+            filter: none;
+    opacity: 1;
+    top: 29%;
+  }
+  65% {
+    -ms-filter: none;
+    -webkit-filter: none;
+            filter: none;
+    opacity: 1;
+    top: 50%;
+  }
+  75% {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    top: 29%;
+  }
+}
 .intro-img {
   background-image: url("../img/jpg/baobab_about4.jpg");
   background-position: center center;
@@ -1038,17 +1118,6 @@ body {
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
 }
-@media only screen and (max-width: 643px) {
-  .intro-img {
-    background-image: url("../img/jpg/baobab_about4-min.jpg");
-    height: 40em;
-  }
-  .intro-img__title {
-    font-size: 2.32em;
-    letter-spacing: 1px;
-    margin-top: 3em;
-  }
-}
 .intro-text__title {
   font-weight: bold;
   font-size: 4.24em;
@@ -1076,46 +1145,6 @@ body {
   max-width: 20.344em;
   margin-bottom: 0.763em;
 }
-@media only screen and (max-width: 808px) {
-  .intro-text__container {
-    width: 53em;
-  }
-  .intro-text__title {
-    font-size: 2.62em;
-    margin-bottom: 1em;
-  }
-  .intro-text__title:after {
-    display: none;
-  }
-  .intro-text__img {
-    width: 15em;
-    height: auto;
-  }
-  .intro-text__paragraph {
-    font-size: 1.82em;
-  }
-}
-@media only screen and (max-width: 586px) {
-  .intro-text__container {
-    width: 320px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .intro-text__img {
-    display: none;
-  }
-  .intro-text__paragraph {
-    text-align: center;
-  }
-}
-@media only screen and (max-width: 400px) {
-  .intro-text__container {
-    width: 250px;
-  }
-  .intro-text__paragraph {
-    text-align: left;
-  }
-}
 .img-baobab {
   background-image: url("../img/jpg/img_deco.jpg");
   background-position: center center;
@@ -1140,16 +1169,6 @@ body {
   .img-baobab__title__img {
     background-image: url("../img/png/baobab_text@2x.png");
     background-size: contain;
-  }
-}
-@media only screen and (max-width: 700px) {
-  .img-baobab {
-    background-image: url("../img/jpg/img_deco-min.jpg");
-    height: 40em;
-  }
-  .img-baobab__deco {
-    top: 145px;
-    width: 12px;
   }
 }
 .last-news {
@@ -1218,73 +1237,6 @@ body {
 }
 .last-news__articles__container-text {
   padding: 2em;
-}
-@media only screen and (max-width: 965px) {
-  .last-news__articles__top {
-    width: 45em;
-    height: auto;
-    padding-bottom: 8em;
-    position: relative;
-  }
-  .last-news__articles__img {
-    display: block;
-    float: none;
-  }
-  .last-news__articles__img img {
-    object-fit: cover;
-    max-width: 100%;
-    height: auto;
-  }
-  .last-news__articles__container-text {
-    display: block;
-    background-color: #fff;
-    width: 45em;
-    height: auto;
-    position: static;
-  }
-  .last-news__articles__top__link {
-    float: right;
-    position: absolute;
-    bottom: 2em;
-  }
-}
-@media only screen and (max-width: 499px) {
-  .last-news__articles__top {
-    width: 30em;
-  }
-  .last-news__articles__container-text {
-    width: 30em;
-  }
-  .last-news__articles__top__title {
-    font-size: 1.62em;
-    width: 300px;
-  }
-  .last-news__articles__top__title {
-    width: auto;
-  }
-  .last-news__articles__top__intro {
-    font-size: 1.2em;
-    width: auto;
-  }
-}
-@media only screen and (max-width: 336px) {
-  .last-news__articles__top {
-    width: 25em;
-  }
-  .last-news__articles__container-text {
-    width: 25em;
-  }
-  .last-news__articles__top__title {
-    font-size: 1.62em;
-    width: 300px;
-  }
-  .last-news__articles__top__title {
-    width: auto;
-  }
-  .last-news__articles__top__intro {
-    font-size: 1.2em;
-    width: auto;
-  }
 }
 .article__vignette {
   display: inline-block;
@@ -1543,18 +1495,6 @@ body {
   background: rgba(7,7,7,0.5);
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
-}
-@media only screen and (max-width: 643px) and (-webkit-min-device-pixel-ratio: 1.3), only screen and (max-width: 643px) and (min--moz-device-pixel-ratio: 1.3), only screen and (max-width: 643px) and (min-device-pixel-ratio: 1.3), only screen and (max-width: 643px) and (-webkit-min-device-pixel-ratio: 1.3020833333333333), only screen and (max-width: 643px) and (min-resolution: 125dpi), only screen and (max-width: 643px) and (min-resolution: 1.3dppx) {
-  .intro-img {
-    background-image: url("../img/jpg/baobab_about4-min@2x.jpg");
-    background-size: cover;
-  }
-}
-@media only screen and (max-width: 700px) and (-webkit-min-device-pixel-ratio: 1.3), only screen and (max-width: 700px) and (min--moz-device-pixel-ratio: 1.3), only screen and (max-width: 700px) and (min-device-pixel-ratio: 1.3), only screen and (max-width: 700px) and (-webkit-min-device-pixel-ratio: 1.3020833333333333), only screen and (max-width: 700px) and (min-resolution: 125dpi), only screen and (max-width: 700px) and (min-resolution: 1.3dppx) {
-  .img-baobab {
-    background-image: url("../img/jpg/img_deco-min@2x.jpg");
-    background-size: cover;
-  }
 }
 .footer {
   background: url("../img/svg/footer_background.svg") no-repeat, #2e4157;

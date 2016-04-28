@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="627774d4-d48a-4bcb-b619-5a045e6d845e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/styles.css" afterPath="$PROJECT_DIR$/www/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/stylus/components/header_components.styl" afterPath="$PROJECT_DIR$/www/stylus/components/header_components.styl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/stylus/components/home-content_components.styl" afterPath="$PROJECT_DIR$/www/stylus/components/home-content_components.styl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/stylus/objects/home-content_components.styl" afterPath="$PROJECT_DIR$/www/stylus/objects/home-content_components.styl" />
-    </list>
+    <list default="true" id="627774d4-d48a-4bcb-b619-5a045e6d845e" name="Default" comment="" />
     <ignored path="Sur un Baobab.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -51,8 +45,8 @@
       <file leaf-file-name="home-content_components.styl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/stylus/components/home-content_components.styl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48976377">
-              <caret line="194" column="8" selection-start-line="194" selection-start-column="8" selection-end-line="194" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.19212599">
+              <caret line="187" column="17" selection-start-line="187" selection-start-column="17" selection-end-line="187" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -729,8 +723,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/stylus/components/home-content_components.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48976377">
-          <caret line="194" column="8" selection-start-line="194" selection-start-column="8" selection-end-line="194" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.19212599">
+          <caret line="187" column="17" selection-start-line="187" selection-start-column="17" selection-end-line="187" selection-end-column="17" />
           <folding />
         </state>
       </provider>

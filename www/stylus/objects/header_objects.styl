@@ -1,4 +1,4 @@
-.header
+/*.header MODIFICATION CLIENT SUPPRESSION SUBHEADER
   .subheader
     height 6em
     &__mail
@@ -20,7 +20,7 @@
       right: 7.45em
     &__social
       display inline-block
-      height: 60px
+      height: 60px*/
 
 /************************************\
   NAV PRINCPALE
@@ -35,7 +35,7 @@
     margin-top 1em
 
 .menu
-  padding 0 4.1em
+  padding 0 6.1em 0 4.1em
   height 8em
   &__container
     margin 0 auto
@@ -47,6 +47,9 @@
   &__item
     display inline-block
 
++media-query( only screen, max-width 1070px )
+  .menu
+    padding 0 4.1em 0 4.1em
 /************************************\
     HEADER IMG
 \************************************/
@@ -58,7 +61,9 @@
 .header__title
   position: absolute
   text-align center
-  top: 60%;
+  width 100%
+  height 146px
+  top: 67%;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -79,13 +84,3 @@
     max-width 22em
     margin-top .7em
 
-
-/************************************\
-    MOUSE ANIMATION
-\************************************/
-
-.scroll
-  position: absolute
-  top: 79%
-  left: 50%;
-  transform: translate(-50%, -50%);

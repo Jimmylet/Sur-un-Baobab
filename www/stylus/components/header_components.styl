@@ -1,5 +1,6 @@
 @import "kouto-swiss"
 
+/* MODIFICATION CLIENT, SUPPRESSION DU SUBHEADER
 .header
   .subheader
     background-color color-background-subheader
@@ -95,6 +96,7 @@
         max-width 100%
         color color-main-yellow
         text-align left
+*/
 
 
 /************************************\
@@ -111,6 +113,8 @@
 .header-main > .menu
   background-color rgba(46, 65, 87, 0.8)
 .menu
+  &__lang
+    display none
   &__bloc
     display inline-block
   &__icon
@@ -118,7 +122,7 @@
     &__label
       display none
   &__link
-    margin-right 3em
+    margin-right 5em
   &__link--last
     margin-right 0
   &__item
@@ -158,12 +162,18 @@
   background url("../img/png/pattern.png") repeat, url("../img/jpg/background_home_header.jpg") no-repeat center center/cover
 
 .header__title
+  retina-image( "../img/png/title_homebck.png", 423px 146px, "@2x" );
+  background-repeat no-repeat
+  background-position center center
+  background-size contain
   &__main
+    display none // Modification client, change de police, import d'une image sur le fond.
     font-size: 4.85em
     font-weight: bold
     color color-white
     text-shadow: 0px 1px 1px rgba(0,0,0,0.80);
   &__sub
+    display none
     font-size: 2.33em
     color color-white
     &:before
@@ -203,68 +213,28 @@
     margin-left 1.753em
     line-height 1.25em
 
-
-
+.menu
+  &__lang__deskopt
+    color white
+    position: absolute
+    right: 0
+    background-color color-blue - 30%
+    &__item
+      display block
+      margin-bottom .41em
+      font-size: 1.3em
+      background-color color-blue - 30%
+      padding 5px 5px
+      transition trans
+      &:hover
+      &:focus
+        background-color color-blue
+        transition trans
+    &__item:last-child
+      margin-bottom 0
 /************************************\
     MOUSE ANIMATION
 \************************************/
-
-@keyframes scroll-animation
-  0%{
-    opacity 1;
-    top 29%;
-  }
-  65%{
-    opacity 1;
-    top 50%;
-  }
-  75%{
-    opacity 0
-    top 50%
-  }
-  100%{
-    opacity 0
-    top 29%
-  }
-
-.scroll
-  display inline-block;
-  line-height 1.385em
-  font-size 1.3em
-  font-weight normal
-  color #7F8C8D
-  color #FFF
-  text-decoration: none;
-  overflow: hidden;
-  &__mouse
-    position: relative;
-    display: block;
-    width: 2.569em
-    height: 4.185em
-    margin: 0 auto 1em
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: 2px solid #FFF;
-    border-radius: 1.769em
-    &__mouvement
-      position absolute;
-      display block;
-      top 29%;
-      left 50%;
-      width 0.538em
-      height 0.538em
-      margin: -4px 0 0 -3.5px;
-      background: #FFF;
-      border-radius: 50%;
-      animation: scroll-animation 3s linear infinite;
-  &__message
-    color transparent
-    transition trans
-
-.scroll:hover .scroll__message
-  color white
-  transition trans
 
 
 /************************************\
@@ -278,6 +248,7 @@
         &__text
           display none
 
+/*
 +media-query( only screen, max-width 929px )
   .header
     .subheader
@@ -313,11 +284,21 @@
         display none
       &__form
         border-right 0
+*/
 
 
 /************************************\
   MENU PRINCIPAL RESPONSIVE
 \************************************/
+
++media-query( only screen, max-width 1070px )
+  .menu
+    &__link
+      margin-right 3em
+      &--last
+        margin-right 0
+
+
 
 +media-query( only screen, max-width 908px )
   .menu
@@ -325,12 +306,12 @@
       font-size: 1.4em
       margin-top 1.5em
 
-+media-query( only screen, max-width 789px )
++media-query( only screen, max-width 807px )
   .subheader
     display none
   .header
     &__logo
-      margin-left 4.4em
+      margin-left 2.4em
   .menu
     position: relative
     padding 0
@@ -379,6 +360,21 @@
         transform: translateY(-6px);
       & span:after
         transform: translateY(6px);
+    &__lang
+      display inline-block
+      color white
+      margin-top 10px
+      &__item
+        background-color color-blue - 30%
+        font-size: 1.4em
+        padding 5px 5px
+        transition trans
+        &:hover
+        &:focus
+          background-color color-blue
+          transition trans
+    &__lang__deskopt
+      display none
     &__container
       position: relative
       width 25em
@@ -440,3 +436,5 @@
       transform: rotate(-45deg);
     & span:after
       transform: rotate(45deg);
+
+

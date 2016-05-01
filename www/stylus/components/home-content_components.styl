@@ -28,6 +28,14 @@
       background-color color-main-yellow
       transition trans
 
++media-query( only screen, max-width 643px )
+  .intro-img
+    retina-image( "../img/jpg/baobab_about4-min.jpg", cover, "@2x");
+    height 40em
+    &__title
+      font-size 2.32em
+      letter-spacing 1px
+      margin-top 3em
 
 /************************************\
     TEXT INTRO - Rencontrer,animer…
@@ -35,7 +43,7 @@
 
 .intro-text
   &__title
-    font-weight bold
+    font-family handofseanfont
     font-size 4.24em
     color color-main-yellow
     margin-top: 1.769em
@@ -43,15 +51,48 @@
     &:after
       content "";
       display block
-      width 615px
-      height 24px
-      retina-image("../img/png/text-intro_geometric_subtitle.png", 615px 24px, "@2x" )
+      width 548px
+      height 8px
+      retina-image("../img/png/intro-text_line.png", 548px 8px, "@2x" )
       background-repeat no-repeat
       margin 0.236em auto 0.849em auto
   &__paragraph
     font-size: 2.62em
     max-width 20.344em
     margin-bottom 0.763em
+
++media-query( only screen, max-width 808px )
+  .intro-text
+    &__container
+      width 53em
+    &__title
+      font-size 2.62em
+      margin-bottom 1em
+      &:after
+        display none
+    &__img
+      width 15em
+      height auto
+    &__paragraph
+      font-size: 1.82em
+
++media-query( only screen, max-width 586px )
+  .intro-text
+    &__container
+      width 320px
+      margin 0 auto
+      text-align center
+    &__img
+      display none
+    &__paragraph
+      text-align center
+
++media-query( only screen, max-width 400px )
+  .intro-text
+    &__container
+      width 250px
+    &__paragraph
+      text-align left
 
 /************************************\
   IMGS SurunBaobab
@@ -68,6 +109,18 @@
       background-repeat no-repeat
       background-position center 35%
       height: 100%
+
++media-query( only screen, max-width 700px )
+  .img-baobab
+    retina-image("../img/jpg/img_deco-min.jpg", cover,"@2x" )
+    height 40em
+    &__deco
+      top 145px
+      width 12px
+
+
+
+
 
 /************************************\
   ARTICLES NEWS
@@ -128,6 +181,61 @@
   &__container-text
     padding 2em
 
++media-query( only screen, max-width 965px )
+  .last-news
+    &__articles__top
+      width 45em
+      height auto
+      padding-bottom 8em
+      position: relative
+    &__articles__img
+      display block
+      float none
+      & img
+        object-fit: cover;
+        max-width: 100%;
+        height: auto;
+    &__articles__container-text
+      display block
+      background-color color-white
+      width: 45em
+      height auto
+      position static
+    &__articles__top__link
+      float right
+      position: absolute
+      bottom: 2em
+
++media-query( only screen, max-width 499px )
+  .last-news
+    &__articles__top
+      width 30em
+    &__articles__container-text
+      width 30em
+    &__articles__top__title
+      font-size 1.62em
+      width 300px
+  .last-news__articles__top__title
+    width auto
+  .last-news__articles__top__intro
+    font-size: 1.2em
+    width auto
+
++media-query( only screen, max-width 336px )
+  .last-news
+    &__articles__top
+      width 25em
+    &__articles__container-text
+      width 25em
+    &__articles__top__title
+      font-size 1.62em
+      width 300px
+  .last-news__articles__top__title
+    width auto
+  .last-news__articles__top__intro
+    font-size: 1.2em
+    width auto
+
 
 .article__vignette
   display inline-block
@@ -173,20 +281,22 @@
     margin-bottom: 1.5em
   &__text1
     display block
-    font-size 5em
+    font-family: handofseanfont
+    font-size 4em
     color color-white
     font-weight: bold
   &__text2
+    font-family: handofseanfont
     display block
     color color-white
     font-weight: bold
     text-transform uppercase
-    font-size: 9.05em
-    line-height 0.8em
+    font-size: 7.05em
+    line-height 1.7em
     &:after
       content "";
       margin: 0 auto
-      margin-top: 0.331em
+      margin-top: 0.040em
       display block
       width 4.420em
       height 1px

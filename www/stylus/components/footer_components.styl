@@ -73,3 +73,50 @@
 .visuallyhidden
   color transparent
 
++media-query( only screen, max-width 970px )
+  .footer
+    height: 30em;
+    padding-top 6em
+    &__help-us
+      width 25em
+    &__section
+      &__title
+        font-size: 1.82em
+    &__help-us__link
+      font-size: 1.5em
+      border 1px solid color-main-yellow
+    &__contact-us
+      margin-right: 4em
+      &__item
+        font-size 1.5em
+    &__section__newsletter-input
+      font-size: 1.5em
+    &__section__newsletter-submit
+      height 30px
+      width 30px
+      top 0.9em
+    &__social__item:before
+      font-size: 3em
+
++media-query( only screen, max-width 712px )
+  .footer
+    height auto
+    &__container
+      max-width 28em
+  .footer__help-us
+    display block
+    float none
+    text-align center
+    margin 0 0 4em 0
+    &__link
+      width 220px
+  .footer__contact-us
+    display block
+    max-width 22em
+    text-align center
+    margin 0 0 4em 0
+  .footer__section__newsletter-social-container
+    float none
+    display block
+    text-align center
+    padding-bottom 7em

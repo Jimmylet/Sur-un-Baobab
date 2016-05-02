@@ -1633,3 +1633,65 @@ body {
 .visuallyhidden {
   color: transparent;
 }
+@media only screen and (max-width: 970px) {
+  .footer {
+    height: 30em;
+    padding-top: 6em;
+  }
+  .footer__help-us {
+    width: 25em;
+  }
+  .footer__section__title {
+    font-size: 1.82em;
+  }
+  .footer__help-us__link {
+    font-size: 1.5em;
+    border: 1px solid #d9a613;
+  }
+  .footer__contact-us {
+    margin-right: 4em;
+  }
+  .footer__contact-us__item {
+    font-size: 1.5em;
+  }
+  .footer__section__newsletter-input {
+    font-size: 1.5em;
+  }
+  .footer__section__newsletter-submit {
+    height: 30px;
+    width: 30px;
+    top: 0.9em;
+  }
+  .footer__social__item:before {
+    font-size: 3em;
+  }
+}
+@media only screen and (max-width: 712px) {
+  .footer {
+    height: auto;
+  }
+  .footer__container {
+    max-width: 28em;
+  }
+  .footer__help-us {
+    display: block;
+    float: none;
+    text-align: center;
+    margin: 0 0 4em 0;
+  }
+  .footer__help-us__link {
+    width: 220px;
+  }
+  .footer__contact-us {
+    display: block;
+    max-width: 22em;
+    text-align: center;
+    margin: 0 0 4em 0;
+  }
+  .footer__section__newsletter-social-container {
+    float: none;
+    display: block;
+    text-align: center;
+    padding-bottom: 7em;
+  }
+}

@@ -162,10 +162,10 @@
   background url("../img/png/pattern.png") repeat, url("../img/jpg/background_home_header.jpg") no-repeat center center/cover
 
 .header__title
-  retina-image( "../img/png/title_homebck.png", 423px 146px, "@2x" );
+  retina-image( "../img/png/title_homebck.png", contain, "@2x" );
   background-repeat no-repeat
   background-position center center
-  background-size contain
+  width 80%
   &__main
     display none // Modification client, change de police, import d'une image sur le fond.
     font-size: 4.85em
@@ -217,7 +217,7 @@
   &__lang__deskopt
     color white
     position: absolute
-    right: 0
+    left: 0
     background-color color-blue - 30%
     &__item
       display block
@@ -438,3 +438,10 @@
       transform: rotate(45deg);
 
 
+/************************************\
+  BOTTOM HEADER
+\************************************/
+
++media-query( only screen, max-width 660px )
+  .bottom-header
+    display none

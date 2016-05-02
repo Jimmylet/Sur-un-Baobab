@@ -183,35 +183,6 @@
 
 
 
-+media-query( only screen, max-width 499px )
-  .last-news
-    &__articles__top
-      width 30em
-    &__articles__container-text
-      width 30em
-    &__articles__top__title
-      font-size 1.62em
-      width 300px
-  .last-news__articles__top__title
-    width auto
-  .last-news__articles__top__intro
-    font-size: 1.2em
-    width auto
-
-+media-query( only screen, max-width 336px )
-  .last-news
-    &__articles__top
-      width 25em
-    &__articles__container-text
-      width 25em
-    &__articles__top__title
-      font-size 1.62em
-      width 300px
-  .last-news__articles__top__title
-    width auto
-  .last-news__articles__top__intro
-    font-size: 1.2em
-    width auto
 
 
 .article__vignette
@@ -432,6 +403,7 @@
 +media-query( only screen, max-width 965px )
   .last-news
     &__articles__top
+      text-align right
       width 45em
       height auto
       padding-bottom 8em
@@ -460,7 +432,14 @@
       &:nth-child(1)
       &:nth-child(3)
         float none
-
+  .last-news__articles__top__title
+  .last-news__articles__top__intro
+    text-align left
+  .last-news__articles__top__intro
+  .last-news__articles__top__link
+    left: 2em
+    float none
+    right auto
   .article__vignette
     margin-bottom 2em
     width 45em
@@ -468,7 +447,53 @@
     &__title
       font-size 2.62em
 
++media-query( only screen, max-width 499px )
+  .last-news
+    &__articles__top
+      width 30em
+    &__articles__container-text
+      width 30em
+    &__articles__top__title
+      font-size 1.62em
+      width 300px
+  .last-news__articles__top__title
+    width auto
+  .last-news__articles__top__intro
+    font-size: 1.2em
+    width auto
 
+  .last-news__container-bottom-articles
+    width 30em
+  .article__vignette
+    margin-bottom 2em
+    width 30em
+    height 20em
+    &__title
+      font-size 1.62em
+
++media-query( only screen, max-width 336px )
+  .last-news
+    &__articles__top
+      width 25em
+    &__articles__container-text
+      width 25em
+    &__articles__top__title
+      font-size 1.62em
+      width 300px
+  .last-news__articles__top__title
+    width auto
+  .last-news__articles__top__intro
+    font-size: 1.2em
+    width auto
+
+  .last-news__container-bottom-articles
+    width 30em
+  .article__vignette
+    margin-bottom 2em
+    width 25em
+    height 16.66em
+    &__title
+      font-size 1.15em
 /************************************\
   SECTION DONATE
 \************************************/
@@ -508,8 +533,16 @@
     transition none
     &__hovereffect
       display none
+    &__img
+      transition 0s all ease
   .last-prod
     & img
       width 100%
       height auto
       box-sizing: border-box
+
+      /************************************\
+       LAST NEWS ARTICLE
+      \************************************/
+
+

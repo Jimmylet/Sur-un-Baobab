@@ -1,0 +1,71 @@
+.whoarewe
+  &__title-container
+    &:after
+      display block
+      content ""
+      clear both
+  &__title
+    display: flex
+    flex-direction: row
+    font-size: 4.78em
+    text-transform: uppercase
+    font-weight: bold
+    margin-bottom 1.046em // 50px
+    white-space nowrap
+    &:before
+      content "\a0"
+      height 2px
+      background-color #363636
+      width 100%
+      display inline-block
+      position: relative;
+      top 21px
+      padding-right: 0.418em // 20px
+      margin-right: 0.418em // 20px
+      flex-grow: 1
+  &__desc
+    text-align center
+
+
+/************************************\
+    DESCRIPTION DES FONDATEURS
+\************************************/
+
+.whoarewe__about
+  text-align: center
+  display inline-block
+  &-elena
+    float: left
+  &-francois
+    float: right
+  &__img
+    margin-bottom 2em
+    vertical-align baseline
+  &__name
+    margin-bottom: 0.667em //20px
+    font-size: 3em
+    font-weight: bold
+  &__text
+    margin-bottom 1.648em // 30px
+    font-size: 1.82em
+    line-height 1.3em
+    text-align left
+  &__button
+    display inline-block
+    &:after
+      display inline-block
+      color color-blue
+      font-family: glyphs
+      font-size: 3em
+      transition trans
+    &:hover:after
+    &:focus:after
+      color color-blue + 20%
+  &__button-mail
+    margin-right: 5em
+    &:after
+      content "\e91c"
+  &__button-tel
+    &:after
+      content "\e91b"
+

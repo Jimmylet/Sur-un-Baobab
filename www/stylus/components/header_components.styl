@@ -110,6 +110,8 @@
     background-position center center
     color transparent
 
+.header > .menu
+  background-color #2E4157
 .header-main > .menu
   background-color rgba(46, 65, 87, 0.8)
 .menu
@@ -158,33 +160,21 @@
     HEADER IMG
 \************************************/
 
+
 .header-main
   background url("../img/png/pattern.png") repeat, url("../img/jpg/background_home_header.jpg") no-repeat center center/cover
 
-.header__title
+.header-main > .header__title-main
   retina-image( "../img/png/title_homebck.png", contain, "@2x" );
   background-repeat no-repeat
   background-position center center
   width 80%
+.header__title
   &__main
     display none // Modification client, change de police, import d'une image sur le fond.
-    font-size: 4.85em
-    font-weight: bold
-    color color-white
-    text-shadow: 0px 1px 1px rgba(0,0,0,0.80);
   &__sub
     display none
-    font-size: 2.33em
-    color color-white
-    &:before
-      content "";
-      display block
-      width 10.511em
-      height 0.05em
-      background-color white
-      margin 0 auto
-      margin-top .3em
-      margin-bottom .3em
+
 
 /************************************\
     BOTTOM HEADER

@@ -468,6 +468,11 @@ body {
 .desc-technique {
   padding: 6em 3em;
 }
+.desc-technique__container {
+  position: relative;
+  max-width: 106em;
+  margin: 0 auto;
+}
 .whoarewe {
   padding: 6em 3em 0;
 }
@@ -522,6 +527,54 @@ body {
   max-width: 39.5em;
   margin-top: 16em;
   margin: 16em auto 0 auto;
+}
+.news__container {
+  max-width: 106em;
+  margin: 0 auto;
+}
+.news__container .article__container {
+  max-width: 100%;
+  position: relative;
+  margin-bottom: 10em;
+}
+.news__container .article__container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.news__container .article__text-container {
+  display: block;
+  max-width: 42em;
+}
+.news__container .article__img-container {
+  max-width: 58.5em;
+  max-height: 45.9em;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+}
+.news__container .article__img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  zoom: 2;
+  margin: auto;
+  height: auto;
+  max-height: 100%;
+  width: auto;
+  max-width: 100%;
+}
+.article__container:nth-child(odd) .article__img-container {
+  float: right;
+}
+.article__container:nth-child(odd) .article__text-container {
+  float: left;
+}
+.article__container:nth-child(even) .article__img-container {
+  float: left;
+}
+.article__container:nth-child(even) .article__text-container {
+  float: right;
 }
 .footer {
   height: 40em;
@@ -1739,6 +1792,9 @@ body {
 .desc-projet__quote-2 {
   font-size: 2.62em;
 }
+.title_section_project {
+  position: relative;
+}
 .desc-technique {
   background-color: #f5f5f5;
 }
@@ -1756,12 +1812,23 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 1.046em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: left;
+  -ms-justify-content: left;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  margin-top: 4rem;
+  overflow: hidden;
 }
 .desc-technique__title:after {
   content: "\a0";
   height: 2px;
   background-color: #363636;
-  width: 100%;
+  width: 20%;
   display: inline-block;
   position: relative;
   top: 21px;
@@ -1884,6 +1951,9 @@ ins.play-gif:hover {
     transform: rotate(359deg);
   }
 }
+.whoarewe__title-container {
+  width: 100%;
+}
 .whoarewe__title-container:after {
   display: block;
   content: "";
@@ -1903,13 +1973,18 @@ ins.play-gif:hover {
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 1.046em;
-  white-space: nowrap;
+  -webkit-justify-content: right;
+  -ms-justify-content: right;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  width: 100%;
 }
 .whoarewe__title:before {
   content: "\a0";
   height: 2px;
   background-color: #363636;
-  width: 100%;
+  width: 20%;
   display: inline-block;
   position: relative;
   top: 21px;
@@ -2105,6 +2180,67 @@ ins.play-gif:hover {
   .desc-projet__quote-2 {
     font-size: 1.8em;
   }
+}
+.article__title-link {
+  display: block;
+}
+.article__title {
+  font-size: 2.321em;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2em;
+}
+.article__infos {
+  margin: 2em 0 2em 0;
+}
+.article__infos__author,
+.article__infos__date {
+  font-size: 1.435em;
+  color: #858585;
+  font-weight: 500;
+}
+.article__infos__author {
+  margin-right: 1.236em;
+}
+.article__infos__author:before,
+.article__infos__date:before {
+  font-family: glyphs;
+  color: #d9a613;
+  font-size: 0.8em;
+  display: inline-block;
+  margin-right: 0.371em;
+}
+.article__infos__author:before {
+  content: "\e915";
+}
+.article__infos__date:before {
+  content: "\e914";
+}
+.article__intro {
+  font-size: 2.058em;
+  color: #5c5c5c;
+  line-height: 1.2em;
+}
+.article__button-more {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  text-align: center;
+  font-size: 2.058em;
+  text-transform: uppercase;
+  color: #363636;
+  padding: 0.554em 2.75em;
+  border: 1px solid #d9a613;
+  border-radius: 6px;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.article__button-more:hover,
+.article__button-more:focus {
+  background-color: #d9a613;
+  color: #fff;
 }
 .footer {
   background: url("../img/svg/footer_background.svg") no-repeat, #2e4157;

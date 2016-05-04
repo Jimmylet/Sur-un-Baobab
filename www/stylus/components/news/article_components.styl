@@ -1,0 +1,52 @@
+.article
+  &__title-link
+    display: block
+  &__title
+    font-size: 2.321em
+    font-weight: bold
+    color #000
+    text-transform: uppercase
+    letter-spacing: 1px
+    line-height 1.2em
+  &__infos
+    margin 2em 0 2em 0
+    &__author
+    &__date
+      font-size: 1.435em
+      color color-infos-articles
+      font-weight: 500
+    &__author
+      margin-right: 1.236em // 20px
+    &__author:before
+    &__date:before
+      font-family: glyphs
+      color color-main-yellow
+      font-size: .8em // 12px
+      display inline-block
+      margin-right: 0.371em // 6px
+    &__author:before
+      content "\e915"
+    &__date:before
+      content "\e914"
+  &__intro
+    font-size: 2.058em
+    color color-text-articles
+    line-height: 1.2em
+  &__button-more
+    position: absolute
+    bottom: 0
+    display block
+    text-align center
+    font-size: 2.058em
+    text-transform: uppercase
+    color text-color-button
+    padding 0.554em 2.75em // 16px
+    border 1px solid color-main-yellow
+    border-radius 6px
+    transition trans
+    &:hover
+    &:focus
+      background-color color-main-yellow
+      color #FFF
+
+

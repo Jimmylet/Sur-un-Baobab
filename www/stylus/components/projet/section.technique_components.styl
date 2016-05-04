@@ -1,4 +1,6 @@
 
+.title_section_project
+    position relative
 .desc-technique
     background-color color-grey-background
     &__title
@@ -8,11 +10,15 @@
         text-transform: uppercase
         font-weight: bold
         margin-bottom 1.046em // 50px
+        display: flex;
+        justify-content: left;
+        margin-top: 4rem;
+        overflow: hidden;
         &:after
             content "\a0"
             height 2px
             background-color #363636
-            width 100%
+            width 20%
             display inline-block
             position: relative;
             top 21px

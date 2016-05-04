@@ -1,0 +1,52 @@
+.news__container
+  max-width 106em
+  margin: 0 auto
+
+  .article__container
+    max-width 100%
+    position: relative
+    margin-bottom 10em
+    &:after
+      content ""
+      display block
+      clear both
+
+  .article__text-container
+    display block
+    max-width 42em
+
+
+  .article__img-container
+    max-width 58.5em
+    max-height 45.9em
+    overflow: hidden
+    position: relative
+    border-radius 8px
+
+  .article__img
+    display block
+    height 100%
+    width 100%
+    zoom: 2;
+    margin: auto;
+    height: auto;
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
+
+.article__container:nth-child(odd) .article__img-container
+  float right
+.article__container:nth-child(odd) .article__text-container
+  float left
+
+.article__container:nth-child(even) .article__img-container
+  float left
+.article__container:nth-child(even) .article__text-container
+  float: right
+
+
+/*
+.article__container:nth-child(2n+2)
+  & article__img-container
+    float left
+*/

@@ -535,7 +535,7 @@ body {
 .news__container .article__container {
   max-width: 100%;
   position: relative;
-  margin-bottom: 10em;
+  margin-bottom: 15em;
 }
 .news__container .article__container:after {
   content: "";
@@ -545,6 +545,10 @@ body {
 .news__container .article__text-container {
   display: block;
   max-width: 42em;
+}
+.news__container .article__title-container {
+  max-width: 42em;
+  display: inline-block;
 }
 .news__container .article__img-container {
   max-width: 58.5em;
@@ -574,6 +578,9 @@ body {
   float: left;
 }
 .article__container:nth-child(even) .article__text-container {
+  float: right;
+}
+.article__container:nth-child(even) .article__title-container {
   float: right;
 }
 .footer {
@@ -2241,6 +2248,67 @@ ins.play-gif:hover {
 .article__button-more:focus {
   background-color: #d9a613;
   color: #fff;
+}
+@media only screen and (max-width: 1096px) {
+  .news__container {
+    margin: 0 auto;
+    max-width: 60em;
+    padding: 0 3em;
+  }
+  .article__container:nth-child(odd) .article__img-container,
+  .article__container:nth-child(odd) .article__text-container,
+  .article__container:nth-child(even) .article__img-container,
+  .article__container:nth-child(even) .article__text-container,
+  .article__container:nth-child(even) .article__title-container {
+    float: left;
+  }
+  .news__container .article__text-container {
+    max-width: 58.5em;
+  }
+  .article__img-container {
+    margin-bottom: 1em;
+  }
+  .article__button-more {
+    margin-top: 1.458em;
+    position: static;
+    display: inline-block;
+  }
+  .news__container .article__container {
+    margin-bottom: 10em;
+  }
+  .news__container .article__title-container {
+    margin-bottom: 2em;
+    max-width: 58.5em;
+  }
+}
+@media only screen and (max-width: 573px) {
+  .article__title {
+    font-size: 1.6em;
+    letter-spacing: 0px;
+    margin-bottom: 10px;
+  }
+  .news__container .article__title-container {
+    margin-bottom: 0;
+  }
+  .article__infos {
+    margin: 10px 0 10px;
+  }
+  .article__infos__author,
+  .article__infos__date {
+    font-size: 1.2em;
+  }
+  .article__intro {
+    font-size: 1.5em;
+  }
+  .article__button-more {
+    margin-top: 1em;
+  }
+  .news__container .article__container {
+    margin-bottom: 5em;
+  }
+  .article__button-more {
+    font-size: 1.5em;
+  }
 }
 .footer {
   background: url("../img/svg/footer_background.svg") no-repeat, #2e4157;

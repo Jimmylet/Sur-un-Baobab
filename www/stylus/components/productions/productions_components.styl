@@ -1,0 +1,145 @@
+.productions
+  &__title-container
+    max-width 48em
+    margin-left 49em
+    margin-bottom 1em
+  &__title
+    font-size 3.76em
+    font-weight: bold
+    text-transform: uppercase
+    &-partner
+      font-size: 1.62em
+      color #717171
+      font-weight: lighter
+  &__background
+    background-color color-grey-background
+  &__text-infos
+    margin-top 1.431em // 20px
+    margin-bottom 2.504em // 35px
+    display inline-block
+    font-size: 1.398em
+    color #5C5C5C
+  &__text-infos__item
+    display inline-block
+    margin-right 1.717em
+  &__text-infos__item:before
+    font-family: glyphs
+    font-size: 24px
+    color #2E4157
+    position: relative
+    top 4px
+    line-height 30px
+  &__text-infos__duration:before
+    content "\e911"
+    margin-right 9px
+  &__text-infos__location:before
+    content "\e910"
+    margin-right 4px
+  &__text-infos__date:before
+    content "\e914"
+    margin-right 9px
+
+
+.productions
+  &__details
+    font-size: 1.82em
+    line-height 1.2em
+    font-weight: lighter
+    margin-bottom 1.923em
+    & b
+      font-weight: 500
+      display inline-block
+      margin-right: 10px
+    &__item
+      display inline-block
+      margin-bottom 8px
+  &__synopsis
+    &__title
+      display block
+      font-size: 2.6em
+      text-transform: uppercase
+      color #5C5C5C
+      margin-bottom: 0.728em // 15px
+    &__paragraph
+      font-size: 1.82em
+      font-weight: lighter
+      color #343434
+      line-height 1.3em
+  &__button
+    font-size: 2.621em
+    text-transform uppercase
+    border 2px solid color-main-yellow
+    border-radius 10px
+    background-color #FFF
+    padding 0.458em 1.221em // 12px, 32px
+    &:hover
+    &:focus
+      background-color color-main-yellow
+      color #FFF
+      transition trans
+
+.productions
+  &__article
+    margin-bottom 15em
+  &__figure
+    position: absolute
+    top: -6em
+    left 3em
+  &__img
+    box-shadow: -2px -3px 11px 0px rgba(0,0,0,0.50), 2px 3px 11px 0px rgba(0,0,0,0.50);
+
+
+/************************************\
+  START MEDIAQUERIES
+\************************************/
+
++media-query( only screen, max-width 1065px )
+  .productions
+    &__figure
+      position static
+    &__img
+      width 300px
+      height auto
+      box-shadow none
+      margin-top 2.5em
+      float: left
+    &__article
+      max-width 85em
+      margin 0 auto 15em auto
+    &__title-container
+      margin-left: 2em
+
++media-query( only screen, max-width 912px )
+  .productions
+    &__text
+      position static
+    &__article
+      max-width 48em
+    &__background
+      text-align center
+      padding-bottom 1px
+    &__figure
+      display inline-block
+    &__title-container
+      text-align center
+    &__synopsis__paragraph
+      margin-bottom 4em
+    &__button
+      margin 0 auto
+      position static
+      position: relative
+      top 14px
+      right 0
+
++media-query( only screen, max-width 560px )
+  .productions__details
+    font-size 1.5em
+  .productions__button
+    font-size 2em
+
++media-query( only screen, max-width 412px )
+  .productions
+    &__img
+    &__figure
+      max-width 100%
+      height auto

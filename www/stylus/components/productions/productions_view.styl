@@ -1,0 +1,83 @@
+.prod-view
+  &__title
+    font-weight: bold
+    font-size: 3.76em
+    color #000
+  &__subtitle
+    display: block
+    color #717171
+    font-size: 1.62em
+    margin-bottom: 1.852em // 30px
+  &__videoplayer
+    display block
+    max-width 100%
+    height auto
+    margin-bottom 5em
+  &__synopsis
+    display block
+    color #000
+    text-transform: uppercase
+    font-size: 2.95em
+    letter-spacing 0.73px
+    font-weight: 500
+    margin-bottom 0.339em // 10px
+  &__synopsis-paragraph
+      font-size: 2.32em
+      color: #5C5C5C
+      line-height: 1.336em // 31px
+
+/************************************\
+  TABS LINK STYLE
+\************************************/
+
+.prod-view
+  &__tabs-list
+    display inline-block
+    max-width 100%
+  &__tabs-link
+    display inline-block
+    text-align center
+    font-size 2.058em
+    min-height 7.191em
+    min-width 224px
+    background-color #FFF
+    text-transform: uppercase
+    color #5C5C5C
+    &:before
+      margin-top: 1em
+      margin-bottom .4em
+      font-family: glyphs
+      font-size: 2em
+      color color-main-yellow
+      display block
+    &-1:before
+      content "\e90b"
+    &-2:before
+      content "\e90c"
+    &-3:before
+       content "\e90d"
+    &-4:before
+       content "\e906"
+    &-5:before
+      content "\e90e"
+
+
+
+/************************************\
+    SECTIONS CONTENT
+\************************************/
+
+.prod-view
+  &__sections
+    background-color color-grey-background
+    display none
+
+.prod-view__content-container .active
+  display block
+  background-color color-grey-background
+  width 100%
+  padding 0 2em
+  margin: 0 auto
+
+.prod-view__tabs-container .active a
+  background-color color-grey-background

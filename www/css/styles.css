@@ -636,6 +636,16 @@ body {
   bottom: -28px;
   right: 25px;
 }
+.prod-view {
+  max-width: 116em;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+.prod-view__synopsis-container {
+  max-width: 86.5em;
+  margin: 0 auto;
+  text-align: center;
+}
 .footer {
   height: 40em;
   position: relative;
@@ -2471,6 +2481,7 @@ ins.play-gif:hover {
 }
 .productions__background {
   background-color: #f5f5f5;
+  border-radius: 10px;
 }
 .productions__text-infos {
   margin-top: 1.431em;
@@ -2620,6 +2631,88 @@ ins.play-gif:hover {
     max-width: 100%;
     height: auto;
   }
+}
+.prod-view__title {
+  font-weight: bold;
+  font-size: 3.76em;
+  color: #000;
+}
+.prod-view__subtitle {
+  display: block;
+  color: #717171;
+  font-size: 1.62em;
+  margin-bottom: 1.852em;
+}
+.prod-view__videoplayer {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 5em;
+}
+.prod-view__synopsis {
+  display: block;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 2.95em;
+  letter-spacing: 0.73px;
+  font-weight: 500;
+  margin-bottom: 0.339em;
+}
+.prod-view__synopsis-paragraph {
+  font-size: 2.32em;
+  color: #5c5c5c;
+  line-height: 1.336em;
+}
+.prod-view__tabs-list {
+  display: inline-block;
+  max-width: 100%;
+}
+.prod-view__tabs-link {
+  display: inline-block;
+  text-align: center;
+  font-size: 2.058em;
+  min-height: 7.191em;
+  min-width: 224px;
+  background-color: #fff;
+  text-transform: uppercase;
+  color: #5c5c5c;
+}
+.prod-view__tabs-link:before {
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+  font-family: glyphs;
+  font-size: 2em;
+  color: #d9a613;
+  display: block;
+}
+.prod-view__tabs-link-1:before {
+  content: "\e90b";
+}
+.prod-view__tabs-link-2:before {
+  content: "\e90c";
+}
+.prod-view__tabs-link-3:before {
+  content: "\e90d";
+}
+.prod-view__tabs-link-4:before {
+  content: "\e906";
+}
+.prod-view__tabs-link-5:before {
+  content: "\e90e";
+}
+.prod-view__sections {
+  background-color: #f5f5f5;
+  display: none;
+}
+.prod-view__content-container .active {
+  display: block;
+  background-color: #f5f5f5;
+  width: 100%;
+  padding: 0 2em;
+  margin: 0 auto;
+}
+.prod-view__tabs-container .active a {
+  background-color: #f5f5f5;
 }
 .footer {
   background: url("../img/svg/footer_background.svg") no-repeat, #2e4157;

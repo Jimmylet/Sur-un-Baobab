@@ -25,6 +25,7 @@
       font-size: 2.32em
       color: #5C5C5C
       line-height: 1.336em // 31px
+      margin-bottom 4.310em // 100px
 
 /************************************\
   TABS LINK STYLE
@@ -42,7 +43,7 @@
     min-width 224px
     background-color #FFF
     text-transform: uppercase
-    color #5C5C5C
+    color color-main-yellow
     &:before
       margin-top: 1em
       margin-bottom .4em
@@ -61,8 +62,11 @@
     &-5:before
       content "\e90e"
 
+.prod-view__sections__title
+  display none
 
-
+.prod-view__tabs-container ul
+  max-width 100%
 /************************************\
     SECTIONS CONTENT
 \************************************/
@@ -76,8 +80,100 @@
   display block
   background-color color-grey-background
   width 100%
-  padding 0 2em
+  padding 3em 5em
   margin: 0 auto
 
 .prod-view__tabs-container .active a
   background-color color-grey-background
+  color #5C5C5C
+.prod-view__tabs-container .active a:before
+  color #5C5C5C
+.prod-view__tabs-container a
+  transition trans
+.prod-view__tabs-container a:hover
+  background-color color-grey-background
+  transition trans
+.prod-view__tabs-container .active a:hover
+  background-color color-grey-background
+
+
+  /************************************\
+    SECTIONS CONTENU
+  \************************************/
+
+.prod-view__sections__figure
+  max-width 100%
+  height auto
+  margin-bottom: 4em
+.prod-view__sections__figure-img
+  display block
+  margin: 0 auto
+  max-width 100%
+  height auto
+.prod-view__sections__subtitle
+  display block
+  font-weight: bold
+  font-size: 3em
+  margin-bottom: .5em
+  margin-top: .5em
+.prod-view__sections__paragraph
+  font-size: 2em
+  line-height 1.3em
+  margin-bottom 2em
+.prod-view__sections__paragraph-img-float
+  max-width 40%
+  height auto
+  float right
+  margin-left 5em
+.prod-view__sections__bloc-txt:after
+  content ""
+  display block
+  clear both
+.prod-view__sections__paragraph-img
+  max-width 100%
+  height auto
+.prod-view__content-container
+  margin-bottom 10em
+
+
+.prod-view__sections__affiche
+  max-width 30%
+  height auto
+  display block
+  margin: 0 auto
+  margin-bottom 5em
+
+  /************************************\
+    TABLE
+  \************************************/
+
+.prod-view__table
+  font-size: 2.053em
+.table__head
+  font-weight 500
+.table__head
+.table__data
+  padding .8em
+  border-bottom 1px solid #7C7C7C
+  text-align left
+.table__data
+  padding-left 2em
+.table__row
+  background-color color-grey-background
+.table__row:hover
+  background-color color-grey-background - 5%
+.table__row:nth-child(even)
+  background-color #FFF
+.table__row:nth-child(even):hover
+  background-color #FFF - 10%
+
+
+/************************************\
+  MEDIA
+\************************************/
+
+/*
++media-query( only screen, max-width 1176px )
+  .prod-view__tabs-link
+    font-size: 1.4em
+    min-width 124px*/

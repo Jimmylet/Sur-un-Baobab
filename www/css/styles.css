@@ -649,6 +649,29 @@ body {
 .prod-view__sections {
   margin-bottom: 5em;
 }
+.photos__container {
+  max-width: 105em;
+  margin: 0 auto;
+  padding: 0 3em;
+}
+.photos__intro__button-container {
+  margin: 0 auto;
+  position: absolute;
+  bottom: -5.5em;
+  position: absolute;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+.photos__intro {
+  position: relative;
+}
+.photos__intro-container {
+  margin: 0 auto;
+  max-width: 78em;
+}
 .footer {
   height: 40em;
   position: relative;
@@ -2880,6 +2903,69 @@ ins.play-gif:hover {
     margin-right: 10px;
     position: relative;
     top: 5px;
+  }
+}
+.photos-titlesection {
+  display: none;
+}
+.photos__intro {
+  background-color: #f5f5f5;
+  padding: 4em 6em;
+  border-radius: 8px;
+  margin-bottom: 15em;
+}
+.photos__intro__paragraph {
+  font-size: 2.32em;
+  letter-spacing: 0.57px;
+  line-height: 1.2em;
+  color: #5c5c5c;
+  margin-bottom: 1.293em;
+}
+.photos__intro__button {
+  display: block;
+  background-color: #d9a613;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2.62em;
+  height: 2.5em;
+  text-align: center;
+  line-height: 2.4em;
+  border-radius: 8px;
+  letter-spacing: 0.68px;
+  padding: 0 1.145em;
+}
+.photos__intro__button:after {
+  font-family: glyphs;
+  content: "\e90a";
+  margin-left: 1.145em;
+}
+.photos__intro__button:hover,
+.photos__intro__button:focus {
+  background-color: #c39511;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.photos__intro__button-text {
+  display: block;
+  margin-top: 5px;
+  font-size: 1.8em;
+  text-align: center;
+  color: #5c5c5c;
+}
+@media only screen and (max-width: 595px) {
+  .photos__intro__button {
+    font-size: 2em;
+  }
+  .photos__intro__paragraph {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (max-width: 368px) {
+  .photos__intro__button {
+    font-size: 1.5em;
+  }
+  .photos__intro__paragraph {
+    font-size: 1.2em;
   }
 }
 .footer {

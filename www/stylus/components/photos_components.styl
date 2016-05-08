@@ -1,0 +1,52 @@
+.photos
+  &-titlesection
+    display none
+  &__intro
+    background-color color-grey-background
+    padding 4em 6em
+    border-radius 8px
+    margin-bottom 15em
+    &__paragraph
+      font-size: 2.32em
+      letter-spacing: 0.57px;
+      line-height: 1.2em
+      color #5C5C5C
+      margin-bottom 1.293em // 30px
+    &__button
+      display: block
+      background-color color-main-yellow
+      color #FFF
+      text-transform: uppercase
+      font-size: 2.62em
+      height 2.5em
+      text-align center
+      line-height: 2.4em
+      border-radius 8px
+      letter-spacing: 0.68px
+      padding 0 1.145em // 30px
+      &:after
+        font-family: glyphs
+        content "\e90a"
+        margin-left 1.145em // 30px
+      &:hover
+      &:focus
+        background-color color-main-yellow - 10%
+        transition trans
+      &-text
+        display block
+        margin-top: 5px
+        font-size: 1.8em
+        text-align center
+        color #5C5C5C
+
++media-query( only screen, max-width 595px )
+  .photos__intro__button
+    font-size: 2em;
+  .photos__intro__paragraph
+    font-size: 1.5em
+
++media-query( only screen, max-width 368px )
+  .photos__intro__button
+    font-size: 1.5em;
+  .photos__intro__paragraph
+    font-size: 1.2em

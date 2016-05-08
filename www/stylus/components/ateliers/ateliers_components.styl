@@ -1,0 +1,59 @@
+.ateliers__section-title
+  display none
+
+.ateliers-article
+  text-align center
+  width 100%
+  border-top: 10px solid color-main-yellow
+  margin-bottom: 15em
+  &__background1
+    background-color color-grey-background
+    border-radius 0 0 8px 8px
+    width 90%
+    margin: 0 auto
+    padding 2.5em 0 7.5em 0
+  &__background2
+    border 10px solid #FFF
+    width 80%
+    border-radius 10px
+    margin: 0 auto
+    padding 0 2em
+  &__title
+    font-weight: bold
+    font-size: 3em
+    letter-spacing: 1.19px;
+    text-transform: uppercase
+    margin 0.833em 0 1.333em 0// 25px 40px
+  &__figure
+    margin-bottom: 4em
+    max-width 100%
+    &__img
+      max-width 100%
+      height auto
+.ateliers__button
+  position relative
+  top -15px
+  bottom: 0
+  text-transform: uppercase
+  color #FFF
+  background-color color-main-yellow
+  font-size 2.62em
+  padding 0.611em 2.595em //16px 68px
+  box-sizing content-box
+  border-radius 8px
+  border 2px solid color-main-yellow
+  &:hover
+  &:focus
+    background-color #FFF
+    color text-color
+    transition trans
+
++media-query( only screen, max-width 763px )
+  .ateliers-article
+    &__title
+      font-size: 2em
+
+
++media-query( only screen, max-width 463px )
+  .ateliers__button
+    font-size: 2em

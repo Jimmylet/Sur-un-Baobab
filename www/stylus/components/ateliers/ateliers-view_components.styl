@@ -1,0 +1,69 @@
+.ateliers-view__section-title
+  display none
+
+.step
+  padding-top 6em
+  padding-bottom 6em
+  &__title-container
+    text-align center
+    margin-bottom 10em
+  &__title
+  &__number
+    font-family: handofseanfont
+    color #000
+    font-size: 3.2em
+    display inline-block
+  &__number
+    margin-right 0.781em // 25px
+  &__text__title
+    display block
+    font-weight: bold
+    font-size: 2.62em
+    margin-bottom 0.763em // 20px
+  &__text__paragraph
+    font-size 2.02em
+  &__text-container
+    max-width 45em
+    float: left
+  &__content-container
+    margin-bottom 5em
+    &:after
+      content ""
+      display block
+      clear both
+  &__figure
+    float right
+  &__ul
+    margin-left 1.5em
+  &__li
+    font-size 2.02em
+    line-height 1.4em
+    &:before
+      content "-"
+      margin-right .5em
+
+.step:nth-child(odd)
+  background-color color-grey-background
+
++media-query( only screen, max-width 986px )
+  .step
+    &__figure
+    &__text-container
+      float none
+      margin 0 auto
+      text-align center
+    &__text__paragraph
+    &__ul
+      margin-bottom: 2em
+    &__figure__img
+      display block
+      margin 0 auto
+      max-width 100%
+      height auto
+
++media-query( only screen, max-width 786px )
+  .step__title
+    font-size: 2.5em
+  .step__number
+    font-size: 2.5em
+    margin-bottom 1em

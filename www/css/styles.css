@@ -727,6 +727,11 @@ body {
 .ateliers-article {
   position: relative;
 }
+.step__container {
+  max-width: 110em;
+  padding: 0 2.5em;
+  margin: 0 auto;
+}
 .footer {
   height: 40em;
   position: relative;
@@ -3378,9 +3383,8 @@ ins.play-gif:hover {
   padding: 0 2em;
 }
 .ateliers-article__title {
-  font-weight: bold;
+  font-family: hand_of_sean, Raleway, Helvetica, Arial, sans-serif;
   font-size: 3em;
-  letter-spacing: 1.19px;
   text-transform: uppercase;
   margin: 0.833em 0 1.333em 0;
 }
@@ -3421,6 +3425,92 @@ ins.play-gif:hover {
 @media only screen and (max-width: 463px) {
   .ateliers__button {
     font-size: 2em;
+  }
+}
+.ateliers-view__section-title {
+  display: none;
+}
+.step {
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+.step__title-container {
+  text-align: center;
+  margin-bottom: 10em;
+}
+.step__title,
+.step__number {
+  font-family: hand_of_sean, Raleway, Helvetica, Arial, sans-serif;
+  color: #000;
+  font-size: 3.2em;
+  display: inline-block;
+}
+.step__number {
+  margin-right: 0.781em;
+}
+.step__text__title {
+  display: block;
+  font-weight: bold;
+  font-size: 2.62em;
+  margin-bottom: 0.763em;
+}
+.step__text__paragraph {
+  font-size: 2.02em;
+}
+.step__text-container {
+  max-width: 45em;
+  float: left;
+}
+.step__content-container {
+  margin-bottom: 5em;
+}
+.step__content-container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.step__figure {
+  float: right;
+}
+.step__ul {
+  margin-left: 1.5em;
+}
+.step__li {
+  font-size: 2.02em;
+  line-height: 1.4em;
+}
+.step__li:before {
+  content: "-";
+  margin-right: 0.5em;
+}
+.step:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+@media only screen and (max-width: 986px) {
+  .step__figure,
+  .step__text-container {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .step__text__paragraph,
+  .step__ul {
+    margin-bottom: 2em;
+  }
+  .step__figure__img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 786px) {
+  .step__title {
+    font-size: 2.5em;
+  }
+  .step__number {
+    font-size: 2.5em;
+    margin-bottom: 1em;
   }
 }
 .footer {

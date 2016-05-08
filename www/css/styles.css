@@ -672,6 +672,40 @@ body {
   margin: 0 auto;
   max-width: 78em;
 }
+.contact__title-container {
+  position: absolute;
+  top: 25em;
+  width: 100%;
+}
+.contact__numero-container {
+  margin: 0 auto 5em;
+}
+.contact__numero-container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.contact__form-section-1,
+.contact__form-section-2,
+.contact__form-section-3 {
+  max-width: 87em;
+  margin: 0 auto;
+}
+.contact__names:after,
+.contact__objects:after,
+.contact__form-section-3:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.contact__firstname,
+.contact__email {
+  float: left;
+}
+.contact__lastname,
+.contact__subject {
+  float: right;
+}
 .footer {
   height: 40em;
   position: relative;
@@ -2966,6 +3000,218 @@ ins.play-gif:hover {
   }
   .photos__intro__paragraph {
     font-size: 1.2em;
+  }
+}
+.header-contact {
+  background: url("../img/jpg/contact-photo.jpg") no-repeat center center;
+  height: 50em;
+}
+.body-contact {
+  background-color: #f9f9f9;
+}
+.contact__title-container {
+  text-align: center;
+}
+.contact__title {
+  font-size: 4em;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1.34px;
+  text-shadow: 0px 2px 1px rgba(0,0,0,0.5);
+}
+.contact__subtitle {
+  margin-top: 5px;
+  display: block;
+  font-weight: 500;
+  font-size: 2em;
+  color: #fafafa;
+  letter-spacing: 0.65px;
+}
+.contact__numero-container {
+  max-width: 46em;
+}
+.contact__telephone__title,
+.contact__whatsapp__title {
+  font-size: 1.62em;
+  font-weight: bold;
+  color: #343434;
+  margin-right: 10px;
+}
+.contact__telephone__title:before,
+.contact__whatsapp__title:before {
+  font-family: glyphs;
+  font-size: 1.6em;
+  position: relative;
+  top: 5px;
+  color: #2e4157;
+}
+.contact__telephone__title:before {
+  content: "\e91b";
+}
+.contact__whatsapp__title:before {
+  content: "\e91a";
+}
+.contact__telephone__link,
+.contact__whatsapp__link {
+  display: block;
+  font-size: 1.62em;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.contact__whatsapp-container {
+  float: right;
+}
+.contact__telephone-container {
+  float: left;
+}
+.contact__label {
+  display: block;
+  margin-bottom: 1.25em;
+  font-weight: 500;
+  font-size: 1.2em;
+  color: #3c3d41;
+  letter-spacing: 0.4px;
+}
+.contact__input {
+  min-width: 25.926em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  background: #eee;
+  -webkit-box-shadow: inset 0px 1px 0px 0px rgba(0,0,0,0.1);
+  box-shadow: inset 0px 1px 0px 0px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  color: #3c3d41;
+  font-size: 1.62em;
+  border: none;
+  padding: 0.926em 1.173em;
+  font-weight: bold;
+  margin-bottom: 1.852em;
+}
+.contact__input::-webkit-input-placeholder {
+  font-weight: lighter;
+}
+.contact__input::-moz-placeholder {
+  font-weight: lighter;
+}
+.contact__input:-ms-input-placeholder {
+  font-weight: lighter;
+}
+.contact__input::placeholder {
+  font-weight: lighter;
+}
+.contact__form-section-1__container {
+  padding-bottom: 1em;
+  border-bottom: 1px solid #eee;
+}
+.contact__form__submit {
+  font-size: 2.62em;
+  padding: 0.305em 1.527em;
+  border: 2px solid #d9a613;
+  border-radius: 6px;
+  background-color: #fff;
+  font-weight: regular;
+  cursor: pointer;
+  font-weight: 300;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  float: right;
+}
+.contact__form__submit:hover,
+.contact__form__submit:focus {
+  background-color: #d9a613;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  color: #fff;
+}
+.contact__form__attachement {
+  font-size: 1em;
+  color: #3c3d41;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.contact__form__attachement:before {
+  font-family: glyphs;
+  content: "\e907";
+  margin-right: 1em;
+}
+.contact__form-section-2 textarea {
+  width: 100%;
+  min-height: 15.432em;
+}
+.contact__form-section-2__container {
+  background-color: #fff;
+  padding-top: 3em;
+}
+.contact__form-section-3__container {
+  background-color: #fff;
+}
+.contact__form-section-3 {
+  padding-bottom: 5em;
+}
+@media only screen and (max-width: 928px) {
+  .contact__form__submit,
+  .contact__firstname,
+  .contact__email,
+  .contact__lastname,
+  .contact__subject {
+    float: none;
+  }
+  .contact__input {
+    max-width: 420px;
+    width: 100%;
+    min-width: 0;
+  }
+  .contact__firstname,
+  .contact__lastname,
+  .contact__email,
+  .contact__subject,
+  .contact__message {
+    padding: 0 2.5em;
+    max-width: 47em;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .contact__form-section-3 {
+    text-align: center;
+    max-width: 47em;
+    padding: 0 2.5em 5em 2.5em;
+  }
+  .contact__form__submit {
+    display: block;
+    margin-top: 1em;
+    margin: 1em auto 0;
+  }
+  .contact__numero-container {
+    max-width: 47em;
+    padding: 0 2.5em;
+  }
+  .contact__telephone-container,
+  .contact__whatsapp-container {
+    float: none;
+    text-align: center;
+  }
+  .contact__telephone-container {
+    margin-bottom: 3em;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .contact__title,
+  .contact__subtitle {
+    padding: 0 25px;
+  }
+  .contact__title {
+    font-size: 2.5em;
+  }
+  .contact__subtitle {
+    font-size: 1.5em;
+  }
+  .header-contact {
+    height: 30em;
+  }
+  .contact__title-container {
+    top: 15em;
   }
 }
 .footer {

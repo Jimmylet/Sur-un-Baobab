@@ -1,0 +1,177 @@
+.header-contact
+  background url("../img/jpg/contact-photo.jpg") no-repeat center center
+  height 50em
+.body-contact
+  background-color #F9F9F9
+.contact
+  &__title-container
+    text-align center
+  &__title
+    font-size: 4em
+    font-weight: bold
+    color: #FFF
+    letter-spacing: 1.34px;
+    text-shadow: 0px 2px 1px rgba(0,0,0,0.50);
+  &__subtitle
+    margin-top 5px
+    display block
+    font-weight: 500
+    font-size: 2em
+    color: #FAFAFA
+    letter-spacing: 0.65px
+  &__numero-container
+    max-width 46em
+  &__telephone__title
+  &__whatsapp__title
+    font-size: 1.62em
+    font-weight: bold
+    color #343434
+    margin-right: 10px
+    &:before
+      font-family: glyphs
+      font-size: 1.6em
+      position: relative
+      top 5px
+      color #2E4157
+  &__telephone__title:before
+    content "\e91b"
+  &__whatsapp__title:before
+    content "\e91a"
+  &__telephone__link
+  &__whatsapp__link
+    display block
+    font-size: 1.62em
+    font-weight: 500
+    margin-top 10px
+  &__whatsapp-container
+    float right
+  &__telephone-container
+    float: left
+
+
+/************************************\
+    STYLE FORM
+\************************************/
+
+.contact
+  &__label
+    display block
+    margin-bottom 1.250em // 15px
+    font-weight: 500
+    font-size: 1.2em
+    color: #3C3D41
+    letter-spacing: 0.4px
+  &__input
+    min-width: 25.926em // 420px
+    appearance none
+    outline none
+    background #EEEEEE
+    box-shadow inset 0px 1px 0px 0px rgba(0,0,0,0.10)
+    border-radius 4px
+    color #3C3D41
+    font-size: 1.62em
+    border none
+    padding 0.926em 1.173em // 15px, 19px
+    font-weight: bold
+    margin-bottom: 1.852em // 30px
+    &::placeholder
+      font-weight: lighter
+  &__form-section-1__container
+    padding-bottom 1em
+    border-bottom 1px solid #EEE
+  &__form__submit
+    font-size: 2.62em
+    padding 0.305em 1.527em // 8px, 40px
+    border 2px solid color-main-yellow
+    border-radius 6px
+    background-color #FFF
+    font-weight regular
+    cursor pointer
+    font-weight 300
+    transition trans
+    float: right
+    &:hover
+    &:focus
+      background-color color-main-yellow
+      transition trans
+      color #FFF
+  &__form__attachement
+    font-size 1em
+    color #3C3D41
+    text-transform: uppercase
+    letter-spacing 2px
+    &:before
+      font-family glyphs
+      content "\e907"
+      margin-right 1em
+
+.contact__form-section-2
+  & textarea
+    width 100%
+    min-height 15.432em // 250px
+
+.contact__form-section-2__container
+  background-color #FFF
+  padding-top 3em
+
+.contact__form-section-3__container
+  background-color #FFF
+.contact__form-section-3
+  padding-bottom 5em
+
+
+
++media-query( only screen, max-width 928px )
+  .contact
+    &__form__submit
+    &__firstname
+    &__email
+    &__lastname
+    &__subject
+      float none
+
+  .contact__input
+    max-width 420px
+    width 100%
+    min-width 0
+  .contact__firstname
+  .contact__lastname
+  .contact__email
+  .contact__subject
+  .contact__message
+    padding 0 2.5em
+    max-width 47em
+    margin 0 auto
+    width 100%
+  .contact__form-section-3
+    text-align center
+    max-width 47em
+    padding 0 2.5em 5em 2.5em
+  .contact__form__submit
+    display block
+    margin-top 1em
+    margin 1em auto 0
+  .contact__numero-container
+    max-width 47em
+    padding 0 2.5em
+  .contact__telephone-container
+  .contact__whatsapp-container
+    float none
+    text-align center
+  .contact__telephone-container
+    margin-bottom 3em
+
+
++media-query( only screen, max-width 620px )
+  .contact
+    &__title
+    &__subtitle
+      padding 0 25px
+    &__title
+      font-size: 2.5em
+    &__subtitle
+      font-size: 1.5em
+  .header-contact
+    height 30em
+  .contact__title-container
+    top 15em

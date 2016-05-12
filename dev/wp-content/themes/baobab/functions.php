@@ -1,40 +1,46 @@
 <?php
 
+
+
 /*
- * Define post types
+ * Define post_types & taxonomies
  */
 
-add_theme_support('post-thumbnails'); // FAIRE FONCTIONNER LES THUMBNAILS
+add_theme_support( 'post-thumbnails' );
 
-// Créer de nouveaux post types (des customs post type)
-/*register_post_type( $post_type, $args );*/ // VOIR COMMENT CA S'ECRIT
-// Ici on définit l'interface d'administrations, avec les ongles comme celui de l'article. Ici c'est un projet
 register_post_type( 'project', [
-      'label' => 'Court-métrages',
-      'labels' => [
-            'singular_name' => 'Court-métrage',
-            'add_new' => 'Ajouter un nouveau projet'
-      ],
-      'description' => 'La liste de tous les projets (court-métrages, ateliers, …) affichés sur le site.',
-      'public' => true,
-      'menu_position' => 5,
-      'menu_icon' => 'dashicons-editor-video',  // Voir les dashs icons dans wordpress
-      'supports' => ['title', 'editor', 'thumbnail'],
-      "has_archive" => true
-] );
+            'label' => __('Court-métrages','b'),
+            'labels' => [
+                        'singular_name' => __('Court-métrage','b'),
+                        'add_new' => __('Ajouter un nouveau projet','b')
+                  ],
+            'description' => __('La liste de tous les projets (court-métrages, ateliers, ...) affichés sur le site.','b'),
+            'public' => true,
+            'menu_position' => 5,
+            'menu_icon' => 'dashicons-editor-video',
+            'supports' => ['title','editor','thumbnail'],
+            'has_archive' => true
+      ] );
 
-register_taxonomy('project-type', 'project', [
-      'label' => 'Types de projets',
-      'labels' => [
-            'singular_name' => 'Type de projet'
-      ],
-      'public' => true,
-      'description' => 'Le procédé utilisé pour créer ce projet',
-      'hierarchical' => true
-]);
+register_taxonomy( 'project-type', 'project', [
+            'label' => __('Types de projets','b'),
+            'labels' => [
+                  'singular_name' => __('Type de projet','b')
+            ],
+            'public' => true,
+            'description' => __('Le procédé utilisé pour créer ce projet','b'),
+            'hierarchical' => true
+      ] );
+
 
 /*
- * Generate an exercpt based on custom rules, used on the homepage.
+ * Register nav menus
+ */
+
+register_nav_menu('main-nav', __('Menu principal utilisé dans le header.','b') );
+
+/*
+ * Generates a custom excerpt, used on the homepage
  */
 
 function get_the_custom_excerpt($length = 150)
@@ -42,6 +48,11 @@ function get_the_custom_excerpt($length = 150)
       $excerpt = get_the_content();
       $excerpt = strip_shortcodes( $excerpt );
       $excerpt = strip_tags( $excerpt );
+      // Pourrait être amélioré de façon significative.
+      // Par exemple :
+      // - ne pas couper en plein milieu d'un mot
+      // - ajouter un point de suspension quand on a dû couper dans le texte
+      // - etc.
       return substr($excerpt, 0, $length);
 }
 
@@ -50,16 +61,48 @@ function the_custom_excerpt($length = 150)
       echo get_the_custom_excerpt($length);
 }
 
+/*
+ * Generates a link label containing the post_title (from the loop)
+ */
 
-/// Mettre un text dans un lien et mettre dedans un %s,
-//// Generate a link label containing the post_title
 function get_the_link($string, $replace = '%s')
 {
-      // On remplace le symbole '%s' (par défaut) par le titre du post courant, entouré d'un span (avec une classe "sro" = "Screen readers only" qui sera cachée en CSS. Le but étant de créer un lien unique sur la page, tout en gardant un lien formaté de façon simple et surtout de façon ) pouvoir le traduire.
-      return str_replace('$replace', '<span class="sro">' . get_the_title() . '</span>', __($string, 'b'));
+      // Mode opératoire :
+      // - On remplace la string "%s" (ou celle fournie par $replace) par le titre du post courant dans the_loop, entouré d'un span.
+      // - Ne pas oublier d'ajouter une classe sur ce span (dans ce cas, une classe "sro" pour "Screen Readers Only"
+      // - Via le CSS, on cible cette classe afin de lui attribuer les styles nécessaires pour la cacher.
+      // Le but étant de créer un lien unique, tout en respectant un design demandant une répétition de liens qui, à priori, seraient identiques (par exemple : "Lire la suite", "Voir plus", ...).
+      // Cette amélioration va impacter l'accessibilité de votre site, mais donc aussi son référencement.
+      return str_replace($replace, '<span class="sro">' . get_the_title() . '</span>', __($string,'b'));
 }
 
 function the_link($string, $replace = '%s')
 {
-      echo get_the_link(replace);
+      echo get_the_link($string, $replace);
+}
+
+
+/// MENU
+
+function b_get_menu_id( $location ) {
+      $locations = get_nav_menu_locations();
+      if(isset($locations[$location])) {
+            return $locations[$location];
+            return false;
+      }
+}
+
+function b_get_menu_items( $location ){
+      $a = [];
+
+      foreach (wp_get_nav_menu_items( b_get_menu_id($location) ) as $obj ){
+            $item = new stdClass();
+            $item->label = $obj->title;
+            $item->url = $obj->url;
+            $item->icon = $obj->classes[0];
+            array_push($a, $item);
+      }
+
+      return $a;
+      /*var_dump($a);*/ // Utiliser var dump pour voir à quoi se rapporte les éléments
 }

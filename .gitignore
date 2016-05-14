@@ -1,9 +1,10 @@
 assets
 projet-sur-un-baobab-master
 Mockups/mockups.bmpr
-dev/*
-!dev/wp-content/
-dev/wp-content/*
-!dev/wp-content/themes/
-dev/wp-content/themes/*
-!dev/wp-content/themes/baobab
+dev_real/*
+!dev_real/wp-content/
+dev_real/wp-content/*
+!dev_real/wp-content/themes/
+dev_real/wp-content/themes/*
+!dev_real/wp-content/themes/baobab
+dev_exercice/*

@@ -218,9 +218,6 @@ body {
   position: absolute;
   color: #fff;
 }
-.header {
-  position: relative;
-}
 .header__logo {
   display: inline-block;
   width: 8.5em;
@@ -286,7 +283,7 @@ body {
   margin-top: 1.527em;
 }
 .intro-text {
-  padding: 0 2em 7.5em;
+  padding: 0 0 5em;
 }
 .intro-text__container {
   max-width: 76em;
@@ -1260,7 +1257,7 @@ body {
   }
 }
 .intro-text__paragraph {
-  font-size: 2.62em;
+  font-size: 2.22em;
   max-width: 20.344em;
   margin-bottom: 0.763em;
 }
@@ -1880,7 +1877,7 @@ body {
   font-size: 4.8em;
   text-transform: uppercase;
 }
-.desc-projet__title__text-yellow {
+.desc-projet__title i {
   color: #d9a613;
 }
 .desc-projet__title strong {

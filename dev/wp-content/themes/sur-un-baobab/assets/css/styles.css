@@ -218,9 +218,6 @@ body {
   position: absolute;
   color: #fff;
 }
-.header {
-  position: relative;
-}
 .header__logo {
   display: inline-block;
   width: 8.5em;
@@ -271,7 +268,7 @@ body {
 }
 .bottom-header__text {
   display: inline-block;
-  max-width: 28em;
+  max-width: 25em;
   margin-top: 0.7em;
 }
 .intro-img {
@@ -286,7 +283,7 @@ body {
   margin-top: 1.527em;
 }
 .intro-text {
-  padding: 0 0 4em 0;
+  padding: 0 0 5em;
 }
 .intro-text__container {
   max-width: 76em;
@@ -1464,8 +1461,7 @@ body {
           filter: grayscale(100%);
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
-/************************************
-      DONATE
+/************************************      DONATE
   \************************************/
 }
 .donate {
@@ -1676,8 +1672,7 @@ body {
   background: rgba(7,7,7,0.5);
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
-/************************************
-    MEDIAQUERIES LAST-ARTICLES NEWS
+/************************************    MEDIAQUERIES LAST-ARTICLES NEWS
   \************************************/
 }
 @media only screen and (max-width: 965px) {
@@ -1844,8 +1839,7 @@ body {
     height: auto;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-/************************************
-       LAST NEWS ARTICLE
+/************************************       LAST NEWS ARTICLE
       \************************************/
   }
 }
@@ -1883,7 +1877,7 @@ body {
   font-size: 4.8em;
   text-transform: uppercase;
 }
-.desc-projet__title__text-yellow {
+.desc-projet__title i {
   color: #d9a613;
 }
 .desc-projet__title strong {
@@ -2764,8 +2758,7 @@ body {
 }
 .prod-view__tabs-container .active a:hover {
   background-color: #f5f5f5;
-/************************************
-    SECTIONS CONTENU
+/************************************    SECTIONS CONTENU
   \************************************/
 }
 .prod-view__sections__figure {
@@ -2815,8 +2808,7 @@ body {
   display: block;
   margin: 0 auto;
   margin-bottom: 5em;
-/************************************
-    TABLE
+/************************************    TABLE
   \************************************/
 }
 .prod-view__table {

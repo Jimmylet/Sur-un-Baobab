@@ -21,11 +21,11 @@
                               <nav class="menu">
                                     <a href="<?php echo get_home_url(); ?>" class="header__logo">Logo</a>
                                     <input type="checkbox" class="menu__icon" id="menu__icon">
-                                    <label for="menu__icon" class="menu__icon__label" id="menu__icon__label">Menu
+                                    <label for="menu__icon" class="menu__icon__label" id="menu__icon__label"><?php _e('Menu','b');?>
                                           <span></span>
                                     </label>
                                     <div class="menu__container">
-                                          <h2 class="menu__title" aria-level="2">Menu de navigation</h2>
+                                          <h2 class="menu__title" aria-level="2"><?php _e('Menu de navigation','b');?></h2>
                                           <div class="menu__lang__deskopt">
                                                 <a href="" class="menu__lang__deskopt__item" lang="fr">FR</a>
                                                 <a href="" class="menu__lang__deskopt__item" lang="es">ES</a>

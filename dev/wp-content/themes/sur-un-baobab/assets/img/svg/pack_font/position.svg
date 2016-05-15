@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="18px" height="28px" viewBox="0 0 18 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7 (28169) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Court-métrage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-822.000000, -433.000000)" fill="#2E4157">
+            <g id="Film_1" transform="translate(193.000000, 334.000000)">
+                <g id="location" transform="translate(628.558322, 99.361949)">
+                    <g id="location-pin">
+                        <g id="Location_pin">
+                            <path d="M9.35788489,0.0152370602 C4.68180041,0.0152370602 0.892851444,3.78894897 0.892851444,8.46334044 C0.892851444,16.5457544 9.35788489,27.086414 9.35788489,27.086414 C9.35788489,27.086414 17.8229183,16.5440614 17.8229183,8.46334044 C17.8229183,3.79064198 14.0339694,0.0152370602 9.35788489,0.0152370602 L9.35788489,0.0152370602 Z M9.35788489,13.1377319 C6.83191891,13.1377319 4.78676683,11.0908868 4.78676683,8.56661384 C4.78676683,6.04234087 6.83191891,3.99549578 9.35788489,3.99549578 C11.8804649,3.99549578 13.9273099,6.04234087 13.9273099,8.56661384 C13.9273099,11.0908868 11.8804649,13.1377319 9.35788489,13.1377319 L9.35788489,13.1377319 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

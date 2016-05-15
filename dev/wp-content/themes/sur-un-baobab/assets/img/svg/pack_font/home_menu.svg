@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 38 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g id="Plan de travail1" transform="matrix(0.993575,0,0,0.981509,-0.0626532,-0.965282)">
+        <clipPath id="_clip1">
+            <rect x="0.063" y="0.983" width="37.996" height="33.98"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <g transform="matrix(1.00647,0,0,1.01884,0.0641893,0.985828)">
+                <clipPath id="_clip2">
+                    <path d="M33.032,19.568L33.032,33.355L23.594,33.355L23.594,24.164L14.157,24.164L14.157,33.355L4.719,33.355L4.719,19.568L18.876,9.228L33.032,19.568Z"/>
+                </clipPath>
+                <g clip-path="url(#_clip2)">
+                    <rect x="-0.281" y="4.228" width="38.313" height="34.127" style="fill:rgb(204,204,204);fill-rule:nonzero;"/>
+                </g>
+            </g>
+            <g transform="matrix(1.00647,0,0,1.01884,0.0641893,0.985828)">
+                <clipPath id="_clip3">
+                    <path d="M37.751,20.088L18.876,5.818L0,20.088L0,14.27L18.876,0L37.751,14.27L37.751,20.088Z"/>
+                </clipPath>
+                <g clip-path="url(#_clip3)">
+                    <rect x="-5" y="-5" width="47.751" height="30.088" style="fill:rgb(204,204,204);fill-rule:nonzero;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

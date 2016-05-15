@@ -6,5 +6,4 @@ dev/*
 dev/wp-content/*
 !dev/wp-content/themes/
 dev/wp-content/themes/*
-!dev/wp-content/themes/baobab
-dev/*
+!dev/wp-content/themes/sur-un-baobab

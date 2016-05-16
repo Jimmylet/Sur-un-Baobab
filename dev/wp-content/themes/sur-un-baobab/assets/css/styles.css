@@ -268,7 +268,7 @@ body {
 }
 .bottom-header__text {
   display: inline-block;
-  max-width: 25em;
+  max-width: 28em;
   margin-top: 0.7em;
 }
 .intro-img {
@@ -1137,7 +1137,7 @@ body {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 705px) {
   .bottom-header {
     display: none;
   }
@@ -1178,7 +1178,7 @@ body {
   content: "\e917";
   font-size: 1.7em;
   position: relative;
-  right: -5px;
+  right: -3px;
 }
 .breadcrumb__link:last-child:after {
   display: none;

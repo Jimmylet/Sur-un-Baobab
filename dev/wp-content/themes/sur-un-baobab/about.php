@@ -11,18 +11,8 @@ get_header();
 <div class="site-content">
     <div class="container">
 
-        <ol class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-            <li class="breadcrumb__link" itemprop="title">
-                <a href="../index.html" class="breadcrumb__link__text" itemprop="url">
-                    Accueil
-                </a>
-            </li>
-            <li class="breadcrumb__link" itemprop="title">
-                <a href="projet.html" class="breadcrumb__link__text" itemprop="url">
-                    Projet
-                </a>
-            </li>
-        </ol>
+        <?php the_breadcrumb(); ?>
+
         <main>
             <section class="desc-projet">
                 <div class="desc-projet__container">

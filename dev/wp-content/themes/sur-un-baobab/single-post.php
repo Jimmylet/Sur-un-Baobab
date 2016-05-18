@@ -76,7 +76,7 @@ get_header();
                                     </div>-->
                                     <!-- Partager l'article -->
                                     <div class="news-view__partager">
-                                          <span class="news__view-partager__text">Partager&nbsp;:</span>
+                                          <span class="news__view-partager__text"><?php _e('Partager','b');?>&nbsp;:</span>
                                           <a href="#" class="news-view__link follow-us__item follow-us__item-fb">
                                                 <span class="visuallyhidden">Facebook</span>
                                           </a>

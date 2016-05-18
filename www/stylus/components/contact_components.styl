@@ -100,10 +100,16 @@
     color #3C3D41
     text-transform: uppercase
     letter-spacing 2px
+    cursor pointer
     &:before
       font-family glyphs
       content "\e907"
       margin-right 1em
+    &:hover
+    &:focus
+      font-weight: bold
+    &-input
+      display none
 
 .contact__form-section-2
   & textarea

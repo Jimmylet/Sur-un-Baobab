@@ -3083,11 +3083,19 @@ body {
   color: #3c3d41;
   text-transform: uppercase;
   letter-spacing: 2px;
+  cursor: pointer;
 }
 .contact__form__attachement:before {
   font-family: glyphs;
   content: "\e907";
   margin-right: 1em;
+}
+.contact__form__attachement:hover,
+.contact__form__attachement:focus {
+  font-weight: bold;
+}
+.contact__form__attachement-input {
+  display: none;
 }
 .contact__form-section-2 textarea {
   width: 100%;

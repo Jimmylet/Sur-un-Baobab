@@ -26,11 +26,11 @@ Template Name: Homepage
                         <nav class="menu">
                               <a href="<?php echo get_home_url(); ?>" class="header__logo">Logo</a>
                               <input type="checkbox" class="menu__icon" id="menu__icon">
-                              <label for="menu__icon" class="menu__icon__label" id="menu__icon__label">Menu
+                              <label for="menu__icon" class="menu__icon__label" id="menu__icon__label"><?php _e('Menu','b');?>
                                     <span></span>
                               </label>
                               <div class="menu__container">
-                                    <h2 class="menu__title" aria-level="2">Menu de navigation</h2>
+                                    <h2 class="menu__title" aria-level="2"><?php _e('Menu de navigation','b');?></h2>
                                     <div class="menu__lang__deskopt">
                                           <a href="" class="menu__lang__deskopt__item" lang="fr">FR</a>
                                           <a href="" class="menu__lang__deskopt__item" lang="es">ES</a>
@@ -112,9 +112,9 @@ Template Name: Homepage
 
             </div>
             <section class="last-news">
-                  <h2 class="last-news__title" aria-level="2">Nos dernières nouvelles</h2>
+                  <h2 class="last-news__title" aria-level="2"><?php _e('Nos dernières nouvelles','b');?></h2>
 							<span class="last-news__newsletters">
-								Ne manquez plus rien, <a href="#" class="last-news__newsletters__link">abonnez-vous &nbsp;!</a>
+								<?php _e('Ne ratez plus rien','b');?>, <a href="#" class="last-news__newsletters__link"><?php _e('abonnez-vous','b');?> &nbsp;!</a>
 							</span>
                   <svg class="last-news__line2" width="2" height="98" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 1.5V97" stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd"

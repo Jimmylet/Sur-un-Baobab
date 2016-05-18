@@ -5,6 +5,21 @@
  */
 
 add_theme_support( 'post-thumbnails' );
+add_image_size( 'thumb-article', 931, 621, true );
+
+add_filter( 'thumb-article', 'wpshout_custom_sizes' );
+function wpshout_custom_sizes( $sizes ) {
+      return array_merge( $sizes, array(
+          'thumb-article' => __( 'image article' ),
+      ) );
+}
+
+function baobab_custom_thumbnail_size(){
+      add_image_size( 'thumb-article', 931, 621 );
+}
+add_action( 'after_setup_baobab', 'baobab_custom_thumbnail_size' );
+
+
 
 register_post_type( 'project', [
             'label' => __('Court-métrages','b'),
@@ -143,10 +158,11 @@ function the_breadcrumb() {
             echo 'Accueil';
             echo "</a></li>";
             if (is_category() || is_single()) {
-                  echo '<li class="breadcrumb__link>';
-                  the_category(' </li><li class="breadcrumb__link> ');
+                  echo '<li class="breadcrumb__link">';
+                  echo '<a class="breadcrumb__link__text" href="';
+                  the_category('</li><li class="breadcrumb__link>');
                   if (is_single()) {
-                        echo "</li><li class=\"breadcrumb__link>";
+                        echo '</li><li class=\"breadcrumb__link>';
                         the_title();
                         echo '</li>';
                   }
@@ -168,3 +184,42 @@ function the_breadcrumb() {
       elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
       echo '</ol>';
 }
+
+function the_breadcrumb_article(){
+      echo '<ol class="breadcrumb">';
+      if (!is_home()) {
+            echo '<li class="breadcrumb__link"><a class="breadcrumb__link__text" href="';
+            echo get_home_url();
+            echo '">';
+            echo 'Accueil';
+            echo "</a></li>";
+            if (is_category() || is_single()) {
+                  echo '<li class="breadcrumb__link">';
+                  echo '<a class="breadcrumb__link__text" href="">';
+                  echo 'Actualités</a>';
+                  echo '</li><li class="breadcrumb__link>';
+                  if (is_single()) {
+                        echo '</li><li class=\"breadcrumb__link>';
+                        the_title();
+                        echo '</li>';
+                  }
+            } elseif (is_page()) {
+                  echo '<li class="breadcrumb__link"><a class="breadcrumb__link__text" href="';
+                  echo get_permalink();
+                  echo '">';
+                  echo the_title();
+                  echo '</a>';
+                  echo '</li>';
+            }
+      }
+      echo '</ol>';
+}
+
+
+    $phrase = get_the_content();
+    // This is where wordpress filters the content text and adds paragraphs
+    $phrase = apply_filters('the_content', $phrase);
+    $replace = '<p class="news-view__paragraph" ">';
+
+    echo str_replace('<p>', $replace, $phrase);
+

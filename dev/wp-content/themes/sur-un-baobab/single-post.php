@@ -36,11 +36,8 @@ get_header();
                                     // This is where wordpress filters the content text and adds paragraphs
                                     $phrase = apply_filters('the_content', $phrase);
                                     $replace_p = '<p class="news-view__paragraph" ">';
-                                    $subtitle = apply_filters('the_content', $subtitle);
-                                    $replace_subtitle = '<span class="news-view__subtitle">';
 
                                     echo str_replace('<p>', $replace_p, $phrase);
-                                    echo str_replace('<h1>', $replace_subtitle, $subtitle);
                                     ?>
                                    <!-- <p class="news-view__paragraph">
                                     </p>
@@ -77,8 +74,23 @@ get_header();
                                                 <span class="visuallyhidden">Instagram</span>
                                           </a>
                                     </div>-->
-									<span class="news-view__tags">Tags&nbsp;: <a href="#">2016</a>, <a href="#">Diffusion</a>, <a
-                                              href="#">Droits de la femme</a>, <a href="#">surunbaobab</a></span>
+                                    <!-- Partager l'article -->
+                                    <div class="news-view__partager">
+                                          <span class="news__view-partager__text">Partager&nbsp;:</span>
+                                          <a href="#" class="news-view__link follow-us__item follow-us__item-fb">
+                                                <span class="visuallyhidden">Facebook</span>
+                                          </a>
+                                          <a href="#" class="news-view__link follow-us__item follow-us__item-tw">
+                                                <span class="visuallyhidden">Twitter</span>
+                                          </a>
+                                          <a href="#" class="news-view__link follow-us__item follow-us__item-inst">
+                                                <span class="visuallyhidden">Instagram</span>
+                                          </a>
+                                    </div>
+                                    <!-- TAGS-->
+									<span class="news-view__tags">Tags&nbsp;:
+                                          <?php the_tags( '<a>', '</a>, '); ?>
+                                    </span>
                               </article>
                               <?php endwhile; endif; ?>
 

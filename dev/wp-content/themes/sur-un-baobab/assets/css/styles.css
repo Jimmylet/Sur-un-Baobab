@@ -2400,10 +2400,11 @@ body {
   text-transform: uppercase;
   margin-top: 0.901em;
   margin-bottom: 0.601em;
+  line-height: 1.25em;
 }
 .news-view__paragraph {
   font-size: 2.058em;
-  line-height: 1.3em;
+  line-height: 1.4em;
   margin-bottom: 0.997em;
 }
 .news-view__paragraph strong {
@@ -2416,6 +2417,9 @@ body {
 .news-view__paragraph a:hover,
 .news-view__paragraph a:focus {
   text-decoration: underline;
+}
+.news-view__paragraph i {
+  font-style: italic;
 }
 .news-view__subtitle {
   display: inline-block;
@@ -2438,6 +2442,8 @@ body {
   font-style: italic;
   border-left: 8px solid #2e4157;
   padding-left: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   color: #5c5c5c;
 }
 .news-view__tags {
@@ -2453,7 +2459,10 @@ body {
 .news-view__link {
   margin-right: 10px;
 }
-.news__view-partager {
+.news-view__partager {
+  margin-top: 4em;
+}
+.news__view-partager__text {
   font-size: 1.5em;
   font-weight: 500;
   position: relative;

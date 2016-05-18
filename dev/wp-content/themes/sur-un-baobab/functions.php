@@ -150,9 +150,9 @@ function b_get_languages()
  */
 
 function the_breadcrumb() {
-      echo '<ol class="breadcrumb">';
+      echo '<ol class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">';
       if (!is_home()) {
-            echo '<li class="breadcrumb__link"><a class="breadcrumb__link__text" href="';
+            echo '<li class="breadcrumb__link"  itemprop="title"><a class="breadcrumb__link__text" href="';
             echo get_home_url();
             echo '">';
             echo 'Accueil';
@@ -167,7 +167,7 @@ function the_breadcrumb() {
                         echo '</li>';
                   }
             } elseif (is_page()) {
-                  echo '<li class="breadcrumb__link"><a class="breadcrumb__link__text" href="';
+                  echo '<li class="breadcrumb__link"><a class="breadcrumb__link__text"  itemprop="link" href="';
                   echo get_permalink();
                   echo '">';
                   echo the_title();
@@ -175,20 +175,13 @@ function the_breadcrumb() {
                   echo '</li>';
             }
       }
-      elseif (is_tag()) {single_tag_title();}
-      elseif (is_day()) {echo"<li>Archive for "; the_time('F jS, Y'); echo'</li>';}
-      elseif (is_month()) {echo"<li>Archive for "; the_time('F, Y'); echo'</li>';}
-      elseif (is_year()) {echo"<li>Archive for "; the_time('Y'); echo'</li>';}
-      elseif (is_author()) {echo"<li>Author Archive"; echo'</li>';}
-      elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "<li>Blog Archives"; echo'</li>';}
-      elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
       echo '</ol>';
 }
 
 function the_breadcrumb_article(){
-      echo '<ol class="breadcrumb">';
+      echo '<ol class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">';
       if (!is_home()) {
-            echo '<li class="breadcrumb__link"><a class="breadcrumb__link__text" href="';
+            echo '<li class="breadcrumb__link"  itemprop="title"><a class="breadcrumb__link__text" itemprop="url" href="';
             echo get_home_url();
             echo '">';
             echo 'Accueil';
@@ -197,11 +190,12 @@ function the_breadcrumb_article(){
                   echo '<li class="breadcrumb__link">';
                   echo '<a class="breadcrumb__link__text" href="">';
                   echo 'Actualités</a>';
-                  echo '</li><li class="breadcrumb__link>';
+                  echo '</li>';
                   if (is_single()) {
-                        echo '</li><li class=\"breadcrumb__link>';
+                        echo '<li class="breadcrumb__link">';
+                        echo '<a class="breadcrumb__link__text" href="">';
                         the_title();
-                        echo '</li>';
+                        echo '</a></li>';
                   }
             } elseif (is_page()) {
                   echo '<li class="breadcrumb__link"><a class="breadcrumb__link__text" href="';
@@ -222,4 +216,3 @@ function the_breadcrumb_article(){
     $replace = '<p class="news-view__paragraph" ">';
 
     echo str_replace('<p>', $replace, $phrase);
-

@@ -6,6 +6,7 @@
 
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'thumb-article', 931, 621, true );
+add_image_size( 'thumb-article-list', 585, 390, true);
 
 add_filter( 'thumb-article', 'wpshout_custom_sizes' );
 function wpshout_custom_sizes( $sizes ) {
@@ -55,22 +56,24 @@ register_nav_menu( 'main-nav', __('Menu principal, affiché dans le header.','b'
  * Generates a custom excerpt, used on the homepage
  */
 
-function get_the_custom_excerpt($length = 150)
-{
-      $excerpt = get_the_content();
-      $excerpt = strip_shortcodes( $excerpt );
-      $excerpt = strip_tags( $excerpt );
-      // Pourrait être amélioré de façon significative.
-      // Par exemple :
-      // - ne pas couper en plein milieu d'un mot
-      // - ajouter un point de suspension quand on a dû couper dans le texte
-      // - etc.
-      return substr($excerpt, 0, $length);
-}
-
-function the_custom_excerpt($length = 150)
-{
-      echo get_the_custom_excerpt($length);
+function custom_excerpt($new_length = 38, $new_more = '…') {
+      // use the variable passed from $new_length as the length of the excerpt
+      add_filter('excerpt_length', function () use ($new_length) {
+            return $new_length;
+      }, 999);
+      // determine what comes at the end of the excerpt (in this case ...)
+      add_filter('excerpt_more', function () use ($new_more) {
+            return $new_more;
+      });
+      // generate the current excerpt
+      $output = get_the_excerpt();
+      // use wptexturize to basically sanitize the excerpt
+      $output = apply_filters('wptexturize', $output);
+      // convert_chars to remove metadata tags and convert others to unicode
+      $output = apply_filters('convert_chars', $output);
+      // the above line may not be needed depending on the status of wpautop
+      // echo that sucker
+      echo $output;
 }
 
 /*

@@ -29,51 +29,9 @@ get_header();
                                     <h2 aria-level="2" class="news-view__title">
                                           <?php the_title();?>
                                     </h2>
-                                    <?php
-
-                                    $phrase = get_the_content();
-                                    /*$subtitle = get_the_content();*/
-                                    // This is where wordpress filters the content text and adds paragraphs
-                                    $phrase = apply_filters('the_content', $phrase);
-                                    $replace_p = '<p class="news-view__paragraph" ">';
-
-                                    echo str_replace('<p>', $replace_p, $phrase);
-                                    ?>
-                                   <!-- <p class="news-view__paragraph">
-                                    </p>
-                                    <p class="news-view__paragraph">
-                                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                          incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,
-                                          consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                                          dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                          sed do eiusmod tempor incididunt ut.
-                                    </p>
-                                    <blockquote class="news-view__paragraph news-view__blockquote">
-                                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                          incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,
-                                          consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                                          dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                          sed do eiusmod tempor incididunt ut.
-                                    </blockquote>
-                                    <p class="news-view__paragraph">
-                                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                          incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,
-                                          consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                                          dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                          sed do eiusmod tempor incididunt ut.
-                                    </p>
-                                    <div class="news-view__partager">
-                                          <span class="news__view-partager">Partager&nbsp;:</span>
-                                          <a href="#" class="news-view__link follow-us__item follow-us__item-fb">
-                                                <span class="visuallyhidden">Facebook</span>
-                                          </a>
-                                          <a href="#" class="news-view__link follow-us__item follow-us__item-tw">
-                                                <span class="visuallyhidden">Twitter</span>
-                                          </a>
-                                          <a href="#" class="news-view__link follow-us__item follow-us__item-inst">
-                                                <span class="visuallyhidden">Instagram</span>
-                                          </a>
-                                    </div>-->
+                                    <div class="news-view__the-content">
+                                          <?php the_content(); ?>
+                                    </div>
                                     <!-- Partager l'article -->
                                     <div class="news-view__partager">
                                           <span class="news__view-partager__text"><?php _e('Partager','b');?>&nbsp;:</span>

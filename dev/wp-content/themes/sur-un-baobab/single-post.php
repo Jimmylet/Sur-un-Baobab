@@ -17,10 +17,10 @@ get_header();
                               <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
                               <article class="news-view__article">
                                     <figure class="news-view__img-container">
-                                          <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'medium') ); ?>
+                                          <?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'thumb-article' ); ?>
                                           <img class="news-view__img"
-                                               src="<?php echo $url ?>"
-                                               alt="" width="930" height="621">
+                                               src="<?php echo $url[0] ?>"
+                                               alt="" width="<?php echo $url[1] ?>" height="<?php echo $url[2] ?>">
                                     </figure>
                                     <div class="news-view__infos article__infos">
                                           <span class="news-view__infos__author article__infos__author"><?php _e('Par','b');?> <?php the_author();?></span>

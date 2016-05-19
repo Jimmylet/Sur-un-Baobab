@@ -1,5 +1,19 @@
 <?php
 
+/*
+Template Name: archive
+*/
+
+/*global $wp_query;*/
+
+if(is_page()){
+    query_posts([
+        'posts_per_page' => 5,
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'post_type' => 'post'
+    ]);
+}
 
 
 get_header(); ?>

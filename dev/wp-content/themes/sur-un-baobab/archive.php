@@ -8,7 +8,7 @@ Template Name: archive
 
 if(is_page()){
     query_posts([
-        'posts_per_page' => 5,
+        'posts_per_page' => 4,
         'orderby' => 'date',
         'order' => 'DESC',
         'post_type' => 'post'
@@ -34,14 +34,14 @@ get_header(); ?>
                     <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
                     <article class="article__container">
                         <div class="article__title-container">
-                            <a href="<?php the_permalink();?>" title="Vers l'article Sur un Baobab, un an déjà"
+                            <a href="<?php the_permalink();?>" title="<?php _e('Vers l’article','b');?> <?php the_title();?>"
                                class="article__title-link">
                                 <h3 aria-level="3" class="article__title">
                                     <?php the_title();?>
                                 </h3>
                             </a>
                         </div>
-                        <a href="<?php the_permalink();?>" title="Vers l'article Sur un Baobab, un an déjà"
+                        <a href="<?php the_permalink();?>" title="<?php _e('Vers l’article','b');?> <?php the_title();?>"
                            class="article__img-link">
                             <figure class="article__img-container">
                                 <!-- Recup thumbnail et size -->
@@ -56,13 +56,13 @@ get_header(); ?>
                         </a>
                         <div class="article__text-container">
                             <div class="article__infos">
-                                <span class="article__infos__author">Par Éléna</span>
-                                <span class="article__infos__date">Le 31 septembre 2016</span>
+                                <span class="article__infos__author"><?php _e('Par','b');?> <?php the_author();?></span>
+                                <span class="article__infos__date"><?php _e('Le','b');?> <?php the_date();?></span>
                             </div>
                             <p class="article__intro">
                                 <?php custom_excerpt(); ?>
                             </p>
-                            <a href="<?php the_permalink();?>" class="article__button-more">Lire la suite</a>
+                            <a href="<?php the_permalink();?>" title="<?php _e('Vers l’article','b');?> <?php the_title();?>" class="article__button-more">Lire la suite <span class="visuallyhidden">à propos de l'article <?php the_title();?></span></a>
                         </div>
 
                     </article>

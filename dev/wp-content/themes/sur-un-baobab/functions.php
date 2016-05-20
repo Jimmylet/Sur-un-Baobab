@@ -23,7 +23,7 @@ add_action( 'after_setup_baobab', 'baobab_custom_thumbnail_size' );
 
 
 register_post_type( 'project', [
-            'label' => __('Court-métrages','b'),
+            'label' => __('Productions','b'),
             'labels' => [
                         'singular_name' => __('Court-métrage','b'),
                         'add_new' => __('Ajouter un nouveau projet','b')
@@ -211,6 +211,8 @@ function the_breadcrumb_article(){
       }
       echo '</ol>';
 }
+
+
 
 
     $phrase = get_the_content();

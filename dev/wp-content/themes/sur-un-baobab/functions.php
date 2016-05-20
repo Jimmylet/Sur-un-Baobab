@@ -7,6 +7,7 @@
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'thumb-article', 931, 621, true );
 add_image_size( 'thumb-article-list', 585, 390, true);
+add_image_size('thumb-affiche', 420, 593, true);
 
 add_filter( 'thumb-article', 'wpshout_custom_sizes' );
 function wpshout_custom_sizes( $sizes ) {
@@ -32,7 +33,7 @@ register_post_type( 'project', [
             'public' => true,
             'menu_position' => 5,
             'menu_icon' => 'dashicons-editor-video',
-            'supports' => ['title','editor','thumbnail'],
+            'supports' => ['title','thumbnail'],
             'has_archive' => true
       ] );
 

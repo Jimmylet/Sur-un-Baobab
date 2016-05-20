@@ -37,104 +37,65 @@ get_header();?>
                     Les productions de Surunbaobab
                 </h2>
                 <div class="productions__container">
+
+                    <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
                     <article class="productions__article">
                         <div class="productions__title-container">
                             <h3 aria-level="3" class="productions__title">
-                                Safidin’i Pela
+                                <?php the_title();?>
                             </h3>
-											<span class="productions__title-partner">
-												En association avec ONG Bel Avenir
-											</span>
+                            <span class="productions__title-partner">
+                                <?php the_field('prod_association');?>
+                            </span>
                         </div>
                         <div class="productions__background">
                             <figure class="productions__figure">
-                                <img src="../img/jpg/affiche_safidinipela.jpg" width="420" height="593" alt="Affiche du film Safidin'i Pela" class="productions__img">
+                                <!-- Recup thumbnail et size -->
+                                <?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'thumb-affiche' ); ?>
+                                <!-- Recup alt -->
+                                <?php $thumb_id = get_post_thumbnail_id($post->id);
+                                $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);?>
+                                <img src="<?php echo $url[0] ?>" width="<?php echo $url[1] ?>" height="<?php echo $url[2] ?>" alt="<?php echo $alt;?>" class="productions__img">
                             </figure>
                             <div class="productions__text">
                                 <div class="productions__text-infos">
-                                    <span class="productions__text-infos__item productions__text-infos__duration">6m 17s</span>
-                                    <span class="productions__text-infos__item productions__text-infos__location">Tuléar, Madagascar</span>
-                                    <span class="productions__text-infos__item productions__text-infos__date">Octobre 2015</span>
+                                    <span class="productions__text-infos__item productions__text-infos__duration"><?php the_field('prod_duree');?></span>
+                                    <span class="productions__text-infos__item productions__text-infos__location"><?php the_field('prod_location');?></span>
+                                    <span class="productions__text-infos__item productions__text-infos__date"><?php the_field('prod_creation');?></span>
                                 </div>
                                 <ul class="productions__details">
                                     <li class="productions__details__item">
-                                        <b>Thème&nbsp;: </b>La grossesse précoce
+                                        <b><?php _e('Thème','b');?>&nbsp;: </b><?php the_field('prod_theme');?>
                                     </li>
                                     <li class="productions__details__item">
-                                        <b>Participants&nbsp;: </b>9 enfants/adolescents
+                                        <b><?php _e('Participants','b');?>&nbsp;: </b><?php the_field('prod_participants');?>
                                     </li>
                                     <li class="productions__details__item">
-                                        <b>Technique&nbsp;: </b>2D, papier-découpé
+                                        <b><?php _e('Technique','b');?>&nbsp;: </b><?php the_field('prod_technique');?>
                                     </li>
                                     <li class="productions__details__item">
-                                        <b>Langue&nbsp;: </b>Veze (dialecte malgache)
+                                        <b><?php _e('Langue','b');?>&nbsp;: </b><?php the_field('prod_langue');?>
                                     </li>
                                     <li class="productions__details__item">
-                                        <b>Sous-titres&nbsp;: </b>ES / FR / EN / MG / CAT / IT
+                                        <b><?php _e('Sous-titres','b');?>&nbsp;: </b><?php the_field('prod_sous-titres');?>
                                     </li>
                                 </ul>
                                 <div class="productions__synopsis">
 													<span class="productions__synopsis__title">
-														Synopsis&nbsp;:
+														<?php _e('Synopsis','b');?>&nbsp;:
 													</span>
                                     <p class="productions__synopsis__paragraph">
-                                        Pela, une jeune fille du sud de Madagascar, traîne les pieds sur le chemin de l’école. Elle hésite à suivre Ralay; cet homme, bien plus âgé qu’elle, l’invite à le suivre tout en lui donnant de l’argent. Elle rencontre alors son amie Vony, une très jeune maman qui lui raconte son histoire…
+                                        <?php the_field('prod_synopsis');?>
                                     </p>
                                 </div>
                             </div>
-                            <a href="productions_view.html" class="productions__button">Voir le film</a>
+                            <a href="<?php the_permalink();?>" class="productions__button" title="<?php _e('Voir le film','b');?> <?php the_title();?>"><?php _e('Voir le film','b');?> <span class="visuallyhidden"><?php the_title();?></span></a>
 
                         </div>
                     </article>
-                    <article class="productions__article">
-                        <div class="productions__title-container">
-                            <h3 aria-level="3" class="productions__title">
-                                Safidin’i Pela
-                            </h3>
-											<span class="productions__title-partner">
-												En association avec ONG Bel Avenir
-											</span>
-                        </div>
-                        <div class="productions__background">
-                            <figure class="productions__figure">
-                                <img src="../img/jpg/affiche_safidinipela.jpg" width="420" height="593" alt="Affiche du film Safidin'i Pela" class="productions__img">
-                            </figure>
-                            <div class="productions__text">
-                                <div class="productions__text-infos">
-                                    <span class="productions__text-infos__item productions__text-infos__duration">6m 17s</span>
-                                    <span class="productions__text-infos__item productions__text-infos__location">Tuléar, Madagascar</span>
-                                    <span class="productions__text-infos__item productions__text-infos__date">Octobre 2015</span>
-                                </div>
-                                <ul class="productions__details">
-                                    <li class="productions__details__item">
-                                        <b>Thème&nbsp;: </b>La grossesse précoce
-                                    </li>
-                                    <li class="productions__details__item">
-                                        <b>Participants&nbsp;: </b>9 enfants/adolescents
-                                    </li>
-                                    <li class="productions__details__item">
-                                        <b>Technique&nbsp;: </b>2D, papier-découpé
-                                    </li>
-                                    <li class="productions__details__item">
-                                        <b>Langue&nbsp;: </b>Veze (dialecte malgache)
-                                    </li>
-                                    <li class="productions__details__item">
-                                        <b>Sous-titres&nbsp;: </b>ES / FR / EN / MG / CAT / IT
-                                    </li>
-                                </ul>
-                                <div class="productions__synopsis">
-													<span class="productions__synopsis__title">
-														Synopsis&nbsp;:
-													</span>
-                                    <p class="productions__synopsis__paragraph">
-                                        Pela, une jeune fille du sud de Madagascar, traîne les pieds sur le chemin de l’école. Elle hésite à suivre Ralay; cet homme, bien plus âgé qu’elle, l’invite à le suivre tout en lui donnant de l’argent. Elle rencontre alors son amie Vony, une très jeune maman qui lui raconte son histoire…
-                                    </p>
-                                </div>
-                            </div>
-                            <a href="productions_view.html" class="productions__button">Voir le film</a>
+                    <?php endwhile; endif; ?>
 
-                        </div>
-                    </article>
+
                 </div>
             </section>
         </main>

@@ -104,22 +104,32 @@ Template Name: Homepage
                               stroke-linecap="square"/>
                   </svg>
                   <div class="last-news__articles">
+                        <!-- Debut WP_QUERY -->
+                        <?php
+                        $posts = new WP_Query( ['posts_per_page' => 1, 'post_type' => 'post'] );
+                        if ( $posts->have_posts() ): while ( $posts->have_posts() ): $posts->the_post();
+                        ?>
+                        <!-- Recup thumbnail et size -->
+                        <?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'thumb-article-home' ); ?>
+                        <!-- Recup alt -->
+                        <?php $thumb_id = get_post_thumbnail_id($post->id);
+                        $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);?>
+
                         <article class="last-news__articles__top">
-                              <a href="#" class="last-news__articles__img">
-                                    <img src="./img/jpg/article_top_min.jpg" alt="" width="450" height="303">
+                              <a href="<?php the_permalink();?>" class="last-news__articles__img">
+                                    <img src="<?php echo $url[0] ?>" alt="<?php echo $alt;?>" width="<?php echo $url[1] ?>" height="<?php echo $url[2] ?>">
                               </a>
                               <div class="last-news__articles__container-text">
                                     <h3 class="last-news__articles__top__title" aria-level="3">
-                                          Tongasoa et le vazaha diffusé au Cambodge et en Taïlande
+                                          <?php the_title();?>
                                     </h3>
                                     <p class="last-news__articles__top__intro">
-                                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                          quis nostrud exercitation ullamco laboris nis.
+                                          <?php custom_excerpt(); ?>
                                     </p>
-                                    <a href="#" class="last-news__articles__top__link">Lire l’article</a>
+                                    <a href="<?php the_permalink();?>" class="last-news__articles__top__link"><?php _e('Lire l’article','b');?></a>
                               </div>
                         </article>
+                        <?php endwhile; endif; ?>
                         <div class="last-news__container-bottom-articles">
                               <a href="#" class="last-news__bottom-link">
                                     <article class="article__vignette">
@@ -190,6 +200,7 @@ Template Name: Homepage
                         </div>
                   </div>
             </section>
+            <!-- FAIRE UN DON ET CITATION -->
             <section class="donate">
                   <svg class="donate__img" width="397" height="37" xmlns="http://www.w3.org/2000/svg">
                         <g fill="#FFF" fill-rule="evenodd" fill-opacity=".6">
@@ -205,21 +216,21 @@ Template Name: Homepage
 								les enfants
 							</span>
                   <a href="#" class="donate__button">
-                        <h2>Faire un don</h2>
+                        <h2><?php _e('Faire un don','b');?></h2>
                   </a>
                   <div class="follow-us">
 								<span class="follow-us__text">
-									Nous suivre, c’est nous aider &nbsp;!
+									<?php _e('Nous suivre, c’est nous aider','b');?> &nbsp;!
 								</span>
-                        <a href="" class="follow-us__item follow-us__item-fb" title="Vers Facebook"><span
+                        <a href="" class="follow-us__item follow-us__item-fb" title="<?php _e('Vers','b');?> Facebook"><span
                                   class="visuallyhidden">Facebook</span></a>
-                        <a href="" class="follow-us__item follow-us__item-tw" title="Vers Twitter"><span
+                        <a href="" class="follow-us__item follow-us__item-tw" title="<?php _e('Vers','b');?> Twitter"><span
                                   class="visuallyhidden">Twitter</span></a>
-                        <a href="" class="follow-us__item follow-us__item-inst" title="Vers Instagram"><span
+                        <a href="" class="follow-us__item follow-us__item-inst" title="<?php _e('Vers','b');?> Instagram"><span
                                   class="visuallyhidden">Instagram</span></a>
-                        <a href="" class="follow-us__item follow-us__item-vim" title="Vers Viméo"><span
+                        <a href="" class="follow-us__item follow-us__item-vim" title="<?php _e('Vers','b');?> Viméo"><span
                                   class="visuallyhidden">Viméo</span></a>
-                        <a href="" class="follow-us__item follow-us__item-yout" title="Vers Youtube"><span
+                        <a href="" class="follow-us__item follow-us__item-yout" title="<?php _e('Vers','b');?> Youtube"><span
                                   class="visuallyhidden">Youtube</span></a>
                   </div>
             </section>

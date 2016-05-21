@@ -6,6 +6,7 @@
 
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'thumb-article', 931, 621, true );
+add_image_size('thumb-article-home', 405, 303, true);
 add_image_size( 'thumb-article-list', 585, 390, true);
 add_image_size('thumb-affiche', 420, 593, true);
 add_image_size('thumb-affiche-home', 408, 576, true);

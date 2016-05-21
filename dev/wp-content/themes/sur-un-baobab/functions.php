@@ -8,6 +8,7 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'thumb-article', 931, 621, true );
 add_image_size( 'thumb-article-list', 585, 390, true);
 add_image_size('thumb-affiche', 420, 593, true);
+add_image_size('thumb-affiche-home', 408, 576, true);
 
 add_filter( 'thumb-article', 'wpshout_custom_sizes' );
 function wpshout_custom_sizes( $sizes ) {
@@ -214,11 +215,10 @@ function the_breadcrumb_article(){
 }
 
 
-
-
     $phrase = get_the_content();
     // This is where wordpress filters the content text and adds paragraphs
     $phrase = apply_filters('the_content', $phrase);
     $replace = '<p class="news-view__paragraph" ">';
 
     echo str_replace('<p>', $replace, $phrase);
+

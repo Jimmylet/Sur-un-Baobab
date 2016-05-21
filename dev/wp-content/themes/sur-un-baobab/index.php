@@ -223,28 +223,31 @@ Template Name: Homepage
                                   class="visuallyhidden">Youtube</span></a>
                   </div>
             </section>
+            <!-- DERNIERES PRODUCTIONS -->
             <section class="last-prod">
                   <div class="last-prod__container">
+                        <?php
+                        $posts = new WP_Query( ['posts_per_page' => 2, 'post_type' => 'project'] );
+                        if ( $posts->have_posts() ): while ( $posts->have_posts() ): $posts->the_post();
+                              ?>
+                              <!-- Recup thumbnail et size -->
+                              <?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'thumb-affiche-home' ); ?>
+                              <!-- Recup alt -->
+                              <?php $thumb_id = get_post_thumbnail_id($post->id);
+                              $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);?>
                         <div class="last-prod__item">
-                              <a href="" class="last-prod__item__link"
-                                 title="Vers la fiche de Tongasoa et le Vazaha">
-                                    Tongasoa et le Vazaha
-                                    <img src="./img/jpg/Tongasoa_Poster_FR.jpg"
-                                         alt="Affiche de Tongasoa et le Vazaha" class="last-prod__item__img"
-                                         width="408" height="576">
-                                    <div class="last-prod__item__hovereffect"></div>
-                              </a>
-                        </div>
-                        <div class="last-prod__item">
-                              <a href="" class="last-prod__item__link" title="Vers la fiche de Safidin’i Pela">
-                                    Safidin’i Pela
-                                    <img src="./img/jpg/SafidinIPela_Poster_FR.jpg" alt="Affiche de Safidin’i Pela"
-                                         class="last-prod__item__img" width="408" height="576">
-                                    <div class="last-prod__item__hovereffect"></div>
-                              </a>
-                        </div>
+                                    <a href="<?php the_permalink();?>" class="last-prod__item__link"
+                                       title="<?php _e('Vers la fiche de','b');?> <?php the_title();?>">
+                                          <?php the_title();?>
+                                          <img src="<?php echo $url[0] ?>"
+                                               alt="<?php echo $alt;?>" class="last-prod__item__img"
+                                               width="<?php echo $url[1] ?>" height="<?php echo $url[2] ?>">
+                                          <div class="last-prod__item__hovereffect"></div>
+                                    </a>
+                              </div>
+                        <?php endwhile; endif; ?>
                   </div>
-                  <a href="#" class="last-prod__button" title="Voir toutes nos production">
-                        <h2>Voir nos productions</h2>
+                  <a href="<?php echo get_page_link(200); ?>" class="last-prod__button" title="<?php _e('Voir toutes nos productions','b');?>">
+                        <h2><?php _e('Voir nos productions','b');?></h2>
                   </a>
             </section>

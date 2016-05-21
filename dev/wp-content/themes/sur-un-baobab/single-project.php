@@ -110,7 +110,8 @@ get_header();
                               <section class="prod-view__sections" id="tab-three">
                                     <h3 aria-level="3" class="prod-view__sections__title">Fiche technique</h3>
                                     <img src="../img/jpg/affiche-min-safidinipela.jpg" alt="" class="prod-view__sections__affiche">
-                                    <table class="prod-view__table">
+                                    <?php the_field('prod_fichetechnique');?>
+                                    <!--<table class="prod-view__table">
                                           <tr class="table__row">
                                                 <th class="table__head">Titre français</th>
                                                 <td class="table__data">Le choix de Pela</td>
@@ -175,7 +176,9 @@ get_header();
                                                 <th class="table__head">Sous-titres disponibles</th>
                                                 <td class="table__data">ES / FR / EN / MG /CAT /IT</td>
                                           </tr>
-                                    </table>
+                                    </table>-->
+
+
                               </section>
 
                               <section class="prod-view__sections" id="tab-four">

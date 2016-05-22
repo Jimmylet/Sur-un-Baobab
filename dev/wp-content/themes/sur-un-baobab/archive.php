@@ -6,24 +6,22 @@ Template Name: archive
 
 /*global $wp_query;*/
 
-if(is_page()){
-    query_posts([
-        'posts_per_page' => 4,
-        'orderby' => 'date',
-        'order' => 'DESC',
-        'post_type' => 'post'
-    ]);
-}
-
-
 get_header(); ?>
 
 
 </header>
 <div class="site-content">
     <div class="container">
-
-        <?php the_breadcrumb();?>
+        <?php the_breadcrumb_article();?>
+        <?php
+        if(is_page()){
+            query_posts([
+                'posts_per_page' => 4,
+                'orderby' => 'date',
+                'order' => 'DESC',
+                'post_type' => 'post'
+            ]);
+        };?>
         <main>
             <section class="news">
                 <h2 aria-level="2" class="news-titlesection">
@@ -66,6 +64,7 @@ get_header(); ?>
                         </div>
 
                     </article>
+
                     <?php endwhile; endif; ?>
                 </div>
 

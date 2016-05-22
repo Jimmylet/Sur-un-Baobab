@@ -15,18 +15,18 @@ get_header();
 
       <ol class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
             <li class="breadcrumb__link" itemprop="title">
-                  <a href="../index.html" class="breadcrumb__link__text" itemprop="url">
+                  <a href="<?php echo get_home_url();?>" class="breadcrumb__link__text" itemprop="url">
                         Accueil
                   </a>
             </li>
             <li class="breadcrumb__link" itemprop="title">
-                  <a href="news.html" class="breadcrumb__link__text" itemprop="url">
+                  <a href="<?php echo get_page_link(200); ?>" class="breadcrumb__link__text" itemprop="url">
                         Productions
                   </a>
             </li>
             <li class="breadcrumb__link" itemprop="title">
-                  <a href="news.html" class="breadcrumb__link__text" itemprop="url">
-                        Safidin’i Pela
+                  <a href="<?php the_permalink();?>" class="breadcrumb__link__text" itemprop="url">
+                        <?php the_title();?>
                   </a>
             </li>
       </ol>
@@ -162,6 +162,7 @@ get_header();
 
                               <section class="prod-view__sections" id="tab-five">
                                     <h3 aria-level="3" class="prod-view__sections__title">Presse</h3>
+
                               </section>
                         </div>
                   </div>

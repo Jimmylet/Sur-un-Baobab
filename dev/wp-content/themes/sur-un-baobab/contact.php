@@ -47,12 +47,12 @@ include 'head.php';
 
                         <ol class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
                             <li class="breadcrumb__link" itemprop="title">
-                                <a href="../index.html" class="breadcrumb__link__text" itemprop="url">
+                                <a href="<?php echo get_home_url();?>" class="breadcrumb__link__text" itemprop="url">
                                     Accueil
                                 </a>
                             </li>
                             <li class="breadcrumb__link" itemprop="title">
-                                <a href="news.html" class="breadcrumb__link__text" itemprop="url">
+                                <a href="<?php the_permalink();?>" class="breadcrumb__link__text" itemprop="url">
                                     Contact
                                 </a>
                             </li>
@@ -61,10 +61,10 @@ include 'head.php';
                             <section class="contact">
                                 <div class="contact__title-container">
                                     <h2 aria-level="2" class="contact__title">
-                                        Prenez contact avec nous&nbsp;!
+                                        <?php the_field('contact_titre1');?>
                                     </h2>
 									<span class="contact__subtitle">
-										Un avis, un projet&nbsp;? Nous serons ravis de vous répondre.
+										<?php the_field('contact_sous-titre');?>
 									</span>
                                 </div>
                                 <div class="contact__numero-container">
@@ -72,14 +72,14 @@ include 'head.php';
 										<span class="contact__telephone__title">
 											Téléphone
 										</span>
-                                        <a href="tel:+32491363975" class="contact__telephone__link">+32 497 36 39 75
+                                        <a href="tel:<?php the_field('contact_tel');?>" class="contact__telephone__link"><?php the_field('contact_tel');?>
                                             (Belgique)</a>
                                     </div>
                                     <div class="contact__whatsapp-container">
 										<span class="contact__whatsapp__title">
 											WhatsApp
 										</span>
-                                        <a href="tel:+32495348966" class="contact__telephone__link">+32 495 34 89 66</a>
+                                        <a href="tel:<?php the_field('contact_whatsapp');?>" class="contact__telephone__link"><?php the_field('contact_whatsapp');?></a>
                                     </div>
                                 </div>
                                 <div class="contact__form-container">

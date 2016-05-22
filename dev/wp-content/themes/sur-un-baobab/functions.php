@@ -8,6 +8,7 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'thumb-article', 931, 621, true );
 add_image_size('thumb-article-home', 405, 303, true);
 add_image_size( 'thumb-article-list', 585, 390, true);
+add_image_size( 'thumb-article-bottom-list', 362, 241, true);
 add_image_size('thumb-affiche', 420, 593, true);
 add_image_size('thumb-affiche-home', 408, 576, true);
 
@@ -223,3 +224,49 @@ function the_breadcrumb_article(){
 
     echo str_replace('<p>', $replace, $phrase);
 
+/*************************************************************************************/
+/* TYNY MCE MODIFY */
+
+// Callback function to insert 'styleselect' into the $buttons array
+function my_mce_buttons_2( $buttons ) {
+      array_unshift( $buttons, 'styleselect' );
+      return $buttons;
+}
+// Register our callback to the appropriate filter
+add_filter( 'mce_buttons_2', 'my_mce_buttons_2' );
+
+// Callback function to filter the MCE settings
+function my_mce_before_init_insert_formats( $init_array ) {
+      // Define the style_formats array
+      $style_formats = array(
+            // Each array child is a format with it's own settings
+          array(
+              'title' => 'Sous-titre 1',
+              'inline' => 'span',
+              'classes' => 'sous-titre1',
+              'wrapper' => false,
+
+          ),
+          array(
+              'title' => 'Sous-titre 2',
+              'block' => 'span',
+              'classes' => 'sous-titre2',
+              'wrapper' => false,
+          ),
+          array(
+              'title' => 'Sous-titre 3',
+              'block' => 'span',
+              'classes' => 'sous-titre3',
+              'wrapper' => false,
+          ),
+      );
+      // Insert the array, JSON ENCODED, into 'style_formats'
+      $init_array['style_formats'] = json_encode( $style_formats );
+
+      return $init_array;
+
+}
+// Attach callback to 'tiny_mce_before_init'
+add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
+
+add_editor_style ( $stylesheet = './assets/css/editor-styles.css' );

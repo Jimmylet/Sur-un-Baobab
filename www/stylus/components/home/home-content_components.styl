@@ -1,47 +1,11 @@
 @import "kouto-swiss"
 
 /************************************\
-  IMAGE D'INTRO - EN SAVOIR PLUS
-\************************************/
-
-.intro-img
-  retina-image( "../img/jpg/baobab_about4.jpg", cover, "@2x");
-  background-position center center
-  text-align center
-  padding 1.5em 2.5em
-  &__title
-    font-weight: bold
-    font-size: 3.33em
-    color color-white
-    text-transform uppercase
-    letter-spacing 2px
-    border 1px solid color-white
-    padding 1.742em 1.9em
-  &__button
-    font-size: 2.62em
-    color color-white
-    padding 0.458em 1.145em
-    border 2px solid color-main-yellow
-    border-radius 3px
-    transition trans
-    &:hover
-      background-color color-main-yellow
-      transition trans
-
-+media-query( only screen, max-width 643px )
-  .intro-img
-    retina-image( "../img/jpg/baobab_about4-min.jpg", cover, "@2x");
-    height 40em
-    &__title
-      font-size 2.32em
-      letter-spacing 1px
-      margin-top 3em
-
-/************************************\
     TEXT INTRO - Rencontrer,animer…
 \************************************/
 
 .intro-text
+  text-align center
   &__title
     font-family handofseanfont
     font-size 4.24em
@@ -60,6 +24,21 @@
     font-size: 2.22em
     max-width 20.344em
     margin-bottom 0.763em
+    text-align left
+    line-height 1.3em
+  &__button
+    display: inline-block
+    margin 1.4em auto 1.4em auto
+    font-size: 2.62em
+    color color-text-articles
+    padding 0.458em 1.145em
+    border 2px solid color-main-yellow
+    border-radius 3px
+    transition trans
+    &:hover
+      background-color color-main-yellow
+      transition trans
+      color white
 
 +media-query( only screen, max-width 808px )
   .intro-text
@@ -87,38 +66,12 @@
     &__paragraph
       text-align center
 
-+media-query( only screen, max-width 400px )
+/*+media-query( only screen, max-width 400px )
   .intro-text
     &__container
       width 250px
     &__paragraph
-      text-align left
-
-/************************************\
-  IMGS SurunBaobab
-\************************************/
-
-.img-baobab
-  retina-image("../img/jpg/img_deco.jpg", cover,"@2x" )
-  background-position center center
-  &__title
-    background-color rgba(224, 195, 49, .9);
-    padding 0 5em
-    &__img
-      retina-image("../img/png/baobab_text.png", contain, "@2x")
-      background-repeat no-repeat
-      background-position center 35%
-      height: 100%
-
-+media-query( only screen, max-width 700px )
-  .img-baobab
-    retina-image("../img/jpg/img_deco-min.jpg", cover,"@2x" )
-    height 40em
-    &__deco
-      top 145px
-      width 12px
-
-
+      text-align left*/
 
 
 
@@ -412,9 +365,7 @@
       display block
       float none
       & img
-        object-fit: cover;
-        max-width: 100%;
-        height: auto;
+        width: 100%;
     &__articles__container-text
       display block
       background-color color-white

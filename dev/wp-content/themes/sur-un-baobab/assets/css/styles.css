@@ -275,6 +275,32 @@ body {
 .news-view__article .news-view__the-content a:focus {
   text-decoration: underline;
 }
+.sous-titre1 {
+  font-family: Raleway, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 2em;
+  display: block;
+  line-height: 1.25em;
+  color: #363636;
+}
+.sous-titre2 {
+  font-family: Raleway, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  font-weight: bold;
+  display: block;
+  line-height: 1.25em;
+  color: #363636;
+}
+.sous-titre3 {
+  font-family: Raleway, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.3em;
+  font-weight: bold;
+  display: block;
+  line-height: 1.25em;
+  color: #363636;
+}
 .header__logo {
   display: inline-block;
   width: 8.5em;
@@ -340,7 +366,8 @@ body {
   margin-top: 1.527em;
 }
 .intro-text {
-  padding: 0 0 5em;
+  position: relative;
+  padding: 0 0 16em;
 }
 .intro-text__container {
   max-width: 76em;
@@ -357,27 +384,15 @@ body {
 .intro-text__img {
   float: right;
 }
-.img-baobab {
-  position: relative;
-  height: 70em;
-  white-space: nowrap;
-  position: relative;
-}
-.img-baobab__title {
-  width: 70%;
-  height: 75%;
-  position: absolute;
-  left: 15%;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-.img-baobab__deco {
+.intro-text__deco {
   margin: 0 auto;
   display: block;
-  position: relative;
-  top: 466px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: -100px;
 }
 .last-news {
   margin: 0 auto;
@@ -1245,51 +1260,8 @@ body {
     margin: 3.5em 0 6em 2.5em;
   }
 }
-.intro-img {
-  background-image: url("../img/jpg/baobab_about4.jpg");
-  background-position: center center;
+.intro-text {
   text-align: center;
-  padding: 1.5em 2.5em;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (-webkit-min-device-pixel-ratio: 1.3020833333333333), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-  .intro-img {
-    background-image: url("../img/jpg/baobab_about4@2x.jpg");
-    background-size: cover;
-  }
-}
-.intro-img__title {
-  font-weight: bold;
-  font-size: 3.33em;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  border: 1px solid #fff;
-  padding: 1.742em 1.9em;
-}
-.intro-img__button {
-  font-size: 2.62em;
-  color: #fff;
-  padding: 0.458em 1.145em;
-  border: 2px solid #d9a613;
-  border-radius: 3px;
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
-}
-.intro-img__button:hover {
-  background-color: #d9a613;
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
-}
-@media only screen and (max-width: 643px) {
-  .intro-img {
-    background-image: url("../img/jpg/baobab_about4-min.jpg");
-    height: 40em;
-  }
-  .intro-img__title {
-    font-size: 2.32em;
-    letter-spacing: 1px;
-    margin-top: 3em;
-  }
 }
 .intro-text__title {
   font-family: hand_of_sean, Raleway, Helvetica, Arial, sans-serif;
@@ -1317,6 +1289,25 @@ body {
   font-size: 2.22em;
   max-width: 20.344em;
   margin-bottom: 0.763em;
+  text-align: left;
+  line-height: 1.3em;
+}
+.intro-text__button {
+  display: inline-block;
+  margin: 1.4em auto 1.4em auto;
+  font-size: 2.62em;
+  color: #5c5c5c;
+  padding: 0.458em 1.145em;
+  border: 2px solid #d9a613;
+  border-radius: 3px;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.intro-text__button:hover {
+  background-color: #d9a613;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  color: #fff;
 }
 @media only screen and (max-width: 808px) {
   .intro-text__container {
@@ -1348,50 +1339,6 @@ body {
   }
   .intro-text__paragraph {
     text-align: center;
-  }
-}
-@media only screen and (max-width: 400px) {
-  .intro-text__container {
-    width: 250px;
-  }
-  .intro-text__paragraph {
-    text-align: left;
-  }
-}
-.img-baobab {
-  background-image: url("../img/jpg/img_deco.jpg");
-  background-position: center center;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (-webkit-min-device-pixel-ratio: 1.3020833333333333), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-  .img-baobab {
-    background-image: url("../img/jpg/img_deco@2x.jpg");
-    background-size: cover;
-  }
-}
-.img-baobab__title {
-  background-color: rgba(224,195,49,0.9);
-  padding: 0 5em;
-}
-.img-baobab__title__img {
-  background-image: url("../img/png/baobab_text.png");
-  background-repeat: no-repeat;
-  background-position: center 35%;
-  height: 100%;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (-webkit-min-device-pixel-ratio: 1.3020833333333333), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-  .img-baobab__title__img {
-    background-image: url("../img/png/baobab_text@2x.png");
-    background-size: contain;
-  }
-}
-@media only screen and (max-width: 700px) {
-  .img-baobab {
-    background-image: url("../img/jpg/img_deco-min.jpg");
-    height: 40em;
-  }
-  .img-baobab__deco {
-    top: 145px;
-    width: 12px;
   }
 }
 .last-news {
@@ -1745,9 +1692,7 @@ body {
     float: none;
   }
   .last-news__articles__img img {
-    object-fit: cover;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
   }
   .last-news__articles__container-text {
     display: block;
@@ -1898,18 +1843,6 @@ body {
     box-sizing: border-box;
 /************************************       LAST NEWS ARTICLE
       \************************************/
-  }
-}
-@media only screen and (max-width: 643px) and (-webkit-min-device-pixel-ratio: 1.3), only screen and (max-width: 643px) and (min--moz-device-pixel-ratio: 1.3), only screen and (max-width: 643px) and (min-device-pixel-ratio: 1.3), only screen and (max-width: 643px) and (-webkit-min-device-pixel-ratio: 1.3020833333333333), only screen and (max-width: 643px) and (min-resolution: 125dpi), only screen and (max-width: 643px) and (min-resolution: 1.3dppx) {
-  .intro-img {
-    background-image: url("../img/jpg/baobab_about4-min@2x.jpg");
-    background-size: cover;
-  }
-}
-@media only screen and (max-width: 700px) and (-webkit-min-device-pixel-ratio: 1.3), only screen and (max-width: 700px) and (min--moz-device-pixel-ratio: 1.3), only screen and (max-width: 700px) and (min-device-pixel-ratio: 1.3), only screen and (max-width: 700px) and (-webkit-min-device-pixel-ratio: 1.3020833333333333), only screen and (max-width: 700px) and (min-resolution: 125dpi), only screen and (max-width: 700px) and (min-resolution: 1.3dppx) {
-  .img-baobab {
-    background-image: url("../img/jpg/img_deco-min@2x.jpg");
-    background-size: cover;
   }
 }
 .paragraph-style-projet {

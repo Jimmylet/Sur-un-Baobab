@@ -1,0 +1,28 @@
+.sous-titre1 {
+  font-family: ralewayfont;
+  font-weight: 600;
+  font-size: 2em;
+  display: block;
+  line-height: 1.25em;
+  color: #363636;
+}
+
+.sous-titre2 {
+  font-family: ralewayfont;
+  font-weight: 600;
+  font-size: 1.5em;
+  font-weight: bold;
+  display: block;
+  line-height: 1.25em;
+  color: #363636;
+}
+
+.sous-titre3 {
+  font-family: ralewayfont;
+  font-weight: 600;
+  font-size: 1.3em;
+  font-weight: bold;
+  display: block;
+  line-height: 1.25em;
+  color: #363636;
+}

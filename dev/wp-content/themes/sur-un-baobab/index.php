@@ -48,26 +48,10 @@ Template Name: Homepage
                               </div>
                               <span aria-hidden="true" class="menu__icon-bg"></span>
                         </nav>
-
-<div class="bottom-header">
-      <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
-      <a href="#" class="bottom-header__button"><?php _e('Aidez-nous','b');?></a>
-      <a href="#" class="bottom-header__button"><?php _e('Visionnez nos films','b');?></a>
-                        <span class="bottom-header__text">
-                            <?php bloginfo('description');?>
-                        </span>
-      <?php endwhile; endif; ?>
-</div>
 </header>
 
 <div class="site-content">
       <div class="container">
-            <section class="intro-img">
-                  <h2 class="intro-img__title" aria-level="2"><?php _e('Un projet d’animation pour les enfants','b');?></h2>
-                  <br>
-                  <a class="intro-img__button" href="#"><?php _e('En savoir plus','b');?></a>
-            </section>
-            <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
             <section class="intro-text">
                   <h2 class="intro-text__title">Rencontrer. Animer. Aider.</h2>
                   <div class="intro-text__container">
@@ -78,29 +62,24 @@ Template Name: Homepage
                               <?php the_field('home_description'); ?>
                         </p>
                   </div>
-            </section>
-            <?php endwhile; endif; ?>
-            <div class="img-baobab">
-                  <div class="img-baobab__title">
-                        <div class="img-baobab__title__img"></div>
-                  </div>
-                  <svg class="img-baobab__deco" width="23" height="336" viewBox="0 0 23 336"
+                  <a class="intro-text__button" href="#"><?php _e('En savoir plus','b');?></a>
+                  <svg class="intro-text__deco" width="23" height="212"
                        xmlns="http://www.w3.org/2000/svg">
-                        <g transform="translate(1 1.542)" stroke="#FFF" stroke-width="2" fill="none"
+                        <g transform="translate(1 1.542)" stroke="#DAA700" stroke-width="2" fill="none"
                            fill-rule="evenodd">
                               <circle cx="10.5" cy="10.5" r="10.5"/>
-                              <path d="M10 21v312.458069" stroke-linecap="square"/>
+                              <path d="M10 21v212.458069" stroke-linecap="square"/>
                         </g>
                   </svg>
+            </section>
 
-            </div>
             <section class="last-news">
                   <h2 class="last-news__title" aria-level="2"><?php _e('Nos dernières nouvelles','b');?></h2>
 							<span class="last-news__newsletters">
 								<?php _e('Ne ratez plus rien','b');?>, <a href="#" class="last-news__newsletters__link"><?php _e('abonnez-vous','b');?> &nbsp;!</a>
 							</span>
                   <svg class="last-news__line2" width="2" height="98" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 1.5V97" stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd"
+                        <path d="M1 1.5V97" stroke="#DAA700" stroke-width="2" fill="none" fill-rule="evenodd"
                               stroke-linecap="square"/>
                   </svg>
                   <div class="last-news__articles">
@@ -129,15 +108,28 @@ Template Name: Homepage
                                     <a href="<?php the_permalink();?>" class="last-news__articles__top__link"><?php _e('Lire l’article','b');?></a>
                               </div>
                         </article>
+                        <?php wp_reset_postdata(); ?>
                         <?php endwhile; endif; ?>
                         <div class="last-news__container-bottom-articles">
-                              <a href="#" class="last-news__bottom-link">
+                              <!-- Debut WP_QUERY -->
+                              <?php
+                              $posts = new WP_Query( ['posts_per_page' => 3, 'offset' => 1, 'post_type' => 'post'] );
+                              if ( $posts->have_posts() ): while ( $posts->have_posts() ): $posts->the_post();
+                                    ?>
+                                    <!-- Recup thumbnail et size -->
+                                    <?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'thumb-article-bottom-list' ); ?>
+                                    <!-- Recup alt -->
+                                    <?php $thumb_id = get_post_thumbnail_id($post->id);
+                                    $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);?>
+
+                              <a href="<?php the_permalink();?>" class="last-news__bottom-link" title="<?php _e('Vers l’article','b');?> <?php the_title();?>">
+
                                     <article class="article__vignette">
-                                          <img class="article__vignette__img" src="./img/jpg/preview_article1.jpg"
-                                               alt="" width="362" height="241">
+                                          <img class="article__vignette__img" src="<?php echo $url[0] ?>"
+                                               alt="<?php echo $alt;?>" width="<?php echo $url[1] ?>" height="<?php echo $url[2] ?>">
                                           <div class="article__vignette__container">
                                                 <h3 class="article__vignette__title" aria-level="3">
-                                                      Tongasoa et le vazaha diffusé au Cambodge et en Thaïlande
+                                                      <?php the_title();?>
                                                 </h3>
                                                 <div class="article__vignette__more-container">
                                                       <div class="article__vignette__more">
@@ -153,50 +145,8 @@ Template Name: Homepage
                                           </div>
                                     </article>
                               </a>
-                              <a href="#" class="last-news__bottom-link">
-                                    <article class="article__vignette">
-                                          <img class="article__vignette__img" src="./img/jpg/preview_article2.jpg"
-                                               alt="" width="362" height="241">
-                                          <div class="article__vignette__container">
-                                                <h3 class="article__vignette__title" aria-level="3">
-                                                      Tongasoa et le vazaha diffusé au Cambodge et en Thaïlande
-                                                </h3>
-                                                <div class="article__vignette__more-container">
-                                                      <div class="article__vignette__more">
-                                                            <svg width="13" height="13" viewBox="0 0 13 13"
-                                                                 xmlns="http://www.w3.org/2000/svg">
-                                                                  <g stroke="#282828" fill="none" fill-rule="evenodd"
-                                                                     stroke-linecap="square">
-                                                                        <path d="M6.6848156 1.29920082V12.0870395M1.29920082 6.6848156H12.0870395"/>
-                                                                  </g>
-                                                            </svg>
-                                                      </div>
-                                                </div>
-                                          </div>
-                                    </article>
-                              </a>
-                              <a href="#" class="last-news__bottom-link">
-                                    <article class="article__vignette">
-                                          <img class="article__vignette__img" src="./img/jpg/preview_article3.jpg"
-                                               alt="" width="362" height="241">
-                                          <div class="article__vignette__container">
-                                                <h3 class="article__vignette__title" aria-level="3">
-                                                      Tongasoa et le vazaha diffusé au Cambodge et en Thaïlande
-                                                </h3>
-                                                <div class="article__vignette__more-container">
-                                                      <div class="article__vignette__more">
-                                                            <svg width="13" height="13" viewBox="0 0 13 13"
-                                                                 xmlns="http://www.w3.org/2000/svg">
-                                                                  <g stroke="#282828" fill="none" fill-rule="evenodd"
-                                                                     stroke-linecap="square">
-                                                                        <path d="M6.6848156 1.29920082V12.0870395M1.29920082 6.6848156H12.0870395"/>
-                                                                  </g>
-                                                            </svg>
-                                                      </div>
-                                                </div>
-                                          </div>
-                                    </article>
-                              </a>
+                              <?php wp_reset_postdata(); ?>
+                              <?php endwhile; endif; ?>
                         </div>
                   </div>
             </section>
@@ -210,27 +160,27 @@ Template Name: Homepage
                   </svg>
 
 							<span class="donate__text1">
-								Offrons un sourire à tous
+								<?php _e('Offrons un sourire à tous','b');?>
 							</span>
 							<span class="donate__text2">
-								les enfants
+								<?php _e('les enfants','b');?>
 							</span>
                   <a href="#" class="donate__button">
-                        <h2><?php _e('Faire un don','b');?></h2>
+                        <h2><?php _e('Soutenez-nous','b');?>&nbsp;!</h2>
                   </a>
                   <div class="follow-us">
 								<span class="follow-us__text">
 									<?php _e('Nous suivre, c’est nous aider','b');?> &nbsp;!
 								</span>
-                        <a href="" class="follow-us__item follow-us__item-fb" title="<?php _e('Vers','b');?> Facebook"><span
+                        <a href="<?php the_field('home_facebook');?>" class="follow-us__item follow-us__item-fb" rel="external" title="<?php _e('Vers','b');?> Facebook"><span
                                   class="visuallyhidden">Facebook</span></a>
-                        <a href="" class="follow-us__item follow-us__item-tw" title="<?php _e('Vers','b');?> Twitter"><span
+                        <a href="<?php the_field('home_twitter');?>" class="follow-us__item follow-us__item-tw" rel="external" title="<?php _e('Vers','b');?> Twitter"><span
                                   class="visuallyhidden">Twitter</span></a>
-                        <a href="" class="follow-us__item follow-us__item-inst" title="<?php _e('Vers','b');?> Instagram"><span
+                        <a href="<?php the_field('home_instagram');?>" class="follow-us__item follow-us__item-inst" rel="external" title="<?php _e('Vers','b');?> Instagram"><span
                                   class="visuallyhidden">Instagram</span></a>
-                        <a href="" class="follow-us__item follow-us__item-vim" title="<?php _e('Vers','b');?> Viméo"><span
+                        <a href="<?php the_field('home_vimeo');?>" class="follow-us__item follow-us__item-vim" rel="external" title="<?php _e('Vers','b');?> Viméo"><span
                                   class="visuallyhidden">Viméo</span></a>
-                        <a href="" class="follow-us__item follow-us__item-yout" title="<?php _e('Vers','b');?> Youtube"><span
+                        <a href="<?php the_field('home_youtube');?>" class="follow-us__item follow-us__item-yout"rel="external" title="<?php _e('Vers','b');?> Youtube"><span
                                   class="visuallyhidden">Youtube</span></a>
                   </div>
             </section>
@@ -256,9 +206,10 @@ Template Name: Homepage
                                           <div class="last-prod__item__hovereffect"></div>
                                     </a>
                               </div>
+                              <?php wp_reset_postdata(); ?>
                         <?php endwhile; endif; ?>
                   </div>
                   <a href="<?php echo get_page_link(200); ?>" class="last-prod__button" title="<?php _e('Voir toutes nos productions','b');?>">
-                        <h2><?php _e('Voir nos productions','b');?></h2>
+                        <h2><?php _e('Voir nos réalisations','b');?></h2>
                   </a>
             </section>

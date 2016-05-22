@@ -234,7 +234,28 @@ body {
   width: 100%;
   height: 100%;
 }
-.news-view__article blockquote {
+.alignright {
+  float: right;
+  margin-left: 3rem;
+  max-width: 100%;
+  height: auto;
+}
+.aligncenter {
+  display: block;
+  margin: 3rem auto 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+.alignleft {
+  max-width: 100%;
+  height: auto;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.news-view__article blockquote,
+.prod-view__tabs-and-content-container blockquote {
   font-style: italic;
   border-left: 8px solid #2e4157;
   padding-left: 20px;
@@ -242,37 +263,59 @@ body {
   margin-bottom: 40px;
   color: #5c5c5c;
 }
-.news-view__article em {
+.news-view__article em,
+.prod-view__tabs-and-content-container em {
   font-style: italic;
 }
-.news-view__article p {
+.news-view__article p,
+.prod-view__tabs-and-content-container p {
   font-size: 2.058em;
   line-height: 1.4em;
   margin-bottom: 0.997em;
 }
-.news-view__article strong {
+.news-view__article strong,
+.prod-view__tabs-and-content-container strong {
   font-weight: bold;
 }
-.news-view__article i {
+.news-view__article i,
+.prod-view__tabs-and-content-container i {
   font-style: italic;
 }
-.news-view__article .news-view__the-content {
+.news-view__article .news-view__the-content,
+.prod-view__tabs-and-content-container .news-view__the-content,
+.news-view__article .prod-view__sections,
+.prod-view__tabs-and-content-container .prod-view__sections {
   overflow: hidden;
 }
-.news-view__article .news-view__the-content .alignright {
+.news-view__article .news-view__the-content .alignright,
+.prod-view__tabs-and-content-container .news-view__the-content .alignright,
+.news-view__article .prod-view__sections .alignright,
+.prod-view__tabs-and-content-container .prod-view__sections .alignright {
   float: right;
   margin-left: 3rem;
 }
-.news-view__article .news-view__the-content .aligncenter {
+.news-view__article .news-view__the-content .aligncenter,
+.prod-view__tabs-and-content-container .news-view__the-content .aligncenter,
+.news-view__article .prod-view__sections .aligncenter,
+.prod-view__tabs-and-content-container .prod-view__sections .aligncenter {
   display: block;
   margin: 3rem auto 0 auto;
 }
-.news-view__article .news-view__the-content a {
+.news-view__article .news-view__the-content a,
+.prod-view__tabs-and-content-container .news-view__the-content a,
+.news-view__article .prod-view__sections a,
+.prod-view__tabs-and-content-container .prod-view__sections a {
   color: #e0c331;
   font-weight: 500;
 }
 .news-view__article .news-view__the-content a:hover,
-.news-view__article .news-view__the-content a:focus {
+.prod-view__tabs-and-content-container .news-view__the-content a:hover,
+.news-view__article .prod-view__sections a:hover,
+.prod-view__tabs-and-content-container .prod-view__sections a:hover,
+.news-view__article .news-view__the-content a:focus,
+.prod-view__tabs-and-content-container .news-view__the-content a:focus,
+.news-view__article .prod-view__sections a:focus,
+.prod-view__tabs-and-content-container .prod-view__sections a:focus {
   text-decoration: underline;
 }
 .sous-titre1 {

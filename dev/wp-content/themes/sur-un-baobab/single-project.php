@@ -72,38 +72,13 @@ get_header();
                         <div class="prod-view__content-container">
                               <section class="prod-view__sections active" id="tab-one">
                                     <h3 aria-level="3" class="prod-view__sections__title">Le projet</h3>
-                                    <figure class="prod-view__sections__figure">
-                                          <img src="../img/jpg/safidini_img1_projet.jpg" width="800" height="288" alt="" class="prod-view__sections__figure-img">
-                                    </figure>
-                                    <div class="prod-view__sections__bloc-txt">
-                                          <span aria-level="4" class="prod-view__sections__subtitle">Safidin’i Pela: un projet proposé aux jeunes malgaches</span>
-                                          <p class="prod-view__sections__paragraph">
-                                                Le court métrage « Safidin’i Pela » est le fruit d’un atelier cinéma d’animation qui s’est déroulé entre le mois de septembre et octobre 2015 à Tuléar, ville côtière du sud-ouest de Madagascar. L’atelier a été proposé aux bénéficiaires du Centre Art et Musique et du Foyer Social de l’ONG Bel Avenir, foyer dédié aux adolescentes en risque d’exclusion sociale et de grossesse précoce. Fin octobre, les 9 jeunes participant(e)s volontaires âgé(e)s de 11 à 19 ans présentent fièrement et en avant première leur création devant près de 200 spectateurs dans le vieux cinéma Le Tropic à Tuléar.
-                                          </p>
-                                    </div>
-                                    <div class="prod-view__sections__bloc-txt prod-view__sections__bloc-txt-50%">
-                                          <span aria-level="4" class="prod-view__sections__subtitle">La grossesse précoce</span>
-                                          <img src="../img/jpg/vony.jpg" width="624" height="602" alt="" class="prod-view__sections__paragraph-img-float">
-                                          <p class="prod-view__sections__paragraph">
-                                                Selon le rapport 2011 « Les jeunes à Madagascar: faits et chiffres » de l’Unicef, 48,1% des jeunes filles entre 15 et 19 ans de la région de Atsimo-Andrefana, dont Tuléar est le chef-lieu, sont mères ou sont enceintes. En 2015, pour la même région et la même tranche d’âge, le Southern Africa Gender Protocol Alliance indique 56,2%. En d’autres termes, actuellement dans la région de Tuléar plus d’une adolescente sur deux tombe enceinte pour la première fois entre 15 et 19 ans et la situation à tendance à s’aggraver.
-                                          </p>
-                                          <p class="prod-view__sections__paragraph">
-                                                Malheureusement les grossesses précoces contribuent (avec les grossesses tardives, rapprochées et multiples) pour beaucoup aux taux élevés de mortalité, de mortalité infantile et juvénile, en particulier dans les pays pauvres. Les grossesses des adolescentes sont à risques. Elles augmentent également les taux de mortalité maternelle. Enfin, être une jeune maman réduit fortement la possibilité pour les jeunes femmes de faire des études et de travailler. Ces grossesses précoces risquent de porter un préjudice durable à leur qualité de vie et à celle de leurs enfants. (Binet, Gastineau et Rakotoson, 2010 : 257-272)
-                                          </p>
-                                          <p class="prod-view__sections__paragraph">
-                                                De cette constatation inquiétante est partie l’idée d’aborder la problématique de la grossesse précoce et plus particulièrement des relations entre adultes et jeunes filles car c’est une des causes courantes de grossesse précoce à Madagascar.
-                                          </p>
-                                    </div>
+                                    <?php the_field('prod_projet');?>
                               </section>
 
                               <section class="prod-view__sections" id="tab-two">
                                     <h3 aria-level="3" class="prod-view__sections__title">Making of</h3>
                                     <div class="prod-view__sections__bloc-txt">
-                                          <span aria-level="4" class="prod-view__sections__subtitle">Des déchets pour un décor</span>
-                                          <p class="prod-view__sections__paragraph">
-                                                Une des étapes de fabrication d’un petit film d’animation est la création du décors. Pour celui-ci, les enfants ont créé une maquette d’un paysage malgache en matériaux « recyclés » ! Pour cela ils ont utilisé des déchets et des éléments trouvés dans la rue, par exemple des boites de conserves, un vieux grillage, un peu d’argile, du sable, un reste de moustiquaire, des vieux journaux, etc. Et on a mangé un ananas pour utiliser ses feuilles dans la fabrication de minis cocotiers.
-                                          </p>
-                                          <img src="../img/jpg/decors.jpg" width="624" height="420" alt="" class="prod-view__sections__paragraph-img">
+                                          <?php the_field('prod_makingof');?>
                                     </div>
                               </section>
 

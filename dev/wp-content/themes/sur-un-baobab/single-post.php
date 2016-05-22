@@ -52,6 +52,8 @@ get_header();
                               </article>
                               <?php endwhile; endif; ?>
 
+                              <?php comments_template();?>
+
                         </div>
                   </main>
             </div>

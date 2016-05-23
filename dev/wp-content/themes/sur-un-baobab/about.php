@@ -128,7 +128,7 @@ get_header();
                     </div>
 
                     <div class="projet-helpus">
-                        <a href="#" class="projet-helpus__donate"><?php _e('Aidez-nous','b');?></a>
+                        <a href="#" class="projet-helpus__donate"><?php _e('Soutenez-nous','b');?></a>
                         <span class="projet-helpus__follow-us-text"><?php _e('Ou suivez-nous','b');?></span>
                         <a href="" class="projet-helpus__item follow-us__item follow-us__item-fb"
                            title="Vers Facebook" rel="external" target="_blank">

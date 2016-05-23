@@ -40,15 +40,19 @@ register_post_type( 'project', [
             'has_archive' => true
       ] );
 
-register_taxonomy( 'project-type', 'project', [
-            'label' => __('Types de projets','b'),
-            'labels' => [
-                  'singular_name' => __('Type de projet','b')
-            ],
-            'public' => true,
-            'description' => __('Le procédé utilisé pour créer ce projet','b'),
-            'hierarchical' => true
-      ] );
+register_post_type( 'ateliers', [
+    'label' => __('Ateliers','b'),
+    'labels' => [
+        'singular_name' => __('Ateliers','b'),
+        'add_new' => __('Ajouter un nouvel atelier','b')
+    ],
+    'description' => __('La liste de tous les ateliers du site','b'),
+    'public' => true,
+    'menu_position' => 6,
+    'menu_icon' => 'dashicons-smiley',
+    'supports' => ['title','thumbnail'],
+    'has_archive' => true
+] );
 
 /*
  * Defines navigation menus.
@@ -182,6 +186,13 @@ function the_breadcrumb() {
                   echo '</li>';
             }
       }
+      elseif (is_tag()) {single_tag_title();}
+      elseif (is_day()) {echo"<li>Archive for "; the_time('F jS, Y'); echo'</li>';}
+      elseif (is_month()) {echo"<li>Archive for "; the_time('F, Y'); echo'</li>';}
+      elseif (is_year()) {echo"<li>Archive for "; the_time('Y'); echo'</li>';}
+      elseif (is_author()) {echo"<li>Author Archive"; echo'</li>';}
+      elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "<li>Blog Archives"; echo'</li>';}
+      elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
       echo '</ol>';
 }
 
@@ -209,6 +220,20 @@ function the_breadcrumb_article(){
                   echo get_permalink();
                   echo '">';
                   echo the_title();
+                  echo '</a>';
+                  echo '</li>';
+            }
+            elseif (is_tag()){
+                  echo '<li class="breadcrumb__link">';
+                  echo '<a class="breadcrumb__link__text" href="';
+                  echo get_page_link(147);
+                  echo '">';
+                  echo 'Actualités</a>';
+                  echo '</li>';
+                  echo '<li class="breadcrumb__link"><a class="breadcrumb__link__text" href="';
+                  echo get_tag_link();
+                  echo '">';
+                  echo single_tag_title();
                   echo '</a>';
                   echo '</li>';
             }

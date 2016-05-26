@@ -8,7 +8,7 @@ if(is_page()){
         'posts_per_page' => 3,
         'orderby' => 'date',
         'order' => 'DESC',
-        'post_type' => 'project'
+        'post_type' => 'ateliers'
     ]);
 }
 

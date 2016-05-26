@@ -2,15 +2,15 @@
 /*
  * Template Name: Ateliers list
  */
-        if(is_page()){
-            query_posts([
-                'posts_per_page' => 3,
-                'orderby' => 'date',
-                'order' => 'DESC',
-                'post_type' => 'ateliers'
-            ]);
 
-        };
+if(is_page()){
+    query_posts([
+        'posts_per_page' => 3,
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'post_type' => 'ateliers'
+    ]);
+}
 
 get_header(); ?>
 
@@ -19,7 +19,6 @@ get_header(); ?>
     <div class="container">
 
         <?php the_breadcrumb_article();?>
-
 
         <main>
             <section class="ateliers">

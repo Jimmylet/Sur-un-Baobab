@@ -1,3 +1,4 @@
+
 <footer class="footer">
     <div class="footer__container">
         <section class="footer__section footer__help-us">
@@ -57,8 +58,10 @@
                    title="Vers Viméo">
                     <span class="visuallyhidden">Viméo</span>
                 </a>
-                <a href="" class="footer__social__item footer__social__item-yout"
+                <?php $easy_options = get_option("easy_page_options");?>
+                <a href="<?php $easy_options["footer_yout"];?>" class="footer__social__item footer__social__item-yout"
                    title="Vers Youtube">
+
                     <span class="visuallyhidden">Youtube</span>
                 </a>
             </section>

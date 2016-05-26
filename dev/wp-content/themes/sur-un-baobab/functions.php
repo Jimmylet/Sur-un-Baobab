@@ -50,8 +50,7 @@ register_post_type( 'ateliers', [
     'public' => true,
     'menu_position' => 6,
     'menu_icon' => 'dashicons-smiley',
-    'supports' => ['title','thumbnail'],
-    'has_archive' => true
+    'supports' => ['title','thumbnail']
 ] );
 
 /*
@@ -166,7 +165,7 @@ function the_breadcrumb() {
             echo '<li class="breadcrumb__link"  itemprop="title"><a class="breadcrumb__link__text" href="';
             echo get_home_url();
             echo '">';
-            echo 'Accueil';
+            echo _e('Accueil','b');
             echo "</a></li>";
             if (is_category() || is_single()) {
                   echo '<li class="breadcrumb__link">';
@@ -202,12 +201,13 @@ function the_breadcrumb_article(){
             echo '<li class="breadcrumb__link"  itemprop="title"><a class="breadcrumb__link__text" itemprop="url" href="';
             echo get_home_url();
             echo '">';
-            echo 'Accueil';
+            echo _e('Accueil','b');
             echo "</a></li>";
             if (is_category() || is_single()) {
                   echo '<li class="breadcrumb__link">';
                   echo '<a class="breadcrumb__link__text" href="">';
-                  echo 'Actualités</a>';
+                  echo _e('Actualités','b');
+                  echo '</a>';
                   echo '</li>';
                   if (is_single()) {
                         echo '<li class="breadcrumb__link">';
@@ -228,7 +228,8 @@ function the_breadcrumb_article(){
                   echo '<a class="breadcrumb__link__text" href="';
                   echo get_page_link(147);
                   echo '">';
-                  echo 'Actualités</a>';
+                  echo _e('Actualités','b');
+                  echo '</a>';
                   echo '</li>';
                   echo '<li class="breadcrumb__link"><a class="breadcrumb__link__text" href="';
                   echo get_tag_link();

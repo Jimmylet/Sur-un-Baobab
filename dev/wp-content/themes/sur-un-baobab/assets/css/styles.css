@@ -255,7 +255,8 @@ img {
   height: auto;
 }
 .news-view__article blockquote,
-.prod-view__tabs-and-content-container blockquote {
+.prod-view__tabs-and-content-container blockquote,
+.makedonate__container blockquote {
   font-style: italic;
   border-left: 8px solid #2e4157;
   padding-left: 20px;
@@ -264,58 +265,74 @@ img {
   color: #5c5c5c;
 }
 .news-view__article em,
-.prod-view__tabs-and-content-container em {
+.prod-view__tabs-and-content-container em,
+.makedonate__container em {
   font-style: italic;
 }
 .news-view__article p,
-.prod-view__tabs-and-content-container p {
+.prod-view__tabs-and-content-container p,
+.makedonate__container p {
   font-size: 2.058em;
   line-height: 1.4em;
   margin-bottom: 0.997em;
 }
 .news-view__article strong,
-.prod-view__tabs-and-content-container strong {
+.prod-view__tabs-and-content-container strong,
+.makedonate__container strong {
   font-weight: bold;
 }
 .news-view__article i,
-.prod-view__tabs-and-content-container i {
+.prod-view__tabs-and-content-container i,
+.makedonate__container i {
   font-style: italic;
 }
 .news-view__article .news-view__the-content,
 .prod-view__tabs-and-content-container .news-view__the-content,
+.makedonate__container .news-view__the-content,
 .news-view__article .prod-view__sections,
-.prod-view__tabs-and-content-container .prod-view__sections {
+.prod-view__tabs-and-content-container .prod-view__sections,
+.makedonate__container .prod-view__sections {
   overflow: hidden;
 }
 .news-view__article .news-view__the-content .alignright,
 .prod-view__tabs-and-content-container .news-view__the-content .alignright,
+.makedonate__container .news-view__the-content .alignright,
 .news-view__article .prod-view__sections .alignright,
-.prod-view__tabs-and-content-container .prod-view__sections .alignright {
+.prod-view__tabs-and-content-container .prod-view__sections .alignright,
+.makedonate__container .prod-view__sections .alignright {
   float: right;
   margin-left: 3rem;
 }
 .news-view__article .news-view__the-content .aligncenter,
 .prod-view__tabs-and-content-container .news-view__the-content .aligncenter,
+.makedonate__container .news-view__the-content .aligncenter,
 .news-view__article .prod-view__sections .aligncenter,
-.prod-view__tabs-and-content-container .prod-view__sections .aligncenter {
+.prod-view__tabs-and-content-container .prod-view__sections .aligncenter,
+.makedonate__container .prod-view__sections .aligncenter {
   display: block;
   margin: 3rem auto 0 auto;
 }
 .news-view__article .news-view__the-content a,
 .prod-view__tabs-and-content-container .news-view__the-content a,
+.makedonate__container .news-view__the-content a,
 .news-view__article .prod-view__sections a,
-.prod-view__tabs-and-content-container .prod-view__sections a {
+.prod-view__tabs-and-content-container .prod-view__sections a,
+.makedonate__container .prod-view__sections a {
   color: #e0c331;
   font-weight: 500;
 }
 .news-view__article .news-view__the-content a:hover,
 .prod-view__tabs-and-content-container .news-view__the-content a:hover,
+.makedonate__container .news-view__the-content a:hover,
 .news-view__article .prod-view__sections a:hover,
 .prod-view__tabs-and-content-container .prod-view__sections a:hover,
+.makedonate__container .prod-view__sections a:hover,
 .news-view__article .news-view__the-content a:focus,
 .prod-view__tabs-and-content-container .news-view__the-content a:focus,
+.makedonate__container .news-view__the-content a:focus,
 .news-view__article .prod-view__sections a:focus,
-.prod-view__tabs-and-content-container .prod-view__sections a:focus {
+.prod-view__tabs-and-content-container .prod-view__sections a:focus,
+.makedonate__container .prod-view__sections a:focus {
   text-decoration: underline;
 }
 .sous-titre1 {
@@ -344,6 +361,9 @@ img {
   line-height: 1.25em;
   color: #363636;
 }
+.menu__link:last-child {
+  margin-right: 0;
+}
 .header__logo {
   display: inline-block;
   width: 8.5em;
@@ -357,7 +377,6 @@ img {
 .menu__container {
   margin: 0 auto;
   float: right;
-  margin-right: 1.75em;
 }
 .menu__title {
   display: none;
@@ -762,9 +781,10 @@ img {
   margin-bottom: 5em;
 }
 .photos__container {
-  max-width: 105em;
+  max-width: 120em;
   margin: 0 auto;
   padding: 0 3em;
+  margin-bottom: 10em;
 }
 .photos__intro__button-container {
   margin: 0 auto;

@@ -4,7 +4,6 @@
 Template Name: archive
 */
 
-/*global $wp_query;*/
 
 get_header(); ?>
 
@@ -21,7 +20,9 @@ get_header(); ?>
                 'order' => 'DESC',
                 'post_type' => 'post'
             ]);
-        };?>
+        };
+        ?>
+
         <main>
             <section class="news">
                 <h2 aria-level="2" class="news-titlesection">

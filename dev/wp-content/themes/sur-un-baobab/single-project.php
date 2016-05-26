@@ -175,6 +175,7 @@ get_header();
             </section>
 
       </main>
+</div>
 
       <?php endwhile; endif; ?>
 

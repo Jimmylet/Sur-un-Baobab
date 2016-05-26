@@ -91,12 +91,6 @@ include 'head.php';
                         </main>
                     </div>
 
-                </div>
-                <div class="site-cache" id="site-cache"></div>
-            </div>
+<?php
 
-        </div>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-        <script type="text/javascript" src="../scripts/menu-res.js"></script>
-    </body>
-</html>
+get_footer();

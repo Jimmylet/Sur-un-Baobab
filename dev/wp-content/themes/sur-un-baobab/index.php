@@ -5,7 +5,7 @@ Template Name: Homepage
 
 ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html" xml:lang="fr" lang="fr">
       <head>
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -213,3 +213,8 @@ Template Name: Homepage
                         <h2><?php _e('Voir nos réalisations','b');?></h2>
                   </a>
             </section>
+            </main>
+            </div>
+<?php
+
+get_footer();

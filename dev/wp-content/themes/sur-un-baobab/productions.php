@@ -8,7 +8,7 @@ if(is_page()){
         'posts_per_page' => 3,
         'orderby' => 'date',
         'order' => 'DESC',
-        'post_type' => 'ateliers'
+        'post_type' => 'project'
     ]);
 }
 
@@ -99,5 +99,8 @@ get_header();?>
                 </div>
             </section>
         </main>
+</div>
+<?php
 
+get_footer();
 

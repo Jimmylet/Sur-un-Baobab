@@ -54,16 +54,16 @@ get_header();
                                     <li class="prod-view__tabs-list active">
                                           <a href="#section-projet" data-tab-target="tab-one" class="prod-view__tabs-link prod-view__tabs-link-1 active">Projet</a>
                                     </li><!--
-										---><li class="prod-view__tabs-list">
+										--><li class="prod-view__tabs-list">
                                           <a href="#section_makingof" data-tab-target="tab-two" class="prod-view__tabs-link prod-view__tabs-link-2">Making of</a>
                                     </li><!--
 										 --><li class="prod-view__tabs-list">
                                           <a href="#section_fichetech" data-tab-target="tab-three" class="prod-view__tabs-link prod-view__tabs-link-3">Fiche technique</a>
                                     </li><!--
-										---><li class="prod-view__tabs-list">
+										--><li class="prod-view__tabs-list">
                                           <a href="#section_diffuser" data-tab-target="tab-four" class="prod-view__tabs-link prod-view__tabs-link-4">Diffuser</a>
                                     </li><!--
-										---><li class="prod-view__tabs-list">
+										--><li class="prod-view__tabs-list">
                                           <a href="#section_presse" data-tab-target="tab-five" class="prod-view__tabs-link prod-view__tabs-link-5">Presse</a>
                                     </li>
                               </ul>
@@ -175,7 +175,6 @@ get_header();
             </section>
 
       </main>
-</div>
 
       <?php endwhile; endif; ?>
 

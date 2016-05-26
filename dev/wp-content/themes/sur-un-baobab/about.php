@@ -32,13 +32,9 @@ get_header();
                     <img class="desc-projet__main-img" src="<?php echo $image['url']; ?>"
                          alt="<?php echo $image['alt']; ?>">
                     <?php endif; ?>
-                    <p class="desc-projet__desc paragraph-style-projet">
                         <?php the_field('about_desc'); ?>
-                    </p>
                     <span class="desc-projet__sousrubrique"><?php _e('Nos objectifs','b');?></span>
-                    <p class="desc-projet__desc paragraph-style-projet">
                         <?php the_field('about_obj'); ?>
-                    </p>
                 </div>
             </section>
             <div class="desc-projet__quote">
@@ -52,9 +48,7 @@ get_header();
                             La&nbsp;technique
                         </h2>
                     </div>
-                    <p class="desc-technique__desc paragraph-style-projet">
                         <?php the_field('about_technique_top'); ?>
-                    </p>
                     <figure class="desc-technique__figure">
                         <?php
                         $image = get_field('about_gif');
@@ -63,9 +57,7 @@ get_header();
                                  alt="<?php echo $image['alt']; ?>">
                         <?php endif; ?>
                     </figure>
-                    <p class="desc-technique__desc desc-technique__desc__txtleft paragraph-style-projet">
                         <?php the_field('about_technique_left'); ?>
-                    </p>
                     <a href="#" title="Vers le projet Safidin’i Pela" class="desc-technique__button"><?php _e('Voir la fabrication du film Safidin’i Pela','b');?></a>
                 </div>
             </section>
@@ -76,9 +68,7 @@ get_header();
                             <?php _e('À propos de nous','b');?>
                         </h2>
                     </div>
-                    <p class="whoarewe__desc paragraph-style-projet">
                         <?php the_field('about_elena_francois'); ?>
-                    </p>
 
                     <div class="whoarewe__about-container">
                         <div class="whoarewe__about-container-2">
@@ -156,7 +146,6 @@ get_header();
 
             </section>
         </main>
-        </div>
 <?php
 
 get_footer();

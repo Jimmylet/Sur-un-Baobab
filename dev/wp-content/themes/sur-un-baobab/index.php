@@ -5,13 +5,12 @@ Template Name: Homepage
 
 ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html" xml:lang="fr" lang="fr">
+<html lang="fr">
       <head>
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Accueil - <?php _e('Sur un Baobab','b');?></title>
 <!--[if lt IE 9]>
-<!--<link rel="stylesheet" HREF="css/ie.css" TYPE="text/css">-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
 <![endif]-->
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/assets/css/styles.css';?>">
@@ -52,15 +51,14 @@ Template Name: Homepage
 
 <div class="site-content">
       <div class="container">
+            <main>
             <section class="intro-text">
                   <h2 class="intro-text__title">Rencontrer. Animer. Aider.</h2>
                   <div class="intro-text__container">
                         <img class="intro-text__img" src="<?php bloginfo('template_directory'); ?>/assets/img/svg/baobab_logo_svg.svg" alt="Logo Surunbaobab"
                              width="220"
                              height="177">
-                        <p class="intro-text__paragraph">
                               <?php the_field('home_description'); ?>
-                        </p>
                   </div>
                   <a class="intro-text__button" href="#"><?php _e('En savoir plus','b');?></a>
                   <svg class="intro-text__deco" width="23" height="212"
@@ -180,7 +178,7 @@ Template Name: Homepage
                                   class="visuallyhidden">Instagram</span></a>
                         <a href="<?php the_field('home_vimeo');?>" class="follow-us__item follow-us__item-vim" rel="external" title="<?php _e('Vers','b');?> Viméo"><span
                                   class="visuallyhidden">Viméo</span></a>
-                        <a href="<?php the_field('home_youtube');?>" class="follow-us__item follow-us__item-yout"rel="external" title="<?php _e('Vers','b');?> Youtube"><span
+                        <a href="<?php the_field('home_youtube');?>" class="follow-us__item follow-us__item-yout" rel="external" title="<?php _e('Vers','b');?> Youtube"><span
                                   class="visuallyhidden">Youtube</span></a>
                   </div>
             </section>
@@ -214,7 +212,6 @@ Template Name: Homepage
                   </a>
             </section>
             </main>
-            </div>
 <?php
 
 get_footer();

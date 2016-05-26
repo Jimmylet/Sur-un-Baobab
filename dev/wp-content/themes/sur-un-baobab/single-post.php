@@ -47,7 +47,7 @@ get_header();
                                     </div>
                                     <!-- TAGS-->
 									<span class="news-view__tags">Tags&nbsp;:
-                                          <?php the_tags( '<a>', '</a>, '); ?>
+                                          <?php the_tags(''); ?>
                                     </span>
                               </article>
                               <?php endwhile; endif; ?>
@@ -56,8 +56,6 @@ get_header();
 
                         </div>
                   </main>
-            </div>
-      </div>
 
 <?php
 

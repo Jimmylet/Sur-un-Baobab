@@ -48,12 +48,12 @@ include 'head.php';
                         <ol class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
                             <li class="breadcrumb__link" itemprop="title">
                                 <a href="<?php echo get_home_url();?>" class="breadcrumb__link__text" itemprop="url">
-                                    Accueil
+                                    <?php _e('Accueil','b');?>
                                 </a>
                             </li>
                             <li class="breadcrumb__link" itemprop="title">
                                 <a href="<?php the_permalink();?>" class="breadcrumb__link__text" itemprop="url">
-                                    Contact
+                                    <?php _e('Contactez-nous','b');?>
                                 </a>
                             </li>
                         </ol>
@@ -70,16 +70,16 @@ include 'head.php';
                                 <div class="contact__numero-container">
                                     <div class="contact__telephone-container">
 										<span class="contact__telephone__title">
-											Téléphone
+											<?php _e('Téléphone','b');?>
 										</span>
-                                        <a href="tel:<?php the_field('contact_tel');?>" class="contact__telephone__link"><?php the_field('contact_tel');?>
-                                            (Belgique)</a>
+                                        <a href="tel:<?php the_field('contact_telephone-link');?>" class="contact__telephone__link"><?php the_field('contact_tel');?>
+                                            (<?php _e('Belgique','b');?>)</a>
                                     </div>
                                     <div class="contact__whatsapp-container">
 										<span class="contact__whatsapp__title">
 											WhatsApp
 										</span>
-                                        <a href="tel:<?php the_field('contact_whatsapp');?>" class="contact__telephone__link"><?php the_field('contact_whatsapp');?></a>
+                                        <a href="tel:<?php the_field('contact_whatsapp-link');?>" class="contact__telephone__link"><?php the_field('contact_whatsapp');?></a>
                                     </div>
                                 </div>
                                 <div class="contact__form-container">
@@ -89,7 +89,6 @@ include 'head.php';
 
                             </section>
                         </main>
-                    </div>
 
 <?php
 

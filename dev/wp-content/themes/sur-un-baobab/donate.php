@@ -86,7 +86,6 @@ include 'head.php';
 
             </section>
         </main>
-    </div>
 
 <?php
 

@@ -99,7 +99,7 @@ get_header();?>
                 </div>
             </section>
         </main>
-</div>
+
 <?php
 
 get_footer();

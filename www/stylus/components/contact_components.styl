@@ -54,6 +54,13 @@
 \************************************/
 
 .contact
+  &__form__submit
+  &__firstname
+  &__email
+  &__lastname
+  &__subject
+  &__message
+    position relative
   &__label
     display block
     margin-bottom 1.250em // 15px
@@ -126,6 +133,24 @@
   padding-bottom 5em
 
 
+.screen-reader-response
+  color #ff0033
+  font-weight 600
+  font-size 1.6em
+  text-align center
+  margin-bottom: 1.250em // 20px
+  ul
+    display none
+
+.wpcf7-not-valid-tip
+  color #ff0033
+  position absolute
+  right 0
+  top 0
+  font-size 1.2em
+
+.wpcf7-validation-errors
+  display none
 
 +media-query( only screen, max-width 928px )
   .contact
@@ -166,6 +191,11 @@
     text-align center
   .contact__telephone-container
     margin-bottom 3em
+
+  .wpcf7-not-valid-tip
+    right: 2.250em
+
+
 
 +media-query( only screen, max-width 620px )
   .contact

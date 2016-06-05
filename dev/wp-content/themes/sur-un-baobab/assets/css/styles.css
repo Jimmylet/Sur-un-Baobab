@@ -3256,6 +3256,14 @@ h3#comments {
 .contact__telephone-container {
   float: left;
 }
+.contact__form__submit,
+.contact__firstname,
+.contact__email,
+.contact__lastname,
+.contact__subject,
+.contact__message {
+  position: relative;
+}
 .contact__label {
   display: block;
   margin-bottom: 1.25em;
@@ -3350,6 +3358,26 @@ h3#comments {
 .contact__form-section-3 {
   padding-bottom: 5em;
 }
+.screen-reader-response {
+  color: #f03;
+  font-weight: 600;
+  font-size: 1.6em;
+  text-align: center;
+  margin-bottom: 1.25em;
+}
+.screen-reader-response ul {
+  display: none;
+}
+.wpcf7-not-valid-tip {
+  color: #f03;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.2em;
+}
+.wpcf7-validation-errors {
+  display: none;
+}
 @media only screen and (max-width: 928px) {
   .contact__form__submit,
   .contact__firstname,
@@ -3394,6 +3422,9 @@ h3#comments {
   }
   .contact__telephone-container {
     margin-bottom: 3em;
+  }
+  .wpcf7-not-valid-tip {
+    right: 2.25em;
   }
 }
 @media only screen and (max-width: 620px) {

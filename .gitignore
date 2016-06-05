@@ -1,4 +1,5 @@
 assets
+node_modules
 projet-sur-un-baobab-master
 Mockups/mockups.bmpr
 dev/*
@@ -6,4 +7,6 @@ dev/*
 dev/wp-content/*
 !dev/wp-content/themes/
 dev/wp-content/themes/*
-!dev/wp-content/themes/sur-un-baobab
+!dev/wp-content/themes/Sur-un-baobab/
+
+dev_online/*

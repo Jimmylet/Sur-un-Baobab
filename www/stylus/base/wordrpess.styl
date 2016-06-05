@@ -27,7 +27,7 @@
   max-width 100%
   height auto
 .aligncenter
-  display: block
+  display: inline-block;
   margin: 3rem auto 0 auto
   max-width 100%
   height auto
@@ -74,8 +74,11 @@ img
       &:focus
         text-decoration underline
 
-
-
+@media screen and ( max-width: 574px )
+  .news-view__article
+  .prod-view__tabs-and-content-container
+  .makedonate__container
+    font-size .8em
 
 
 /************************************\
@@ -108,6 +111,176 @@ img
   line-height 1.25em
   color #363636
 
+@media screen and ( max-width: 574px )
+  .sous-titre1
+    font-size .9em // 18px
+  .sous-titre2
+    font-size 18px
+  .sous-titre3
+    font-size 17px
 
 .menu__link:last-child
   margin-right 0;
+
+
+
+.alignleft
+  display: inline-block;
+  margin-right 2em
+
+
+.wp-caption-text
+  color: color-blue
+  font-style italic
+  font-size 1.5em
+  border-left 3px solid color-blue
+  margin-top: 0.667em // 10px
+  padding-left 0.667em // 10 px
+
+
+/**************************\
+  Style commentaire
+/**************************/
+
+.comment-respond
+  background-color: color-grey-background
+  border-radius 8px
+  padding: 1.5em 2em
+  line-height 1.4em
+  margin-bottom: 10em
+.comment-reply-title
+  font-size 2.06em
+  text-transform uppercase
+  font-weight bold
+  letter-spacing: 1.5px
+  color: color-blue
+  margin-bottom: 0.499em // 15px
+  line-height 1.2em
+#email-notes
+  display block
+  margin-bottom .3em
+  font-style normal
+  line-height 1.4em
+.comment-notes
+  font-size: 1.5em
+  margin-bottom 1.333em
+  font-style italic
+  line-height 1.2em
+.required
+  font-weight: bold;
+.comment-form-comment
+  & label
+    display block
+    font-size: 1.5em
+    font-weight 500
+    margin-bottom: .667em
+    line-height 1.2em
+  & textarea
+    width: 100%
+    display block
+    border-radius: 4px
+    padding: 1em 1.333em
+    font-size 1.5em
+    color color-border-subheader
+    outline: none
+    box-sizing: border-box;
+    margin-bottom: 1.333em
+    border: 1px solid #FFF
+    line-height 1.2em
+    &:focus
+    &:hover
+      border: 1px solid color-blue
+.comment-form-author
+.comment-form-email
+.comment-form-url
+  margin-bottom: .667em
+  & label
+    display block
+    font-size: 1.5em
+    font-weight 500
+    margin-right: 1em
+    margin-bottom .5em
+  & input
+    outline: none
+    border: 1px solid #FFF
+    font-size 1.5em
+    padding: .4em
+    margin-bottom 0.667em
+    color color-border-subheader
+    &:focus
+    &:hover
+      border: 1px solid color-blue
+.comment-form-url
+  margin-bottom: 3em
+.comment-body
+  margin-bottom: 3em
+  background-color: color-white
+  border-radius: 4px
+  padding: 2em 1.5em
+
+
+h3#comments
+  display: none;
+.navigation
+  display: none;
+
+.commentlist
+  & .comment-author
+    margin-bottom .5em
+    & img
+      display none
+    & .fn
+      font-size 1.5em
+      font-weight 500
+      color color-blue
+    & .says
+      font-size 1.5em
+      color color-blue
+.commentlist
+  background-color: color-grey-background
+  border-radius 8px
+  padding: 3em 2em
+  line-height 1.4em
+  margin-bottom 5em
+.commentlist p
+  font-size: 1.5em;
+  margin-bottom: 1.333em;
+
+
+.comment-meta
+  font-size: 1.435em;
+  color: #858585;
+  font-weight: 500;
+  margin-bottom .5em
+  position relative
+  top: -5px
+
+.comment-awaiting-moderation
+  display: none;
+
+.reply
+.form-submit .submit
+  font-size 1.5em
+  background-color: #FFF
+  display inline-block
+  padding: .8em .8em
+  border-radius: 4px
+  border: 2px solid color-main-yellow
+  transition: background-color .3s ease
+  cursor: pointer;
+  font-family ralewayfont
+  &:hover
+  &:focus
+    background-color: color-main-yellow
+    color color-white
+    transition: background-color .3s ease
+
+
+.depth-2
+  margin-left: 2em
+.depth-3
+  margin-left 4em
+.depth-4
+  margin-left 6em
+.depth-5
+  margin-left 8em

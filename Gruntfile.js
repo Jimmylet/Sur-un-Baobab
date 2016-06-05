@@ -64,7 +64,7 @@ module.exports = function( grunt ) {
             },
             "styles": {
                 "files": {
-                    "www/css/styles.css": "www/stylus/styles.styl"
+                    "dev/wp-content/themes/sur-un-baobab/assets/css/styles.css": "www/stylus/styles.styl"
                 }
             }
         },

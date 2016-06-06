@@ -1,0 +1,126 @@
+/* Styles IE8 */
+
+.header-main{
+    background-image: url("../img/jpg/background_home_header.jpg");
+}
+
+.header__title-main{
+    left: 10% !important;
+}
+
+.intro-text__img{
+    display: none;
+}
+
+.intro-text__paragraph{
+    max-width: none;
+}
+
+.last-news__articles__img img{
+    max-width: none;
+}
+
+.donate{
+    background-image: url("../img/jpg/home_donate.jpg");
+}
+
+.donate__img{
+    display: none;
+}
+
+
+.footer{
+    background-color: #2e4157 !important;
+}
+
+.menu__item:before{
+    text-align: center;
+    font-size: 2.2em !important;
+}
+
+.footer__section__newsletter-submit{
+  display: none;
+}
+
+.footer__contact-us__item:before{
+  font-size: 2.2em;
+}
+/* Page Notre projet */
+
+.desc-technique__img{
+    float: right;
+}
+
+.desc-projet__quote {
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  min-height: 7.5em;
+}
+
+/* Page actualité */
+
+.news__container .article__img{
+  zoom: 1;
+  display: block;
+}
+
+.news__container .article__title-container{
+  display: block !important;
+  margin: 0 auto;
+  max-width: 60em;
+}
+
+.article__text-container{
+  display: block;
+  margin: 0 auto;
+  max-width: 60em !important;
+}
+
+.article__infos__author:before,
+.article__infos__date:before{
+  font-size: 1.5em;
+}
+
+.article__button-more{
+  bottom: -60px;
+}
+
+.article__container{
+  margin: 0 auto 15em auto !important;
+  max-width: 60em !important;
+}
+
+/* Page réalisation */
+
+.productions__text{
+  top: 1em;
+  right: 8em;
+}
+
+/* Page réalisation view */
+
+.prod-view__tabs-ul {
+  display: block;
+}
+
+.prod-view__tabs-list{
+  display: inline-block;
+}
+
+.prod-view__tabs-link:before{
+  text-align: center;
+}
+
+/* Page contact */
+.contact__input{
+  min-width: 22.92em;
+}
+
+
+/* Breadcrumb fix */
+.breadcrumb__link:after{
+  position: relative;
+  content: ">";
+  font-size: 2em;
+  top: 0px;
+}

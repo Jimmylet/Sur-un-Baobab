@@ -10,14 +10,21 @@ Template Name: Homepage
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Accueil - <?php _e('Sur un Baobab','b');?></title>
-<!--[if lt IE 9]>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
-<![endif]-->
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/assets/css/styles.css';?>">
+<!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ie8/2.9.10/ie8.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/assets/css/ie8.css';?>">
+<![endif]-->
 </head>
 <body>
       <div class="site-container">
             <div class="site-pusher">
+                  <?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'full' ); ?>
+                  <style media="screen">
+                    .header-main{
+                      background: url("<?php echo get_template_directory_uri() . '/assets/img/png/pattern.png';?>") repeat, url("<?php echo $url[0]; ?>") no-repeat center center/cover;
+                    }
+                  </style>
                   <header class="header header-main">
                         <div class="header__title header__title-main">
                               <h1 class="header__title__main header__title-main__main" aria-level="1">Sur un Baobab</h1>
@@ -51,7 +58,7 @@ Template Name: Homepage
 
 <div class="site-content">
       <div class="container">
-            <main>
+
             <section class="intro-text">
                   <h2 class="intro-text__title">Rencontrer. Animer. Aider.</h2>
                   <div class="intro-text__container">
@@ -62,7 +69,7 @@ Template Name: Homepage
                   </div>
                   <a class="intro-text__button" href="#"><?php _e('En savoir plus','b');?></a>
                   <svg class="intro-text__deco" width="23" height="212"
-                       xmlns="http://www.w3.org/2000/svg">
+                       >
                         <g transform="translate(1 1.542)" stroke="#DAA700" stroke-width="2" fill="none"
                            fill-rule="evenodd">
                               <circle cx="10.5" cy="10.5" r="10.5"/>
@@ -76,7 +83,7 @@ Template Name: Homepage
 							<span class="last-news__newsletters">
 								<?php _e('Ne ratez plus rien','b');?>, <a href="#" class="last-news__newsletters__link"><?php _e('abonnez-vous','b');?> &nbsp;!</a>
 							</span>
-                  <svg class="last-news__line2" width="2" height="98" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="last-news__line2" width="2" height="98" >
                         <path d="M1 1.5V97" stroke="#DAA700" stroke-width="2" fill="none" fill-rule="evenodd"
                               stroke-linecap="square"/>
                   </svg>
@@ -132,7 +139,7 @@ Template Name: Homepage
                                                 <div class="article__vignette__more-container">
                                                       <div class="article__vignette__more">
                                                             <svg width="13" height="13" viewBox="0 0 13 13"
-                                                                 xmlns="http://www.w3.org/2000/svg">
+                                                                 >
                                                                   <g stroke="#282828" fill="none" fill-rule="evenodd"
                                                                      stroke-linecap="square">
                                                                         <path d="M6.6848156 1.29920082V12.0870395M1.29920082 6.6848156H12.0870395"/>
@@ -150,7 +157,7 @@ Template Name: Homepage
             </section>
             <!-- FAIRE UN DON ET CITATION -->
             <section class="donate">
-                  <svg class="donate__img" width="397" height="37" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="donate__img" width="397" height="37" >
                         <g fill="#FFF" fill-rule="evenodd" fill-opacity=".6">
                               <path d="M396.574243 36.767081h-36l18-36M360.574243 36.767081h-36l18-36M324.574243 36.767081h-36l18-36M288.574243 36.767081h-36l18-36M252.574243 36.767081h-36l18-36M216.574243 36.767081h-36l18-36M180.574243 36.767081h-36l18-36M144.574243 36.767081h-36l18-36M108.574243 36.767081h-36l18-36M72.574243 36.767081h-36l18-36"/>
                               <path d="M36.574243 36.767081h-36l18-36"/>
@@ -211,7 +218,7 @@ Template Name: Homepage
                         <h2><?php _e('Voir nos réalisations','b');?></h2>
                   </a>
             </section>
-            </main>
+
 <?php
 
 get_footer();

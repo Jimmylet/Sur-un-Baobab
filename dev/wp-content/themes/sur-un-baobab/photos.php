@@ -2,8 +2,10 @@
 /*
  * Template Name: Photos
  */
+
 get_header();
 ?>
+
 
 </header>
 <div class="site-content">

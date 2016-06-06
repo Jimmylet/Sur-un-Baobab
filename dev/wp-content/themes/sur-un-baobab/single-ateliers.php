@@ -17,8 +17,13 @@ get_header();
                 </a>
             </li>
             <li class="breadcrumb__link" itemprop="title">
-                <a href="news.html" class="breadcrumb__link__text" itemprop="url">
+                <a href="<?php echo the_permalink(291);?>" class="breadcrumb__link__text" itemprop="url">
                     Ateliers
+                </a>
+            </li>
+            <li class="breadcrumb__link" itemprop="title">
+                <a href="<?php echo the_permalink();?>" class="breadcrumb__link__text" itemprop="url">
+                    <?php echo the_title();?>
                 </a>
             </li>
         </ol>

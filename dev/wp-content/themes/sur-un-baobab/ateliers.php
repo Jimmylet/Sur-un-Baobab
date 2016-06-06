@@ -3,14 +3,7 @@
  * Template Name: Ateliers list
  */
 
-if(is_page()){
-    query_posts([
-        'posts_per_page' => 3,
-        'orderby' => 'date',
-        'order' => 'DESC',
-        'post_type' => 'ateliers'
-    ]);
-}
+
 
 get_header(); ?>
 
@@ -19,6 +12,16 @@ get_header(); ?>
     <div class="container">
 
         <?php the_breadcrumb_article();?>
+
+        <?php
+          if(is_page()){
+            query_posts([
+                'posts_per_page' => 3,
+                'orderby' => 'date',
+                'order' => 'DESC',
+                'post_type' => 'ateliers'
+            ]);
+        };?>
 
         <main>
             <section class="ateliers">
@@ -54,4 +57,3 @@ get_header(); ?>
 <?php
 
 get_footer();
-

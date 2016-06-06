@@ -284,3 +284,72 @@ h3#comments
   margin-left 6em
 .depth-5
   margin-left 8em
+
+/**************************\
+  PAGINATION STYLE
+/**************************/
+
+.wp-pagenavi
+  height 100%
+  margin-bottom: 10em
+  text-align center
+  a
+  span
+    margin-right: 12px
+  .current
+    background: #D9A613;
+    border-radius: 8px;
+    font-size: 2em
+    color: #FFFFFF;
+    letter-spacing: 0.77px;
+    padding:.4em .8em
+    border: 1px solid #D9A613
+  .page
+    font-size: 2em
+    color #727272
+    background: #F5F5F5
+    letter-spacing: 0.77px;
+    padding:.4em .8em
+    border-radius: 8px;
+    border: 1px solid #F5F5F5
+    &:hover
+    &:focus
+      border: 1px solid #D9A613;
+  .last
+    position relative
+    font-size: 2em
+    color transparent
+    background: #F5F5F5
+    letter-spacing: 0.77px;
+    padding:.4em .8em
+    border-radius: 8px;
+    border: 1px solid #F5F5F5
+    &:before
+      content: "\e913"
+      color #727272
+      display: inline-block;
+      font-family glyphs
+      position absolute
+      left: 13px
+    &:hover
+    &:focus
+      border: 1px solid #D9A613;
+  .first
+    position relative
+    font-size: 2em
+    color transparent
+    background: #F5F5F5
+    letter-spacing: 0.77px;
+    padding:.4em .8em
+    border-radius: 8px;
+    border: 1px solid #F5F5F5
+    &:before
+      content: "\e912"
+      color #727272
+      display: inline-block;
+      font-family glyphs
+      position absolute
+      left: 13px
+    &:hover
+    &:focus
+      border: 1px solid #D9A613;

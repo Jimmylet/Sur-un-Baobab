@@ -162,22 +162,22 @@ function b_get_languages()
 function the_breadcrumb() {
       echo '<ol class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">';
       if (!is_home()) {
-            echo '<li class="breadcrumb__link"  itemprop="title"><a class="breadcrumb__link__text" href="';
+            echo '<li class="breadcrumb__link"  itemprop="title"><a class="breadcrumb__link__text" itemprop="link" href="';
             echo get_home_url();
             echo '">';
             echo _e('Accueil','b');
             echo "</a></li>";
             if (is_category() || is_single()) {
-                  echo '<li class="breadcrumb__link">';
-                  echo '<a class="breadcrumb__link__text" href="';
-                  the_category('</li><li class="breadcrumb__link>');
+                  echo '<li class="breadcrumb__link" itemprop="title">';
+                  echo '<a class="breadcrumb__link__text" itemprop="link" href="';
+                  the_category('</li><li class="breadcrumb__link itemprop="title">');
                   if (is_single()) {
-                        echo '</li><li class=\"breadcrumb__link>';
+                        echo '</li><li class=\"breadcrumb__link itemprop="title">';
                         the_title();
                         echo '</li>';
                   }
             } elseif (is_page()) {
-                  echo '<li class="breadcrumb__link"><a class="breadcrumb__link__text"  itemprop="link" href="';
+                  echo '<li class="breadcrumb__link" itemprop="title"><a class="breadcrumb__link__text"  itemprop="link" href="';
                   echo get_permalink();
                   echo '">';
                   echo the_title();
@@ -204,19 +204,19 @@ function the_breadcrumb_article(){
             echo _e('Accueil','b');
             echo "</a></li>";
             if (is_category() || is_single()) {
-                  echo '<li class="breadcrumb__link">';
-                  echo '<a class="breadcrumb__link__text" href="">';
+                  echo '<li class="breadcrumb__link" itemprop="title">';
+                  echo '<a class="breadcrumb__link__text" itemprop="url" href="">';
                   echo _e('Actualités','b');
                   echo '</a>';
                   echo '</li>';
                   if (is_single()) {
-                        echo '<li class="breadcrumb__link">';
-                        echo '<a class="breadcrumb__link__text" href="">';
+                        echo '<li class="breadcrumb__link" itemprop="title">';
+                        echo '<a class="breadcrumb__link__text" itemprop="url" href="">';
                         the_title();
                         echo '</a></li>';
                   }
             } elseif (is_page()) {
-                  echo '<li class="breadcrumb__link"><a class="breadcrumb__link__text" href="';
+                  echo '<li class="breadcrumb__link" itemprop="title"><a class="breadcrumb__link__text" itemprop="url" href="';
                   echo get_permalink();
                   echo '">';
                   echo the_title();
@@ -224,14 +224,14 @@ function the_breadcrumb_article(){
                   echo '</li>';
             }
             elseif (is_tag()){
-                  echo '<li class="breadcrumb__link">';
-                  echo '<a class="breadcrumb__link__text" href="';
+                  echo '<li class="breadcrumb__link" itemprop="title">';
+                  echo '<a class="breadcrumb__link__text" itemprop="url" href="';
                   echo get_page_link(147);
                   echo '">';
                   echo _e('Actualités','b');
                   echo '</a>';
                   echo '</li>';
-                  echo '<li class="breadcrumb__link"><a class="breadcrumb__link__text" href="';
+                  echo '<li class="breadcrumb__link" itemprop="title"><a class="breadcrumb__link__text" itemprop="url" href="';
                   echo get_tag_link();
                   echo '">';
                   echo single_tag_title();
@@ -241,6 +241,9 @@ function the_breadcrumb_article(){
       }
       echo '</ol>';
 }
+
+
+
 
 
     $phrase = get_the_content();
@@ -296,3 +299,6 @@ function my_mce_before_init_insert_formats( $init_array ) {
 add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
 
 add_editor_style ( $stylesheet = './assets/css/editor-styles.css' );
+
+// SCRIPTS jquery
+function bbx_enqueue_scripts() { wp_enqueue_script( 'jquery' ); } add_action( 'wp_enqueue_scripts', 'bbx_enqueue_scripts' );

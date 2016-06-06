@@ -132,6 +132,10 @@
     font-size 1.62em
     text-align center
     margin-top 1em
+    &:hover
+    &:focus
+      color color-main-yellow
+      transition color .3s ease-out
     &:before
       font-family glyphs
       font-size 1.3em
@@ -153,16 +157,17 @@
     &-contact:before
       content "\e91c";
     &:hover:before
+    &:focus:before
       transition trans
       color color-main-yellow
+
+.active-item
+  color: color-main-yellow
 
 /************************************\
     HEADER IMG
 \************************************/
 
-
-.header-main
-  background url("../img/png/pattern.png") repeat, url("../img/jpg/background_home_header.jpg") no-repeat center center/cover
 
 .header-main > .header__title-main
   retina-image( "../img/png/title_homebck.png", contain, "@2x" );
@@ -426,4 +431,3 @@
       transform: rotate(-45deg);
     & span:after
       transform: rotate(45deg);
-

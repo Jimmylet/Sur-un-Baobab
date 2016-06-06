@@ -13,14 +13,15 @@ get_header(); ?>
     <div class="container">
         <?php the_breadcrumb_article();?>
         <?php
-        if(is_page()){
+          if(is_page()){
             query_posts([
-                'posts_per_page' => 4,
-                'orderby' => 'date',
-                'order' => 'DESC',
-                'post_type' => 'post'
+              'posts_per_page' => 3,
+              'orderby' => 'date',
+              'order' => 'DESC',
+              'post_type' => 'post',
+              'paged' => get_query_var('paged')
             ]);
-        };
+          }
         ?>
 
         <main>
@@ -65,14 +66,15 @@ get_header(); ?>
                         </div>
 
                     </article>
-
                     <?php endwhile; endif; ?>
                 </div>
+
+                <?php wp_pagenavi();?>
+
+
 
             </section>
         </main>
 <?php
 
 get_footer();
-
-

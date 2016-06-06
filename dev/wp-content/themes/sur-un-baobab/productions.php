@@ -5,10 +5,11 @@
 
 if(is_page()){
     query_posts([
-        'posts_per_page' => 3,
+        'posts_per_page' => 4,
         'orderby' => 'date',
         'order' => 'DESC',
-        'post_type' => 'project'
+        'post_type' => 'project',
+        'paged' => get_query_var('paged')
     ]);
 }
 
@@ -97,10 +98,11 @@ get_header();?>
 
 
                 </div>
+                <?php wp_pagenavi();?>
+
             </section>
         </main>
 
 <?php
 
 get_footer();
-

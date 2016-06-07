@@ -1231,10 +1231,12 @@ h3#comments {
   font-size: 1.62em;
   text-align: center;
   margin-top: 1em;
+  -webkit-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
 }
 .menu__item:hover,
 .menu__item:focus {
-  color: #d9a613;
+  color: #e0c331;
   -webkit-transition: color 0.3s ease-out;
   transition: color 0.3s ease-out;
 }
@@ -1243,8 +1245,9 @@ h3#comments {
   font-size: 1.3em;
   display: block;
   margin-bottom: 0.5em;
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
+}
+.menu__item--active {
+  color: #e0c331;
 }
 .menu__item-home:before {
   content: "\e917";
@@ -1269,12 +1272,9 @@ h3#comments {
 }
 .menu__item:hover:before,
 .menu__item:focus:before {
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
-  color: #d9a613;
-}
-.active-item {
-  color: #d9a613;
+  -webkit-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+  color: #e0c331;
 }
 .header-main > .header__title-main {
   background-image: url("../img/png/title_homebck.png");
@@ -2715,6 +2715,9 @@ h3#comments {
   .article__button-more {
     font-size: 1.5em;
   }
+  .wp-pagenavi {
+    margin-top: 10em;
+  }
 }
 .news-view__img-container {
   border-radius: 10px;
@@ -3122,6 +3125,14 @@ h3#comments {
 }
 .prod-view__content-container {
   margin-bottom: 10em;
+}
+.active p a {
+  color: #d9a613;
+  font-weight: bold;
+}
+.active p a:hover,
+.active p a:focus {
+  text-decoration: underline;
 }
 .prod-view__sections__affiche {
   max-width: 30%;
@@ -3802,6 +3813,28 @@ h3#comments {
     margin-bottom: 1em;
   }
 }
+.error404 {
+  padding: 10em 4em;
+}
+.error404__title {
+  font-size: 3.33em;
+  font-weight: bold;
+  color: #2e4157;
+  margin-bottom: 1.5em;
+}
+.error404__description,
+.error404__return {
+  font-size: 2.62em;
+  color: #222;
+  margin-bottom: 1.908em;
+}
+.error404__link {
+  font-weight: 500;
+}
+.error404__link:hover,
+.error404__link:focus {
+  text-decoration: underline;
+}
 .footer {
   background: url("../img/svg/footer_background.svg") no-repeat, #2e4157;
   color: #fff;
@@ -3869,6 +3902,13 @@ h3#comments {
   font-size: 4.2em;
   font-family: glyphs;
   margin-right: 0.357em;
+  -webkit-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+}
+.footer__social__item:hover:before {
+  color: #ccc;
+  -webkit-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
 }
 .footer__social__item-fb:before {
   content: "\e91e";
@@ -3928,6 +3968,7 @@ h3#comments {
 @media only screen and (max-width: 712px) {
   .footer {
     height: auto;
+    background: #2e4157;
   }
   .footer__container {
     max-width: 28em;

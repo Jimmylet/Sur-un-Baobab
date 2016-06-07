@@ -4,6 +4,7 @@ Template Name: Homepage
 */
 
 ?>
+<?php $easy_options = get_option("easy_page_options");?>
 <!DOCTYPE html>
 <html lang="fr">
       <head>
@@ -48,8 +49,12 @@ Template Name: Homepage
                                           <a href="" class="menu__lang__item" lang="es">Spanish</a>
                                           <a href="" class="menu__lang__item" lang="en">English</a>
                                     </div>
+                                    <?php
+                          						global $post;
+                          						$thePostID = $post->ID;
+                          					?>
                                     <?php foreach (b_get_menu_items('main-nav') as $navItem): ?>
-                                          <a href="<?php echo $navItem->url;?>" class="menu__link"><span class="menu__item menu__item-<?php echo $navItem->icon;?>" title="Vers la page <?php echo $navItem->label;?>"><?php echo $navItem->label;?></span></a>
+                                          <a href="<?php echo $navItem->url;?>" class="menu__link"><span class="menu__item menu__item-<?php echo $navItem->icon;?> menu__item--<?php echo $thePostID == $navItem->id ? "active" : "" ;?>" title="Vers la page <?php echo $navItem->label;?>"><?php echo $navItem->label;?></span></a>
                                     <?php endforeach; ?>
                               </div>
                               <span aria-hidden="true" class="menu__icon-bg"></span>
@@ -67,7 +72,7 @@ Template Name: Homepage
                              height="177">
                               <?php the_field('home_description'); ?>
                   </div>
-                  <a class="intro-text__button" href="#"><?php _e('En savoir plus','b');?></a>
+                  <a class="intro-text__button" href="<?php the_permalink('27');?>"><?php _e('En savoir plus','b');?></a>
                   <svg class="intro-text__deco" width="23" height="212"
                        >
                         <g transform="translate(1 1.542)" stroke="#DAA700" stroke-width="2" fill="none"
@@ -170,22 +175,22 @@ Template Name: Homepage
 							<span class="donate__text2">
 								<?php _e('les enfants','b');?>
 							</span>
-                  <a href="#" class="donate__button">
+                  <a href="<?php the_permalink('311');?>" class="donate__button">
                         <h2><?php _e('Soutenez-nous','b');?>&nbsp;!</h2>
                   </a>
                   <div class="follow-us">
 								<span class="follow-us__text">
 									<?php _e('Nous suivre, c’est nous aider','b');?> &nbsp;!
 								</span>
-                        <a href="<?php the_field('home_facebook');?>" class="follow-us__item follow-us__item-fb" rel="external" title="<?php _e('Vers','b');?> Facebook"><span
+                        <a href="<?php echo $easy_options['footer_fb'];?>" class="follow-us__item follow-us__item-fb" rel="external" title="<?php _e('Vers','b');?> Facebook"><span
                                   class="visuallyhidden">Facebook</span></a>
-                        <a href="<?php the_field('home_twitter');?>" class="follow-us__item follow-us__item-tw" rel="external" title="<?php _e('Vers','b');?> Twitter"><span
+                        <a href="<?php echo $easy_options['footer_tw'];?>" class="follow-us__item follow-us__item-tw" rel="external" title="<?php _e('Vers','b');?> Twitter"><span
                                   class="visuallyhidden">Twitter</span></a>
-                        <a href="<?php the_field('home_instagram');?>" class="follow-us__item follow-us__item-inst" rel="external" title="<?php _e('Vers','b');?> Instagram"><span
+                        <a href="<?php echo $easy_options['footer_inst'];?>" class="follow-us__item follow-us__item-inst" rel="external" title="<?php _e('Vers','b');?> Instagram"><span
                                   class="visuallyhidden">Instagram</span></a>
-                        <a href="<?php the_field('home_vimeo');?>" class="follow-us__item follow-us__item-vim" rel="external" title="<?php _e('Vers','b');?> Viméo"><span
+                        <a href="<?php echo $easy_options['footer_vim'];?>" class="follow-us__item follow-us__item-vim" rel="external" title="<?php _e('Vers','b');?> Viméo"><span
                                   class="visuallyhidden">Viméo</span></a>
-                        <a href="<?php the_field('home_youtube');?>" class="follow-us__item follow-us__item-yout" rel="external" title="<?php _e('Vers','b');?> Youtube"><span
+                        <a href="<?php echo $easy_options['footer_yout'];?>" class="follow-us__item follow-us__item-yout" rel="external" title="<?php _e('Vers','b');?> Youtube"><span
                                   class="visuallyhidden">Youtube</span></a>
                   </div>
             </section>

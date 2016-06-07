@@ -56,6 +56,10 @@
       font-size: 4.2em
       font-family: glyphs
       margin-right 0.357em
+      transition color .3s ease-out
+    &__item:hover:before
+      color: color-white - 20%
+      transition color .3s ease-out
     &__item-fb:before
       content "\e91e"
     &__item-tw:before
@@ -102,6 +106,7 @@
 +media-query( only screen, max-width 712px )
   .footer
     height auto
+    background color-background-footer
     &__container
       max-width 28em
   .footer__help-us

@@ -61,7 +61,7 @@ get_header();
                                           <a href="#section_fichetech" data-tab-target="tab-three" class="prod-view__tabs-link prod-view__tabs-link-3">Fiche technique</a>
                                     </li><!--
 										--><li class="prod-view__tabs-list">
-                                          <a href="#section_diffuser" data-tab-target="tab-four" class="prod-view__tabs-link prod-view__tabs-link-4">Diffuser</a>
+                                          <a href="#section_diffuser" data-tab-target="tab-four" class="prod-view__tabs-link prod-view__tabs-link-4">Diffusion</a>
                                     </li><!--
 										--><li class="prod-view__tabs-list">
                                           <a href="#section_presse" data-tab-target="tab-five" class="prod-view__tabs-link prod-view__tabs-link-5">Presse</a>
@@ -163,7 +163,8 @@ get_header();
                               </section>
 
                               <section class="prod-view__sections" id="tab-four">
-                                    <h3 aria-level="3" class="prod-view__sections__title"><?php _e('Diffuser','b');?></h3>
+                                    <h3 aria-level="3" class="prod-view__sections__title"><?php _e('Diffusion','b');?></h3>
+                                    <?php the_field('prod_diffusion');?>
                               </section>
 
                               <section class="prod-view__sections" id="tab-five">

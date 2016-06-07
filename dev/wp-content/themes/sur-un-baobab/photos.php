@@ -16,7 +16,7 @@ get_header();
         <main>
             <section class="photos">
                 <h2 aria-level="2" class="photos-titlesection">
-                    Quelques-unes de nos photos
+                    <?php _e('Quelques-unes de nos photos','b');?>
                 </h2>
                 <div class="photos__container">
                     <div class="photos__intro-container">
@@ -28,8 +28,8 @@ get_header();
                                 album photo, ça nous aiderait&nbsp;!
                             </p>
                             <div class="photos__intro__button-container">
-                                <a href="#" class="photos__intro__button">Acheter notre album photo</a>
-                                <span class="photos__intro__button-text">Pour que les enfants en profite&nbsp;!</span>
+                                <a href="<?php the_permalink('311');?>#acheteralbum" class="photos__intro__button"><?php _e('Acheter notre album photo','b');?></a>
+                                <span class="photos__intro__button-text"><?php _e('Pour que les enfants en profitent !','b');?></span>
                             </div>
                         </div>
                     </div>

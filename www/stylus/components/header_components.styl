@@ -132,16 +132,18 @@
     font-size 1.62em
     text-align center
     margin-top 1em
+    transition color .3s ease-out
     &:hover
     &:focus
-      color color-main-yellow
+      color color-hover
       transition color .3s ease-out
     &:before
       font-family glyphs
       font-size 1.3em
       display block
       margin-bottom .5em
-      transition trans
+    &--active
+      color: color-hover
     &-home:before
       content "\e917";
     &-projet:before
@@ -158,11 +160,8 @@
       content "\e91c";
     &:hover:before
     &:focus:before
-      transition trans
-      color color-main-yellow
-
-.active-item
-  color: color-main-yellow
+      transition color .3s ease-out
+      color color-hover
 
 /************************************\
     HEADER IMG

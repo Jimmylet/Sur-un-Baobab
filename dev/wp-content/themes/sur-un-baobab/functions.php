@@ -123,9 +123,19 @@ function b_get_menu_items( $location )
             $item->url = $obj->url;
             $item->label = $obj->title;
             $item->icon = $obj->classes[0];
+            $item->id = $obj->object_id;
             array_push($navItems, $item);
       }
       return $navItems;
+}
+
+// Create menu active
+add_filter('menu__item' , 'active' , 10 , 2);
+function special_nav_class($classes, $item){
+     if( in_array('current-menu-item', $classes) ){
+             $classes[] = 'active';
+     }
+     return $classes;
 }
 
 /*

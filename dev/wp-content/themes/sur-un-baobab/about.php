@@ -14,9 +14,9 @@ get_header();
         <?php the_breadcrumb(); ?>
 
         <main>
-            <section class="desc-projet">
+            <section itemscope itemtype="http://schema.org/Organization" class="desc-projet">
                 <div class="desc-projet__container">
-								<span class="desc-projet__subtitle">
+								<span itemprop="legalName" class="desc-projet__subtitle">
 									<?php the_field('about_subtitle'); ?>
 								</span>
                     <h2 aria-level="2" class="desc-projet__title">
@@ -72,43 +72,43 @@ get_header();
 
                     <div class="whoarewe__about-container">
                         <div class="whoarewe__about-container-2">
-                            <section class="whoarewe__about whoarewe__about-elena">
+                            <section itemscope itemtype="http://schema.org/Article" class="whoarewe__about whoarewe__about-elena">
                                 <?php
                                 $image = get_field('photo_elena_photo');
                                 if( !empty($image) ): ?>
                                     <img class="whoarewe__about__img" src="<?php echo $image['url']; ?>"
-                                         alt="<?php echo $image['alt']; ?>">
+                                         alt="<?php echo $image['alt']; ?>" width="<?php echo $image['width']; ?>" height="<?php echo $image['height']; ?>">
                                 <?php endif; ?>
-                                <h3 aria-level="3" class="whoarewe__about__name"><?php the_field('about_elena_name');?></h3>
+                                <h3 aria-level="3" class="whoarewe__about__name" itemprop="familyName givenName"><?php the_field('about_elena_name');?></h3>
                                 <p class="whoarewe__about__text">
                                     <?php the_field('about_elena');?>
                                 </p>
                                 <div class="whoarewe__about__button-container">
-                                    <a href="mailto:<?php the_field('about_elena_email');?>"
+                                    <a itemprop="email" href="mailto:<?php the_field('about_elena_email');?>"
                                        class="whoarewe__about__button whoarewe__about__button-mail"><span
                                             class="visuallyhidden"><?php _e('Envoyer un email à Éléna','b');?></span></a>
-                                    <a href="tel:+<?php the_field('about_elena_tel');?>"
+                                    <a itemprop="telephone" href="tel:+<?php the_field('about_elena_tel');?>"
                                        class="whoarewe__about__button whoarewe__about__button-tel"><span
                                             class="visuallyhidden"><?php _e('Téléphoner à Éléna','b');?></span></a>
                                 </div>
 
                             </section>
-                            <section class="whoarewe__about whoarewe__about-francois">
+                            <section itemscope itemtype="http://schema.org/Article" class="whoarewe__about whoarewe__about-francois">
                                 <?php
                                 $image = get_field('about_francois_photo');
                                 if( !empty($image) ): ?>
                                     <img class="whoarewe__about__img" src="<?php echo $image['url']; ?>"
-                                         alt="<?php echo $image['alt']; ?>">
+                                         alt="<?php echo $image['alt']; ?>" width="<?php echo $image['width']; ?>" height="<?php echo $image['height']; ?>">
                                 <?php endif; ?>
-                                <h3 aria-level="3" class="whoarewe__about__name"><?php the_field('about_francois_name');?></h3>
+                                <h3 itemprop="familyName givenName" aria-level="3" class="whoarewe__about__name"><?php the_field('about_francois_name');?></h3>
                                 <p class="whoarewe__about__text">
                                     <?php the_field('about_francois');?>
                                 </p>
                                 <div class="whoarewe__about__button-container">
-                                    <a href="mailto:<?php the_field('about_francois_email');?>"
+                                    <a itemprop="email" href="mailto:<?php the_field('about_francois_email');?>"
                                        class="whoarewe__about__button whoarewe__about__button-mail"><span
                                             class="visuallyhidden"><?php _e('Téléphoner à François','b');?></span></a>
-                                    <a href="tel:+<?php the_field('about_francois_tel');?>"
+                                    <a itemprop="telephone" href="tel:+<?php the_field('about_francois_tel');?>"
                                        class="whoarewe__about__button whoarewe__about__button-tel"><span
                                             class="visuallyhidden"><?php _e('Téléphoner à François','b');?></span></a>
                                 </div>
@@ -116,27 +116,27 @@ get_header();
                         </div>
                         <div class="whoarewe__background"></div>
                     </div>
-
+                    <?php $easy_options = get_option("easy_page_options");?>
                     <div class="projet-helpus">
-                        <a href="#" class="projet-helpus__donate"><?php _e('Soutenez-nous','b');?></a>
+                        <a href="<?php the_permalink('311');?>" class="projet-helpus__donate"><?php _e('Soutenez-nous','b');?></a>
                         <span class="projet-helpus__follow-us-text"><?php _e('Ou suivez-nous','b');?></span>
-                        <a href="" class="projet-helpus__item follow-us__item follow-us__item-fb"
+                        <a href="<?php echo $easy_options['footer_fb'];?>" class="projet-helpus__item follow-us__item follow-us__item-fb"
                            title="Vers Facebook" rel="external" target="_blank">
                             <span class="visuallyhidden">Facebook</span>
                         </a>
-                        <a href="" class="projet-helpus__item follow-us__item follow-us__item-tw"
+                        <a href="<?php echo $easy_options['footer_tw'];?>" class="projet-helpus__item follow-us__item follow-us__item-tw"
                            title="Vers Twitter" rel="external" target="_blank">
                             <span class="visuallyhidden">Twitter</span>
                         </a>
-                        <a href="" class="projet-helpus__item follow-us__item follow-us__item-inst"
+                        <a href="<?php echo $easy_options['footer_inst'];?>" class="projet-helpus__item follow-us__item follow-us__item-inst"
                            title="Vers Instagram" rel="external" target="_blank">
                             <span class="visuallyhidden">Instagram</span>
                         </a>
-                        <a href="" class="projet-helpus__item follow-us__item follow-us__item-vim"
+                        <a href="<?php echo $easy_options['footer_vim'];?>" class="projet-helpus__item follow-us__item follow-us__item-vim"
                            title="Vers Viméo" rel="external" target="_blank">
                             <span class="visuallyhidden">Viméo</span>
                         </a>
-                        <a href="" class="projet-helpus__item follow-us__item follow-us__item-yout"
+                        <a href="<?php echo $easy_options['footer_yout'];?>" class="projet-helpus__item follow-us__item follow-us__item-yout"
                            title="Vers Youtube" rel="external" target="_blank">
                             <span class="visuallyhidden">Youtube</span>
                         </a>

@@ -12,7 +12,7 @@ get_header();
 
         <ol class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
             <li class="breadcrumb__link" itemprop="title">
-                <a href="../index.html" class="breadcrumb__link__text" itemprop="url">
+                <a href="<?php echo get_home_url();?>" class="breadcrumb__link__text" itemprop="url">
                     Accueil
                 </a>
             </li>

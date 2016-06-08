@@ -855,7 +855,7 @@ h3#comments {
   height: 15em;
 }
 .last-prod {
-  margin: 10em auto 0 auto;
+  margin: 5em auto 0 auto;
 }
 .last-prod__container {
   text-align: center;
@@ -1982,6 +1982,8 @@ h3#comments {
   transition: 0.3s ease-out;
 }
 .last-prod {
+  background: #f5f5f5;
+  padding-top: 7em;
   text-align: center;
 }
 .last-prod__title {

@@ -50,12 +50,7 @@ get_header();
                     </div>
                         <?php the_field('about_technique_top'); ?>
                     <figure class="desc-technique__figure">
-                        <?php
-                        $image = get_field('about_gif');
-                        if( !empty($image) ): ?>
-                            <img class="desc-technique__img" src="<?php echo $image['url']; ?>"
-                                 alt="<?php echo $image['alt']; ?>">
-                        <?php endif; ?>
+                        <?php the_field('about_gif');?>
                     </figure>
                         <?php the_field('about_technique_left'); ?>
                     <a href="#" title="Vers le projet Safidin’i Pela" class="desc-technique__button"><?php _e('Voir la fabrication du film Safidin’i Pela','b');?></a>

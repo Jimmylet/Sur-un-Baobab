@@ -21,7 +21,7 @@ Template Name: Homepage
       <div class="site-container">
             <div class="site-pusher">
                   <?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'full' ); ?>
-                  <style media="screen">
+                  <style media="screen" scoped>
                     .header-main{
                       background: url("<?php echo get_template_directory_uri() . '/assets/img/png/pattern.png';?>") repeat, url("<?php echo $url[0]; ?>") no-repeat center center/cover;
                     }
@@ -40,14 +40,14 @@ Template Name: Homepage
                               <div class="menu__container">
                                     <h2 class="menu__title" aria-level="2"><?php _e('Menu de navigation','b');?></h2>
                                     <div class="menu__lang__deskopt">
-                                          <a href="" class="menu__lang__deskopt__item" lang="fr">FR</a>
-                                          <a href="" class="menu__lang__deskopt__item" lang="es">ES</a>
-                                          <a href="" class="menu__lang__deskopt__item" lang="en">EN</a>
+                                          <a href="http://baobab.letecheur.me/fr/" class="menu__lang__deskopt__item" lang="fr">FR</a>
+                                          <a href="http://baobab.letecheur.me/es/" class="menu__lang__deskopt__item" lang="es">ES</a>
+                                          <a href="http://baobab.letecheur.me/en/" class="menu__lang__deskopt__item" lang="en">EN</a>
                                     </div>
                                     <div class="menu__lang">
-                                          <a href="" class="menu__lang__item" lang="fr">Français</a>
-                                          <a href="" class="menu__lang__item" lang="es">Spanish</a>
-                                          <a href="" class="menu__lang__item" lang="en">English</a>
+                                          <a href="http://baobab.letecheur.me/fr/" class="menu__lang__item" lang="fr">Français</a>
+                                          <a href="http://baobab.letecheur.me/es/" class="menu__lang__item" lang="es">Spanish</a>
+                                          <a href="http://baobab.letecheur.me/en/" class="menu__lang__item" lang="en">English</a>
                                     </div>
                                     <?php
                           						global $post;
@@ -127,7 +127,7 @@ Template Name: Homepage
                               if ( $posts->have_posts() ): while ( $posts->have_posts() ): $posts->the_post();
                                     ?>
                                     <!-- Recup thumbnail et size -->
-                                    <?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'thumb-article-bottom-list' ); ?>
+                                    <?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'thumb-article-homebottom' ); ?>
                                     <!-- Recup alt -->
                                     <?php $thumb_id = get_post_thumbnail_id($post->id);
                                     $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);?>

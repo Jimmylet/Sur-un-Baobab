@@ -76,7 +76,28 @@
 </div>
 </div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri() . '/assets/scripts/menu-res.js';?>"></script>
+<script type="text/javascript">
+  (function($){
+
+    var $window = $(window)
+
+    $('#menu__icon').click(function(e){
+        e.preventDefault();
+        $('body').toggleClass('with--sidebar');
+    });
+
+    $('#site-cache').click(function(e){
+        $('body').removeClass('with--sidebar');
+    })
+
+    $(window).on('resize', function () {
+        if ($window.width() > 787 ){
+            $('body').removeClass('with--sidebar');
+        }
+    })
+
+  })(jQuery);
+</script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri() . '/assets/scripts/tabs2.js';?>"></script>
 </body>
 </html>

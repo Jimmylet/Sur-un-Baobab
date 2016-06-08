@@ -73,20 +73,87 @@ Template Name: Homepage
                               <?php the_field('home_description'); ?>
                   </div>
                   <a class="intro-text__button" href="<?php the_permalink('27');?>"><?php _e('En savoir plus','b');?></a>
-                  <svg class="intro-text__deco" width="23" height="212"
-                       >
-                        <g transform="translate(1 1.542)" stroke="#DAA700" stroke-width="2" fill="none"
-                           fill-rule="evenodd">
-                              <circle cx="10.5" cy="10.5" r="10.5"/>
-                              <path d="M10 21v212.458069" stroke-linecap="square"/>
-                        </g>
-                  </svg>
             </section>
 
-            <section class="last-news">
+            <!-- DERNIERES PRODUCTIONS -->
+            <section class="last-prod">
+              <h2 class="last-prod__title">Nos dernières réalisations</h2>
+                  <div class="last-prod__container">
+                        <?php
+                        $posts = new WP_Query( ['posts_per_page' => 2, 'post_type' => 'project'] );
+                        if ( $posts->have_posts() ): while ( $posts->have_posts() ): $posts->the_post();
+                              ?>
+                              <!-- Recup thumbnail et size -->
+                              <?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'thumb-affiche-home' ); ?>
+                              <!-- Recup alt -->
+                              <?php $thumb_id = get_post_thumbnail_id($post->id);
+                              $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);?>
+                        <div class="last-prod__item">
+                                    <a href="<?php the_permalink();?>" class="last-prod__item__link"
+                                       title="<?php _e('Vers la fiche de','b');?> <?php the_title();?>">
+                                          <?php the_title();?>
+                                          <img src="<?php echo $url[0] ?>"
+                                               alt="<?php echo $alt;?>" class="last-prod__item__img"
+                                               width="<?php echo $url[1] ?>" height="<?php echo $url[2] ?>">
+                                          <div class="last-prod__item__hovereffect"></div>
+                                    </a>
+                              </div>
+                              <?php wp_reset_postdata(); ?>
+                        <?php endwhile; endif; ?>
+                  </div>
+                  <a href="<?php echo get_page_link(200); ?>" class="last-prod__button" title="<?php _e('Aller vers la page productions','b');?>">
+                        <span><?php _e('Voir toutes nos réalisations','b');?></span>
+                  </a>
+            </section>
+
+
+            <!-- FAIRE UN DON ET CITATION -->
+            <section class="donate">
+                  <svg class="donate__img" width="397" height="37" >
+                        <g fill="#FFF" fill-rule="evenodd" fill-opacity=".6">
+                              <path d="M396.574243 36.767081h-36l18-36M360.574243 36.767081h-36l18-36M324.574243 36.767081h-36l18-36M288.574243 36.767081h-36l18-36M252.574243 36.767081h-36l18-36M216.574243 36.767081h-36l18-36M180.574243 36.767081h-36l18-36M144.574243 36.767081h-36l18-36M108.574243 36.767081h-36l18-36M72.574243 36.767081h-36l18-36"/>
+                              <path d="M36.574243 36.767081h-36l18-36"/>
+                        </g>
+                  </svg>
+
+							<span class="donate__text1">
+								<?php _e('Offrons un sourire à tous','b');?>
+							</span>
+							<span class="donate__text2">
+								<?php _e('les enfants','b');?>
+							</span>
+                  <a href="<?php the_permalink('311');?>" class="donate__button" title="Vers la page Faire un don">
+                        <span class="donate__animdon"><?php _e('Faites un don','b');?>&nbsp;!</span>
+                        <h2 class="donate__animsoutien"><?php _e('Soutenez-nous','b');?>&nbsp;!</h2>
+                  </a>
+                  <div class="follow-us">
+								<span class="follow-us__text">
+									<?php _e('Nous suivre, c’est nous soutenir','b');?> &nbsp;!
+								</span>
+                        <a href="<?php echo $easy_options['footer_fb'];?>" class="follow-us__item follow-us__item-fb" rel="external" title="<?php _e('Vers','b');?> Facebook"><span
+                                  class="visuallyhidden">Facebook</span></a>
+                        <a href="<?php echo $easy_options['footer_tw'];?>" class="follow-us__item follow-us__item-tw" rel="external" title="<?php _e('Vers','b');?> Twitter"><span
+                                  class="visuallyhidden">Twitter</span></a>
+                        <a href="<?php echo $easy_options['footer_inst'];?>" class="follow-us__item follow-us__item-inst" rel="external" title="<?php _e('Vers','b');?> Instagram"><span
+                                  class="visuallyhidden">Instagram</span></a>
+                        <a href="<?php echo $easy_options['footer_vim'];?>" class="follow-us__item follow-us__item-vim" rel="external" title="<?php _e('Vers','b');?> Viméo"><span
+                                  class="visuallyhidden">Viméo</span></a>
+                        <a href="<?php echo $easy_options['footer_yout'];?>" class="follow-us__item follow-us__item-yout" rel="external" title="<?php _e('Vers','b');?> Youtube"><span
+                                  class="visuallyhidden">Youtube</span></a>
+                  </div>
+            </section>
+            <section class="last-news" style="position: relative;">
+              <svg class="intro-text__deco" width="23" height="212"
+                   >
+                    <g transform="translate(1 1.542)" stroke="#DAA700" stroke-width="2" fill="none"
+                       fill-rule="evenodd">
+                          <circle cx="10.5" cy="10.5" r="10.5"/>
+                          <path d="M10 21v212.458069" stroke-linecap="square"/>
+                    </g>
+              </svg>
                   <h2 class="last-news__title" aria-level="2"><?php _e('Nos dernières nouvelles','b');?></h2>
 							<span class="last-news__newsletters">
-								<?php _e('Ne ratez plus rien','b');?>, <a href="#" class="last-news__newsletters__link"><?php _e('abonnez-vous','b');?> &nbsp;!</a>
+								<?php _e('Ne ratez plus rien','b');?>, <a href="#" class="last-news__newsletters__link"><?php _e('abonnez-vous','b');?></a> &nbsp;!
 							</span>
                   <svg class="last-news__line2" width="2" height="98" >
                         <path d="M1 1.5V97" stroke="#DAA700" stroke-width="2" fill="none" fill-rule="evenodd"
@@ -105,23 +172,28 @@ Template Name: Homepage
                         $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);?>
 
                         <article class="last-news__articles__top">
-                              <a href="<?php the_permalink();?>" class="last-news__articles__img">
+                              <a href="<?php the_permalink();?>" class="last-news__articles__img" title="<?php _e('Vers l’article');?> <?php echo the_title();?>">
                                     <img src="<?php echo $url[0] ?>" alt="<?php echo $alt;?>" width="<?php echo $url[1] ?>" height="<?php echo $url[2] ?>">
                               </a>
-                              <div class="last-news__articles__container-text">
-                                    <h3 class="last-news__articles__top__title" aria-level="3">
-                                          <?php the_title();?>
-                                    </h3>
-                                    <p class="last-news__articles__top__intro">
-                                          <?php custom_excerpt(); ?>
-                                    </p>
-                                    <a href="<?php the_permalink();?>" class="last-news__articles__top__link"><?php _e('Lire l’article','b');?></a>
-                              </div>
+                              <a href="<?php the_permalink();?>" title="<?php _e('Vers l’article');?> <?php echo the_title();?>">
+                                <div class="last-news__articles__container-text">
+                                      <h3 class="last-news__articles__top__title" aria-level="3">
+                                            <?php the_title();?>
+                                      </h3>
+                                      <p class="last-news__articles__top__intro">
+                                            <?php custom_excerpt(); ?>
+                                      </p>
+                                      <span href="<?php the_permalink();?>" class="last-news__articles__top__link"><?php _e('Lire l’article','b');?></span>
+                                </div>
+                              </a>
                         </article>
+
+
+
                         <?php wp_reset_postdata(); ?>
                         <?php endwhile; endif; ?>
                         <div class="last-news__container-bottom-articles">
-                              <!-- Debut WP_QUERY -->
+                              <!-- Debut WP_QUERY 2 -->
                               <?php
                               $posts = new WP_Query( ['posts_per_page' => 3, 'offset' => 1, 'post_type' => 'post'] );
                               if ( $posts->have_posts() ): while ( $posts->have_posts() ): $posts->the_post();
@@ -160,69 +232,7 @@ Template Name: Homepage
                         </div>
                   </div>
             </section>
-            <!-- FAIRE UN DON ET CITATION -->
-            <section class="donate">
-                  <svg class="donate__img" width="397" height="37" >
-                        <g fill="#FFF" fill-rule="evenodd" fill-opacity=".6">
-                              <path d="M396.574243 36.767081h-36l18-36M360.574243 36.767081h-36l18-36M324.574243 36.767081h-36l18-36M288.574243 36.767081h-36l18-36M252.574243 36.767081h-36l18-36M216.574243 36.767081h-36l18-36M180.574243 36.767081h-36l18-36M144.574243 36.767081h-36l18-36M108.574243 36.767081h-36l18-36M72.574243 36.767081h-36l18-36"/>
-                              <path d="M36.574243 36.767081h-36l18-36"/>
-                        </g>
-                  </svg>
 
-							<span class="donate__text1">
-								<?php _e('Offrons un sourire à tous','b');?>
-							</span>
-							<span class="donate__text2">
-								<?php _e('les enfants','b');?>
-							</span>
-                  <a href="<?php the_permalink('311');?>" class="donate__button">
-                        <h2><?php _e('Soutenez-nous','b');?>&nbsp;!</h2>
-                  </a>
-                  <div class="follow-us">
-								<span class="follow-us__text">
-									<?php _e('Nous suivre, c’est nous aider','b');?> &nbsp;!
-								</span>
-                        <a href="<?php echo $easy_options['footer_fb'];?>" class="follow-us__item follow-us__item-fb" rel="external" title="<?php _e('Vers','b');?> Facebook"><span
-                                  class="visuallyhidden">Facebook</span></a>
-                        <a href="<?php echo $easy_options['footer_tw'];?>" class="follow-us__item follow-us__item-tw" rel="external" title="<?php _e('Vers','b');?> Twitter"><span
-                                  class="visuallyhidden">Twitter</span></a>
-                        <a href="<?php echo $easy_options['footer_inst'];?>" class="follow-us__item follow-us__item-inst" rel="external" title="<?php _e('Vers','b');?> Instagram"><span
-                                  class="visuallyhidden">Instagram</span></a>
-                        <a href="<?php echo $easy_options['footer_vim'];?>" class="follow-us__item follow-us__item-vim" rel="external" title="<?php _e('Vers','b');?> Viméo"><span
-                                  class="visuallyhidden">Viméo</span></a>
-                        <a href="<?php echo $easy_options['footer_yout'];?>" class="follow-us__item follow-us__item-yout" rel="external" title="<?php _e('Vers','b');?> Youtube"><span
-                                  class="visuallyhidden">Youtube</span></a>
-                  </div>
-            </section>
-            <!-- DERNIERES PRODUCTIONS -->
-            <section class="last-prod">
-                  <div class="last-prod__container">
-                        <?php
-                        $posts = new WP_Query( ['posts_per_page' => 2, 'post_type' => 'project'] );
-                        if ( $posts->have_posts() ): while ( $posts->have_posts() ): $posts->the_post();
-                              ?>
-                              <!-- Recup thumbnail et size -->
-                              <?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'thumb-affiche-home' ); ?>
-                              <!-- Recup alt -->
-                              <?php $thumb_id = get_post_thumbnail_id($post->id);
-                              $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);?>
-                        <div class="last-prod__item">
-                                    <a href="<?php the_permalink();?>" class="last-prod__item__link"
-                                       title="<?php _e('Vers la fiche de','b');?> <?php the_title();?>">
-                                          <?php the_title();?>
-                                          <img src="<?php echo $url[0] ?>"
-                                               alt="<?php echo $alt;?>" class="last-prod__item__img"
-                                               width="<?php echo $url[1] ?>" height="<?php echo $url[2] ?>">
-                                          <div class="last-prod__item__hovereffect"></div>
-                                    </a>
-                              </div>
-                              <?php wp_reset_postdata(); ?>
-                        <?php endwhile; endif; ?>
-                  </div>
-                  <a href="<?php echo get_page_link(200); ?>" class="last-prod__button" title="<?php _e('Voir toutes nos productions','b');?>">
-                        <h2><?php _e('Voir nos réalisations','b');?></h2>
-                  </a>
-            </section>
 
 <?php
 

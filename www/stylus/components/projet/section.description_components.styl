@@ -4,9 +4,10 @@
     text-align center
     font-size: 2.95em
     letter-spacing 2px
-    color #717171
+    color color-button + 40%
     text-transform uppercase
     margin-bottom .3em
+    font-family handofseanfont
   &__title
     display: block
     margin-bottom: .417em
@@ -19,13 +20,15 @@
       font-weight: bold
   &__min-desc
     display block
-    margin-bottom: 2.586em
+    margin 0 auto 2.586em auto
     text-align center
     font-size: 2.32em
+    line-height 1.3em
+    max-width 39em
     color #5C5C5C
   &__main-img
     display block
-    margin-bottom: 6em
+    margin-bottom: 4em
     max-width 100%
     height auto
   &__desc:last-child
@@ -36,7 +39,9 @@
     max-width 100%
     height auto
   &__sousrubrique
-    font-weight: bold
+    display block
+    margin-top 1.6em
+    font-family handofseanfont
     font-size: 3.76em
     text-transform none
     text-align left
@@ -54,11 +59,11 @@
 \************************************/
 
 .desc-projet__quote
+  margin-top 4em
   background-image url("../img/jpg/desc-projet_bckgquote.jpg")
   background-repeat no-repeat
   background-size cover
   background-position center center
-  box-shadow: inset 0px -7px 7px -7px rgba(0,0,0,0.60), inset 0px 7px 7px -6px rgba(0,0,0,0.50)
   padding 8.3em 2.5em 8.3em
   &-1
   &-2

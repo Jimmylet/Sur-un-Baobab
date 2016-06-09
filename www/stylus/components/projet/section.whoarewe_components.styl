@@ -8,11 +8,14 @@
   &__title
     display: flex
     flex-direction: row
-    font-size: 4.78em
+    font-size: 3.78em
     text-transform: uppercase
-    font-weight: bold
+    font-family handofseanfont
     margin-bottom 1.046em // 50px
-    justify-content: right
+    display: flex;
+    justify-content: left;
+    margin-top: 4rem;
+    overflow: hidden;
     width 100%
     &:before
       content "\a0"
@@ -26,7 +29,6 @@
       margin-right: 0.418em // 20px
       flex-grow: 1
   &__desc
-    text-align center
     margin-bottom 60px
 
 /************************************\
@@ -54,21 +56,21 @@
     text-align left
   &__button
     display inline-block
-    &:after
+    &:before
       display inline-block
       color color-blue
       font-family: glyphs
       font-size: 3em
       transition trans
-    &:hover:after
-    &:focus:after
+    &:hover:before
+    &:focus:before
       color color-blue + 20%
   &__button-mail
     margin-right: 5em
-    &:after
+    &:before
       content "\e91c"
   &__button-tel
-    &:after
+    &:before
       content "\e91b"
 
 .whoarewe__background

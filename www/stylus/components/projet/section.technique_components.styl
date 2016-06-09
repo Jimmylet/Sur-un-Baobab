@@ -6,9 +6,9 @@
     &__title
         display: flex
         flex-direction: row
-        font-size: 4.78em
+        font-size: 3.78em
         text-transform: uppercase
-        font-weight: bold
+        font-family handofseanfont
         margin-bottom 1.046em // 50px
         display: flex;
         justify-content: left;
@@ -21,7 +21,7 @@
             width 20%
             display inline-block
             position: relative;
-            top 21px
+            top 15px
             padding-right: 0.418em // 20px
             margin-left: 0.418em // 20px
             flex-grow: 1
@@ -42,17 +42,11 @@
     height auto
 
 
+
 .desc-technique__button
-    display: inline-block
-    margin-top 1em
-    font-size 2em
-    text-transform: uppercase
-    padding 0.870em 0.652em //20px, 15px
-    border 1px solid color-main-yellow
-    border-radius .3em
-    transition trans
-    &:hover
-    &:focus
-        transition trans
-        background-color color-main-yellow
-        color #FFF
+  font-size 2.32em
+  line-height 1.3em
+  {button-style}
+  &:hover
+  &:focus
+    {button-style-hover}

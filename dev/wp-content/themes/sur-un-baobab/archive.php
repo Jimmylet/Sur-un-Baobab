@@ -32,6 +32,7 @@ get_header(); ?>
                 <div class="news__container">
 
                     <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
+                      <div class="article__oddeven"></div>
                     <article class="article__container">
                         <div class="article__title-container">
                             <a href="<?php the_permalink();?>" title="<?php _e('Vers l’article','b');?> <?php the_title();?>"
@@ -60,7 +61,7 @@ get_header(); ?>
                                 <span class="article__infos__date"><?php _e('Le','b');?> <?php the_date();?></span>
                             </div>
                             <p class="article__intro">
-                                <?php custom_excerpt(); ?>
+                                <?php custom_excerpt_article(); ?>
                             </p>
                             <a href="<?php the_permalink();?>" title="<?php _e('Vers l’article','b');?> <?php the_title();?>" class="article__button-more">Lire la suite <span class="visuallyhidden">à propos de l'article <?php the_title();?></span></a>
                         </div>

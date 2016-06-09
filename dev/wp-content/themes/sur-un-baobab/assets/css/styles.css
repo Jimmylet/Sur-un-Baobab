@@ -2243,18 +2243,20 @@ h3#comments {
 }
 .paragraph-style-projet {
   font-size: 2.32em;
-  line-height: 1.3em;
+  line-height: 1.4em;
   color: #363636;
-  margin-bottom: 2.034em;
+  margin-bottom: 1.034em;
+  max-width: 44em;
 }
 .desc-projet__subtitle {
   display: block;
   text-align: center;
   font-size: 2.95em;
   letter-spacing: 2px;
-  color: #717171;
+  color: #9d9d9d;
   text-transform: uppercase;
   margin-bottom: 0.3em;
+  font-family: hand_of_sean, Raleway, Helvetica, Arial, sans-serif;
 }
 .desc-projet__title {
   display: block;
@@ -2271,14 +2273,16 @@ h3#comments {
 }
 .desc-projet__min-desc {
   display: block;
-  margin-bottom: 2.586em;
+  margin: 0 auto 2.586em auto;
   text-align: center;
   font-size: 2.32em;
+  line-height: 1.3em;
+  max-width: 39em;
   color: #5c5c5c;
 }
 .desc-projet__main-img {
   display: block;
-  margin-bottom: 6em;
+  margin-bottom: 4em;
   max-width: 100%;
   height: auto;
 }
@@ -2292,7 +2296,9 @@ h3#comments {
   height: auto;
 }
 .desc-projet__sousrubrique {
-  font-weight: bold;
+  display: block;
+  margin-top: 1.6em;
+  font-family: hand_of_sean, Raleway, Helvetica, Arial, sans-serif;
   font-size: 3.76em;
   text-transform: none;
   text-align: left;
@@ -2307,12 +2313,11 @@ h3#comments {
   background-color: #f5f5f5;
 }
 .desc-projet__quote {
+  margin-top: 4em;
   background-image: url("../img/jpg/desc-projet_bckgquote.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  -webkit-box-shadow: inset 0px -7px 7px -7px rgba(0,0,0,0.6), inset 0px 7px 7px -6px rgba(0,0,0,0.5);
-  box-shadow: inset 0px -7px 7px -7px rgba(0,0,0,0.6), inset 0px 7px 7px -6px rgba(0,0,0,0.5);
   padding: 8.3em 2.5em 8.3em;
 }
 .desc-projet__quote-1,
@@ -2348,9 +2353,9 @@ h3#comments {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  font-size: 4.78em;
+  font-size: 3.78em;
   text-transform: uppercase;
-  font-weight: bold;
+  font-family: hand_of_sean, Raleway, Helvetica, Arial, sans-serif;
   margin-bottom: 1.046em;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2371,7 +2376,7 @@ h3#comments {
   width: 20%;
   display: inline-block;
   position: relative;
-  top: 21px;
+  top: 15px;
   padding-right: 0.418em;
   margin-left: 0.418em;
   -webkit-flex-grow: 1;
@@ -2396,21 +2401,21 @@ h3#comments {
   height: auto;
 }
 .desc-technique__button {
+  font-size: 2.32em;
+  line-height: 1.3em;
   display: inline-block;
-  margin-top: 1em;
-  font-size: 2em;
-  text-transform: uppercase;
-  padding: 0.87em 0.652em;
-  border: 1px solid #d9a613;
-  border-radius: 0.3em;
+  color: #5c5c5c;
+  padding: 0.751em 2.02em;
+  border: 2px solid #d9a613;
+  border-radius: 3px;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
 }
 .desc-technique__button:hover,
 .desc-technique__button:focus {
+  background-color: #d9a613;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
-  background-color: #d9a613;
   color: #fff;
 }
 .whoarewe__title-container {
@@ -2431,15 +2436,21 @@ h3#comments {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  font-size: 4.78em;
+  font-size: 3.78em;
   text-transform: uppercase;
-  font-weight: bold;
+  font-family: hand_of_sean, Raleway, Helvetica, Arial, sans-serif;
   margin-bottom: 1.046em;
-  -webkit-justify-content: right;
-  -ms-justify-content: right;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: left;
+  -ms-justify-content: left;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  margin-top: 4rem;
+  overflow: hidden;
   width: 100%;
 }
 .whoarewe__title:before {
@@ -2459,7 +2470,6 @@ h3#comments {
           flex-grow: 1;
 }
 .whoarewe__desc {
-  text-align: center;
   margin-bottom: 60px;
 }
 .whoarewe__about {
@@ -2490,7 +2500,7 @@ h3#comments {
 .whoarewe__about__button {
   display: inline-block;
 }
-.whoarewe__about__button:after {
+.whoarewe__about__button:before {
   display: inline-block;
   color: #2e4157;
   font-family: glyphs;
@@ -2498,17 +2508,17 @@ h3#comments {
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
 }
-.whoarewe__about__button:hover:after,
-.whoarewe__about__button:focus:after {
+.whoarewe__about__button:hover:before,
+.whoarewe__about__button:focus:before {
   color: #486688;
 }
 .whoarewe__about__button-mail {
   margin-right: 5em;
 }
-.whoarewe__about__button-mail:after {
+.whoarewe__about__button-mail:before {
   content: "\e91c";
 }
-.whoarewe__about__button-tel:after {
+.whoarewe__about__button-tel:before {
   content: "\e91b";
 }
 .whoarewe__background {
@@ -2519,18 +2529,16 @@ h3#comments {
   text-align: center;
 }
 .projet-helpus__donate {
-  font-size: 3.33em;
-  font-weight: bold;
-  text-transform: uppercase;
-  white-space: nowrap;
-  display: block;
+  font-size: 2.62em;
+  display: inline-block;
+  color: #5c5c5c;
+  padding: 0.751em 2.02em;
   border: 2px solid #d9a613;
-  padding: 0.33em 0;
-  text-align: center;
-  margin-bottom: 0.601em;
   border-radius: 3px;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
+  margin-bottom: 0.85em;
+  text-transform: uppercase;
 }
 .projet-helpus__donate:hover,
 .projet-helpus__donate:focus {

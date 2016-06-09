@@ -32,18 +32,17 @@ get_header(); ?>
                 <div class="news__container">
 
                     <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
-                      <div class="article__oddeven"></div>
-                    <article class="article__container">
+
+                      <article class="article__container" style="transition: translateZ(0);">
+                        <a title="<?php _e('Vers l’article','b');?> <?php the_title();?>" href="<?php the_permalink();?>" class="article__main-link">
                         <div class="article__title-container">
-                            <a href="<?php the_permalink();?>" title="<?php _e('Vers l’article','b');?> <?php the_title();?>"
-                               class="article__title-link">
+                            <span class="article__title-link">
                                 <h3 aria-level="3" class="article__title">
                                     <?php the_title();?>
                                 </h3>
-                            </a>
+                          </span>
                         </div>
-                        <a href="<?php the_permalink();?>" title="<?php _e('Vers l’article','b');?> <?php the_title();?>"
-                           class="article__img-link">
+                        <span class="article__img-link">
                             <figure class="article__img-container">
                                 <!-- Recup thumbnail et size -->
                                 <?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'thumb-article-list' ); ?>
@@ -54,7 +53,7 @@ get_header(); ?>
                                      src="<?php echo $url[0] ?>"
                                      alt="<?php echo $alt;?>" width="<?php echo $url[1] ?>" height="<?php echo $url[2] ?>">
                             </figure>
-                        </a>
+                        </span>
                         <div class="article__text-container">
                             <div class="article__infos">
                                 <span class="article__infos__author"><?php _e('Par','b');?> <?php the_author();?></span>
@@ -63,12 +62,13 @@ get_header(); ?>
                             <p class="article__intro">
                                 <?php custom_excerpt_article(); ?>
                             </p>
-                            <a href="<?php the_permalink();?>" title="<?php _e('Vers l’article','b');?> <?php the_title();?>" class="article__button-more">Lire la suite <span class="visuallyhidden">à propos de l'article <?php the_title();?></span></a>
+                            <span class="article__button-more">Lire la suite <span class="visuallyhidden">à propos de l'article <?php the_title();?></span></span>
                         </div>
+                        </a>
 
                     </article>
+
                     <?php endwhile; endif; ?>
-                </div>
 
                 <?php wp_pagenavi();?>
 

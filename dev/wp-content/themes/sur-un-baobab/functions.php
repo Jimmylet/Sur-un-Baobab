@@ -88,7 +88,7 @@ function custom_excerpt($new_length = 25, $new_more = '…') {
  * Generates a custom excerpt, used on the homepage
  */
 
-function custom_excerpt_article($new_length = 38, $new_more = '…') {
+function custom_excerpt_article($new_length = 42, $new_more = '…') {
       // use the variable passed from $new_length as the length of the excerpt
       add_filter('excerpt_length', function () use ($new_length) {
             return $new_length;

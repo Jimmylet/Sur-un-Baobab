@@ -3,17 +3,20 @@
   top: -9999px
   right: -9999px
 .article
+  &__img-container
+    -webkit-mask-image: -webkit-radial-gradient(circle, white, black) // Résoud le bug du border-raidus et du transform: scale
+  &__img
+    transition: 0.3s ease-in-out;
   &__title-link
     display: block
   &__title
     font-size: 2.321em
     font-weight: bold
-    color #000
-    text-transform: uppercase
+    color color-title-article
     letter-spacing: 1px
-    line-height 1.2em
+    line-height 1.4em
   &__infos
-    margin 2em 0 2em 0
+    margin 1em 0 2em 0
     &__author
     &__date
       font-size: 1.435em
@@ -40,18 +43,17 @@
     position: absolute
     bottom: 0
     display block
-    text-align center
-    font-size: 2.058em
-    text-transform: uppercase
-    color text-color-button
-    padding 0.554em 2.75em // 16px
-    border 1px solid color-main-yellow
-    border-radius 6px
-    transition trans
+    font-size 2.058em
+    {button-style}
     &:hover
     &:focus
-      background-color color-main-yellow
-      color #FFF
+      {button-style-hover}
+
+.article__container:hover .article__img
+.article__container:focus .article__img
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+
 
 
 +media-query( only screen, max-width 1096px )

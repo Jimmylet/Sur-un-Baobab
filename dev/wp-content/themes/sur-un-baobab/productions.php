@@ -45,9 +45,6 @@ get_header();?>
                             <h3 aria-level="3" class="productions__title">
                                 <?php the_title();?>
                             </h3>
-                            <span class="productions__title-partner">
-                                <?php the_field('prod_association');?>
-                            </span>
                         </div>
                         <div class="productions__background">
                             <figure class="productions__figure">

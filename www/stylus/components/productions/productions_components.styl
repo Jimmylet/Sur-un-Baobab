@@ -4,10 +4,12 @@
     margin-left 49em
     margin-bottom 1em
   &__title
-    font-size 3.76em
-    font-weight: bold
-    text-transform: uppercase
+    font-family: handofseanfont
+    font-size 3.26em
+    margin-bottom: .8em
     &-partner
+      margin-top: .5em
+      display inline-block
       font-size: 1.62em
       color #717171
       font-weight: lighter
@@ -26,7 +28,7 @@
   &__text-infos__item:before
     font-family: glyphs
     font-size: 24px
-    color #2E4157
+    color color-main-yellow
     position: relative
     top 4px
     line-height 30px
@@ -68,26 +70,19 @@
       line-height 1.3em
   &__button
     font-size: 2.621em
-    text-transform uppercase
-    border 2px solid color-main-yellow
-    border-radius 10px
-    background-color #FFF
-    padding 0.458em 1.221em // 12px, 32px
+    background-color: color-white
+    {button-style}
     &:hover
     &:focus
-      background-color color-main-yellow
-      color #FFF
-      transition trans
+      {button-style-hover}
 
 .productions
   &__article
-    margin-bottom 15em
+    margin-bottom 18.5em
   &__figure
     position: absolute
     top: -6em
     left 3em
-  &__img
-    box-shadow: -2px -3px 11px 0px rgba(0,0,0,0.50), 2px 3px 11px 0px rgba(0,0,0,0.50);
 
 
 /************************************\

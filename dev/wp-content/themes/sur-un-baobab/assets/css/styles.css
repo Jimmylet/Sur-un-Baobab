@@ -1690,11 +1690,11 @@ h3#comments {
   padding-top: 23.1em;
 }
 .last-news__title {
-  font-weight: bold;
+  font-family: hand_of_sean, Raleway, Helvetica, Arial, sans-serif;
   font-size: 3.76em;
   color: #222;
   padding-top: 3.29em;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.3em;
 }
 .last-news__newsletters {
   display: block;
@@ -1990,7 +1990,7 @@ h3#comments {
   font-size: 3.76em;
   color: #222;
   margin-bottom: 1.6em;
-  font-weight: bold;
+  font-family: hand_of_sean, Raleway, Helvetica, Arial, sans-serif;
 }
 .last-prod__item {
   z-index: 1;
@@ -3325,6 +3325,8 @@ h3#comments {
   border-radius: 8px;
   letter-spacing: 0.68px;
   padding: 0 1.145em;
+  position: relative;
+  top: -0.9em;
 }
 .photos__intro__button:after {
   font-family: glyphs;

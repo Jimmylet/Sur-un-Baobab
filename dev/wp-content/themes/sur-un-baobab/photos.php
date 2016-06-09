@@ -29,7 +29,6 @@ get_header();
                             </p>
                             <div class="photos__intro__button-container">
                                 <a href="<?php the_permalink('311');?>#acheteralbum" class="photos__intro__button"><?php _e('Acheter notre album photo','b');?></a>
-                                <span class="photos__intro__button-text"><?php _e('Pour que les enfants en profitent !','b');?></span>
                             </div>
                         </div>
                     </div>

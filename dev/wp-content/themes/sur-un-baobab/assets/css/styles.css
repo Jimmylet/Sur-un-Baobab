@@ -809,7 +809,7 @@ h3#comments {
   z-index: 2;
   width: 80%;
   height: 80%;
-  top: 50%;
+  top: 10%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -1778,6 +1778,9 @@ h3#comments {
 .article__vignette__container {
   background-color: rgba(0,0,0,0.5);
   padding: 2em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
 }
 .article__vignette__more {
   background-color: rgba(181,181,181,0.5);
@@ -3368,7 +3371,7 @@ h3#comments {
   }
 }
 .header-contact {
-  background: url("../img/jpg/contact-photo.jpg") no-repeat center center;
+  background: url("../img/jpg/imgcontact.jpg") no-repeat center center/cover;
   height: 50em;
 }
 .body-contact {
@@ -3378,14 +3381,13 @@ h3#comments {
   text-align: center;
 }
 .contact__title {
+  font-family: hand_of_sean, Raleway, Helvetica, Arial, sans-serif;
   font-size: 4em;
   font-weight: bold;
-  color: #fff;
-  letter-spacing: 1.34px;
-  text-shadow: 0px 2px 1px rgba(0,0,0,0.5);
+  color: #d9a613;
 }
 .contact__subtitle {
-  margin-top: 5px;
+  margin-top: 10px;
   display: block;
   font-weight: 500;
   font-size: 2em;
@@ -3446,7 +3448,7 @@ h3#comments {
   letter-spacing: 0.4px;
 }
 .contact__input {
-  min-width: 25.926em;
+  max-width: 25.926em;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -3480,15 +3482,15 @@ h3#comments {
 }
 .contact__form__submit {
   font-size: 2.62em;
-  padding: 0.305em 1.527em;
+  display: inline-block;
+  color: #5c5c5c;
+  padding: 0.751em 2.02em;
   border: 2px solid #d9a613;
-  border-radius: 6px;
-  background-color: #fff;
-  font-weight: regular;
-  cursor: pointer;
-  font-weight: 300;
+  border-radius: 3px;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
+  background-color: #fff;
+  cursor: pointer;
   float: right;
 }
 .contact__form__submit:hover,
@@ -3519,7 +3521,13 @@ h3#comments {
 }
 .contact__form-section-2 textarea {
   width: 100%;
+  max-width: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   min-height: 15.432em;
+  resize: none;
+  font-family: inherit;
 }
 .contact__form-section-2__container {
   background-color: #fff;

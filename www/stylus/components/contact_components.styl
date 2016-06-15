@@ -1,5 +1,5 @@
 .header-contact
-  background url("../img/jpg/contact-photo.jpg") no-repeat center center
+  background url("../img/jpg/imgcontact.jpg") no-repeat center center/cover
   height 50em
 .body-contact
   background-color #F9F9F9
@@ -7,13 +7,13 @@
   &__title-container
     text-align center
   &__title
+    font-family: handofseanfont
     font-size: 4em
     font-weight: bold
-    color: #FFF
-    letter-spacing: 1.34px;
-    text-shadow: 0px 2px 1px rgba(0,0,0,0.50);
+    color: color-main-yellow
+
   &__subtitle
-    margin-top 5px
+    margin-top 10px
     display block
     font-weight: 500
     font-size: 2em
@@ -69,7 +69,7 @@
     color: #3C3D41
     letter-spacing: 0.4px
   &__input
-    min-width: 25.926em // 420px
+    max-width: 25.926em // 420px
     appearance none
     outline none
     background #EEEEEE
@@ -88,20 +88,13 @@
     border-bottom 1px solid #EEE
   &__form__submit
     font-size: 2.62em
-    padding 0.305em 1.527em // 8px, 40px
-    border 2px solid color-main-yellow
-    border-radius 6px
-    background-color #FFF
-    font-weight regular
-    cursor pointer
-    font-weight 300
-    transition trans
+    {button-style}
+    background-color: color-white
+    cursor: pointer;
     float: right
     &:hover
     &:focus
-      background-color color-main-yellow
-      transition trans
-      color #FFF
+      {button-style-hover}
   &__form__attachement
     font-size 1em
     color #3C3D41
@@ -121,7 +114,13 @@
 .contact__form-section-2
   & textarea
     width 100%
+    max-width: none
+    appearance none
     min-height 15.432em // 250px
+    resize:none;
+    font-family: inherit;
+
+
 
 .contact__form-section-2__container
   background-color #FFF

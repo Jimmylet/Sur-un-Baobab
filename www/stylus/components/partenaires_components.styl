@@ -1,0 +1,88 @@
+.partenaires-titlesection
+  display: none;
+
+.partenaires
+  &__container
+    max-width: 100em
+    margin: 0 auto
+    padding: 0 3em
+  &__block
+    background-color: color-grey-background
+    border-radius 8px
+    padding: 5.5em 5em;
+    margin-bottom: 10em
+    position relative
+    &__content
+      overflow: hidden // Clearfix
+    &__wrap-img
+      max-width: 280px;
+      display: inline-block;
+      float left
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    &__figcaption
+      padding-left 33em
+    &__title
+      display block
+      font-weight bold
+      font-size: 2.6em
+      letter-spacing: .5px
+      margin-bottom: .567em
+      line-height 1.4em
+    &__description
+      font-size: 1.8em
+      line-height 1.4em
+    &__button
+      font-size 1.8em
+      background-color: color-white
+      line-height: 1.3em
+      text-align center
+      {button-style}
+      position absolute
+      bottom: -25px
+      right 50px
+      &:hover
+        {button-style-hover}
+
+.partenaires__block__tabs
+  background-color: color-white
+  margin-top 20px
+
+
+
+@media screen and ( max-width: 849px )
+  .partenaires
+    &__block
+      text-align center
+      padding: 5.5em 5em 2.5em 5em
+      &__wrap-img
+        float: none;
+        margin-bottom 3em
+        position static
+        transform: none;
+      &__figcaption
+        padding-left 0
+      &__button
+        position relative
+        right 0
+        bottom: -52px
+        margin-left: auto
+        margin-right: auto
+
+@media screen and ( max-width: 575px )
+  .partenaires
+    &__block__button--tabs
+      bottom: -42px
+
+@media screen and ( max-width: 389px )
+  .partenaires
+    &__block
+      padding: 3em 2.7em 2.5em 2.7em
+      &__title
+        font-size 2.2em
+      &__description
+        font-size 1.6em
+      &__button
+        font-size: 1.5em
+        padding: 0.751em 1em;

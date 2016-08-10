@@ -1,8 +1,10 @@
 .prod-view
   &__title
     font-weight: bold
-    font-size: 3.76em
+    font-size: 3em
     color #000
+    font-family: handofseanfont
+    margin-bottom .5em
   &__subtitle
     display: block
     color #717171
@@ -70,8 +72,20 @@
        content "\e90d"
     &-4:before
        content "\e906"
-    &-5:before
-      content "\e90e"
+
+.partner-logo
+  display: block;
+  margin-top 34px
+  margin 34px auto 17px auto
+
+@media screen and ( max-width: 575px )
+  .partner-logo
+    width: 32px
+    height: 32px
+
+.prod-view__tabs-ul .active .partner-logo path
+  stroke: #5c5c5c
+  transition: 0.3s ease-out;
 
 .prod-view__sections__title
   display none
@@ -195,14 +209,10 @@
 
 +media-query( only screen, max-width 695px )
   .prod-view__tabs-ul
-    flex-direction row
+    flex-direction column
   .prod-view__tabs-list
     width 100%
-    font-size: 1.3em
-  .prod-view__table
-    font-size: 12px
-  .prod-view__content-container
-    font-size: .8em
+
 
 +media-query( only screen, max-width 570px )
   .prod-view__sections__subtitle
@@ -222,3 +232,15 @@
     margin-right 10px
     position: relative
     top 5px
+
+@media screen and ( max-width: 440px )
+  .prod-view__table
+    font-size: 14px
+
+@media screen and ( max-width: 396px )
+  .prod-view__table
+    font-size: 12px
+
+@media screen and ( max-width: 358px )
+  .prod-view__table
+    font-size: 10px

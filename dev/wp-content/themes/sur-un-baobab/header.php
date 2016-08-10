@@ -11,7 +11,7 @@
             <![endif]-->
 
       </head>
-      <body>
+      <body <?php body_class(); ?>>
             <div class="site-container">
                   <div class="site-pusher">
                         <header class="header">

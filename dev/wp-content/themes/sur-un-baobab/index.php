@@ -7,31 +7,63 @@ Template Name: Homepage
 <?php $easy_options = get_option("easy_page_options");?>
 <!DOCTYPE html>
 <html lang="fr">
-      <head>
-            <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Accueil - <?php _e('Sur un Baobab','b');?></title>
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/assets/css/styles.css';?>">
-<!--[if lt IE 9]>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ie8/2.9.10/ie8.js"></script>
-<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/assets/css/ie8.css';?>">
-<![endif]-->
-</head>
+  <head>
+    <?php wp_enqueue_script( 'jquery' ); ?>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - <?php _e('Sur un Baobab','b');?></title>
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/assets/css/styles.css';?>">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ie8/2.9.10/ie8.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/assets/css/ie8.css';?>">
+    <![endif]-->
+  </head>
+  <script type="text/javascript">
+    window.addEventListener('scroll', function(event) {
+      var depth, i, layer, layers, len, movement, topDistance, translate3d;
+      topDistance = this.pageYOffset;
+      layers = document.querySelectorAll("[data-type='parallax']");
+      for (i = 0, len = layers.length; i < len; i++) {
+        layer = layers[i];
+        depth = layer.getAttribute('data-depth');
+        movement = -(topDistance * depth);
+        translate3d = 'translate3d(0, ' + movement + 'px, 0)';
+        layer.style['-webkit-transform'] = translate3d;
+        layer.style['-moz-transform'] = translate3d;
+        layer.style['-ms-transform'] = translate3d;
+        layer.style['-o-transform'] = translate3d;
+        layer.style.transform = translate3d;
+      }
+      });
+
+  </script>
 <body>
       <div class="site-container">
             <div class="site-pusher">
                   <?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'full' ); ?>
-                  <style media="screen" scoped>
+                  <!--<style media="screen" scoped>
                     .header-main{
                       background: url("<?php echo get_template_directory_uri() . '/assets/img/png/pattern.png';?>") repeat, url("<?php echo $url[0]; ?>") no-repeat center center/cover;
                     }
-                  </style>
+                  </style>-->
                   <header class="header header-main">
-                        <div class="header__title header__title-main">
+                        <!-- <div class="header__title header__title-main">
                               <h1 class="header__title__main header__title-main__main" aria-level="1">Sur un Baobab</h1>
                               <span class="header__title__sub header__title-main__sub">Animation Workshop</span>
+                        </div> -->
+                        <div class="parallax">
+                          <div class="parallax__layer parallax__layer-01" data-type="parallax" data-depth="0.65"></div>
+                          <div class="parallax__layer parallax__layer-02" data-type="parallax" data-depth="0.69"></div>
+                          <div class="parallax__layer parallax__layer-08" data-type="parallax" data-depth="0.80"></div>
+                          <div class="parallax__layer parallax__layer-03" data-type="parallax" data-depth="0.94"></div>
+                          <div class="parallax__layer parallax__layer-04" data-type="parallax" data-depth="0.80"></div>
+                          <div class="parallax__layer parallax__layer-09" data-type="parallax" data-depth="1.00"></div>
+                          <div class="parallax__layer parallax__layer-05" data-type="parallax" data-depth="0.90"></div>
+                          <div class="parallax__layer parallax__layer-07" data-type="parallax" data-depth="0.95"></div>
+
                         </div>
-                        <nav class="menu">
+                        <img class="layer-mask" src="<?php bloginfo('template_directory'); ?>/assets/img/parallax/mask.svg" alt="">
+                        <!-- <nav class="menu">
                               <a href="<?php echo get_home_url(); ?>" class="header__logo">Logo</a>
                               <input type="checkbox" class="menu__icon" id="menu__icon">
                               <label for="menu__icon" class="menu__icon__label" id="menu__icon__label"><?php _e('Menu','b');?>
@@ -58,7 +90,8 @@ Template Name: Homepage
                                     <?php endforeach; ?>
                               </div>
                               <span aria-hidden="true" class="menu__icon-bg"></span>
-                        </nav>
+                        </nav> -->
+
 </header>
 
 <div class="site-content">

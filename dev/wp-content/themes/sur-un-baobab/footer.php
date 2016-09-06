@@ -75,7 +75,7 @@
 <div class="site-cache" id="site-cache"></div>
 </div>
 </div>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<?php wp_enqueue_script( 'jquery' ); ?>
 <script type="text/javascript">
   (function($){
 

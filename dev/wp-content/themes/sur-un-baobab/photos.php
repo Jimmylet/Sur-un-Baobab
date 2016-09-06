@@ -33,7 +33,9 @@ get_header();
                         </div>
                     </div>
 
-                    <?php echo photo_gallery(1); ?>
+                    <?php the_field('photos_gallery'); ?>
+
+
 
                 </div>
             </section>

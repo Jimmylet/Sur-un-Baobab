@@ -69,7 +69,7 @@ img
       display: block
       margin: 3rem auto 0 auto
     a
-      color color-main-yellow
+      color color-hover
       font-weight 500
       &:hover
       &:focus
@@ -211,11 +211,12 @@ img
     &:focus
     &:hover
       border: 1px solid color-blue
+      outline: none
 .comment-form-url
   margin-bottom: 3em
 .comment-body
   margin-bottom: 3em
-  background-color: color-white
+  background-color: #FFF
   border-radius: 4px
   padding: 2em 1.5em
 
@@ -259,17 +260,30 @@ h3#comments
 .comment-awaiting-moderation
   display: none;
 
-.reply
 .form-submit .submit
-  font-size 1.5em
-  background-color: #FFF
   {button-style}
+  font-size 1.5em
   font-family ralewayfont
+  border: none
+  cursor: pointer;
+  font-weight: 500
+  letter-spacing: .5px
   &:hover
   &:focus
+    {button-style-hover}
+    outline: none
+
+.reply
+  a
+    {button-style}
+    font-size 1.5em
     background-color: color-main-yellow
-    color color-white
-    transition: background-color .3s ease
+    font-family ralewayfont
+    font-weight: 500
+    letter-spacing: .5px
+    &:hover
+    &:focus
+      {button-style-hover}
 
 
 .depth-2
@@ -293,24 +307,24 @@ h3#comments
   span
     margin-right: 12px
   .current
-    background: #D9A613;
+    background: color-hover;
     border-radius: 8px;
     font-size: 2em
     color: #FFFFFF;
     letter-spacing: 0.77px;
     padding:.4em .8em
-    border: 1px solid #D9A613
+    border: 1px solid color-hover
   .page
     font-size: 2em
     color #727272
-    background: #F5F5F5
+    background: #e5e3e0
     letter-spacing: 0.77px;
     padding:.4em .8em
     border-radius: 8px;
     border: 1px solid #F5F5F5
     &:hover
     &:focus
-      border: 1px solid #D9A613;
+      border: 1px solid color-hover;
   .last
     position relative
     font-size: 2em

@@ -9,7 +9,7 @@
   &__title
     font-family handofseanfont
     font-size 4.24em
-    color color-main-yellow
+    color color-title-article
     margin-top: 1.769em
     text-align center
     &:after
@@ -30,15 +30,9 @@
     display: inline-block
     margin 1.4em auto 1.4em auto
     font-size: 2.62em
-    color color-text-articles
-    padding 0.751em 2.02em
-    border 2px solid color-main-yellow
-    border-radius 3px
-    transition trans
+    {button-style}
     &:hover
-      background-color color-main-yellow
-      transition trans
-      color white
+      {button-style-hover}
 
 +media-query( only screen, max-width 808px )
   .intro-text
@@ -129,17 +123,12 @@
       line-height 1.3em
     &__link
       font-size: 1.53em
-      padding 0.751em 2.020em
-      border 2px solid color-main-yellow
-      border-radius 3px
+      {button-style}
       letter-spacing .5px
-      transition trans
-      color: #5c5c5c
+        font-weight 500
       &:hover
       &:focus
-        background-color color-main-yellow
-        transition trans
-        color color-white
+        {button-style-hover}
   &__container-text
     padding 2em
 
@@ -337,11 +326,11 @@
         content "\e922"
         font-family glyphs
         color transparent
-        font-size: 10em
+        font-size: 5em
         display block
         position: absolute
         top: 40%
-        left: 1.55em
+        left: 3.25em
         transition .5s ease
       &:hover:before
         color #FFF
@@ -366,18 +355,12 @@
 .last-prod__button
   font-size: 2.62em
   display inline-block
-  color color-button
-  padding 0.751em 2.02em
-  border 2px solid color-main-yellow
-  border-radius 3px
-  transition trans
+  {button-style}
   margin-top 2.18em
   margin-bottom 4.504em
   &:hover
   &:focus
-    background-color color-main-yellow
-    color color-white
-    transition trans
+    {button-style-hover}
 
 .last-prod__item:hover .last-prod__item__hovereffect
   background: rgba(7,7,7,.5);
@@ -402,7 +385,7 @@
         width: 100%;
     &__articles__container-text
       display block
-      background-color color-white
+      background-color #FFF
       width: 45em
       height auto
       position static

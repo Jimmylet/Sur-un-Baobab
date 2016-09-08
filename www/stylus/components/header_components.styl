@@ -1,5 +1,11 @@
 @import "kouto-swiss"
 
+
+/**************************\
+  MENU CENTER
+/**************************/
+
+
 /* MODIFICATION CLIENT, SUPPRESSION DU SUBHEADER
 .header
   .subheader
@@ -102,18 +108,18 @@
 /************************************\
   NAV PRINCPALE
 \************************************/
+//
+// .header
+//   &__logo
+//     retina-image( "../img/png/Baobab_logo.png", 80px 64px, "@2x" );
+//     background-repeat no-repeat
+//     background-position center center
+//     color transparent
 
-.header
-  &__logo
-    retina-image( "../img/png/Baobab_logo.png", 80px 64px, "@2x" );
-    background-repeat no-repeat
-    background-position center center
-    color transparent
-
-.header > .menu
-  background-color #2E4157
-.header-main > .menu
-  background-color rgba(46, 65, 87, 0.8)
+// .header > .menu
+//   background-color #2E4157
+// .header-main > .menu
+//   background-color rgba(46, 65, 87, 1)
 .menu
   &__lang
     display none
@@ -128,10 +134,10 @@
   &__link--last
     margin-right 0
   &__item
-    color color-white
+    color color-background-footer
     font-size 1.62em
     text-align center
-    margin-top 1em
+    margin-top .45em
     transition color .3s ease-out
     &:hover
     &:focus
@@ -158,54 +164,13 @@
       content "\e902";
     &-contact:before
       content "\e91c";
+    &-partner:before
+      content: "\e923";
     &:hover:before
     &:focus:before
       transition color .3s ease-out
       color color-hover
 
-/************************************\
-    HEADER IMG
-\************************************/
-
-
-.header-main > .header__title-main
-  retina-image( "../img/png/title_homebck.png", contain, "@2x" );
-  background-repeat no-repeat
-  background-position center center
-  width 80%
-.header__title
-  &__main
-    display none // Modification client, change de police, import d'une image sur le fond.
-  &__sub
-    display none
-
-
-/************************************\
-    BOTTOM HEADER
-\************************************/
-
-.bottom-header
-  background: rgba(0,0,0,0.65);
-  &__button
-    color color-white
-    border 1px solid color-main-yellow
-    border-radius 3px
-    padding 0.467em 0.701em
-    font-size: 1.3em
-    transition trans
-    &:nth-child(1)
-      margin-left 2.5em
-    &:nth-child(2)
-      margin-left 1.460em
-    &:hover
-    &:focus
-      background-color color-main-yellow
-      transition trans
-  &__text
-    color color-white
-    font-size: 1.3em
-    margin-left 1.753em
-    line-height 1.25em
 
 .menu
   &__lang__deskopt
@@ -228,78 +193,7 @@
       margin-bottom 0
 
 
-// .single-project .menu__item
-//   color color-main-yellow
 
-
-/************************************\
-  SUBHEADER RESPONSIVE
-\************************************/
-
-+media-query( only screen, max-width 995px )
-  .header
-    .subheader
-      &__social
-        &__text
-          display none
-
-/*
-+media-query( only screen, max-width 929px )
-  .header
-    .subheader
-      &__mail
-        display none
-      &__lang
-        border-left 1px solid color-border-subheader
-        margin-left 4.4em
-
-+media-query( only screen, max-width 703px )
-  .header
-    .subheader
-      &__social-container
-        right auto
-
-+media-query( only screen, max-width 639px )
-  .header
-    .subheader
-      &__lang
-        margin-left 0
-        border-left 0
-
-+media-query( only screen, max-width 605px )
-  .header
-    .bottom-header
-      display none
-
-+media-query( only screen, max-width 592px )
-  .header
-    .subheader
-      text-align center
-      &__social-container
-        display none
-      &__form
-        border-right 0
-*/
-
-
-/************************************\
-  MENU PRINCIPAL RESPONSIVE
-\************************************/
-
-+media-query( only screen, max-width 1064px )
-  .menu
-    &__link
-      margin-right 3em
-      &--last
-        margin-right 0
-
-
-
-+media-query( only screen, max-width 972px )
-  .menu
-    &__item
-      font-size: 1.4em
-      margin-top 1.5em
 
 +media-query( only screen, max-width 885px )
   .subheader
@@ -316,11 +210,8 @@
       position: absolute
       z-index: 1
       top: 1em
-      right: 3em
-      width: 60px
+      width: 100%
       height: 60px
-      border-radius: 30px
-      border 1px solid color-main-yellow
       background: color-navres-menu
     &__icon__label
       display inline-block
@@ -336,11 +227,12 @@
       & span:before
       & span:after
         position: absolute;
-        width: 20px;
-        height: 2px;
+        width: 30px;
+        height: 4px;
         background-color: #ffffff;
+        border-radius: 5px;
       & span
-        left: 34px
+        left: 50px
         top: 17px
         transform: translateX(-50%) translateY(-50%);
         transition: background-color 0.2s;
@@ -352,11 +244,12 @@
         backface-visibility: hidden;
         transition: transform 0.2s;
       & span:before
-        transform: translateY(-6px);
+        transform: translateY(-9px);
       & span:after
-        transform: translateY(6px);
+        transform: translateY(9px);
     &__lang
-      display inline-block
+      // display inline-block
+      display none
       color white
       margin-top 10px
       &__item
@@ -370,60 +263,59 @@
           transition background-color .3s ease
     &__lang__deskopt
       display none
+    &__item
+      color #FFF
+      text-align: left;
+      width: 250px
+      margin-bottom: 15px
+      &:before
+        display: inline-block;
+        font-size 20px
+        width: 25px
+        text-align: left;
+        margin-right 15px
     &__container
       position: relative
-      width 25em
-      top 0
+      display: block;
+      height: 0;
+      overflow hidden
+      width 100%;
+      top 7em;
       text-align center
-      background-color color-blue - 20%
+      background-color color-blue
       margin-right 0
       z-index 20
-      position: absolute
-      right: 0
-      top: 0
-      bottom: 0
-      overflow-y: scroll
+      transition: trans
       flex-direction column
     &__link
       margin-right 0
       display block
       font-size: 16.2px
+      &:hover
+        background-color: color-blue + 20%
   .menu__icon:checked
-    transform: translateX(-250px);
     transition: trans
   .menu__icon:checked ~ .menu__container
-    transform: translateX(0px);
-    z-index: 10;
-    overflow-y: visible;
-  .site-pusher
-    height: 100%
-    transition trans
-    transform translateX(0px)
+    overflow visible;
+    height: auto;
+  .site-content
+    transition: trans
+
   .site-container
     overflow: hidden
     height: 100%
   .site-content
     height: 100%
     overflow-scrolling touch
-  /*.header
-    position static*/
-  .menu__container
-    transform translateX(250px)
-    height: 100vh
 
 .with--sidebar
-  overflow hidden
-  height 100%
-  .site-pusher
-    transform translateX(-250px)
-  .site-cache
-    position: absolute
-    left: 0
-    right: 0
-    top: 0
-    bottom: 0
-    transition .3s linear
-    background-color rgba(0,0,0,.6)
+  .site-content
+    transition: trans
+    transform translateY(430px)
+  .menu__container
+    overflow: hidden
+    height: 430px;
+    transition: trans
   .menu__icon__label
     & span
       background-color: transparent;

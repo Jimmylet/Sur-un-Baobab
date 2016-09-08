@@ -41,11 +41,6 @@ Template Name: Homepage
       <div class="site-container">
             <div class="site-pusher">
                   <?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'full' ); ?>
-                  <!--<style media="screen" scoped>
-                    .header-main{
-                      background: url("<?php echo get_template_directory_uri() . '/assets/img/png/pattern.png';?>") repeat, url("<?php echo $url[0]; ?>") no-repeat center center/cover;
-                    }
-                  </style>-->
                   <header class="header header-main">
                         <!-- <div class="header__title header__title-main">
                               <h1 class="header__title__main header__title-main__main" aria-level="1">Sur un Baobab</h1>
@@ -57,25 +52,24 @@ Template Name: Homepage
                           <div class="parallax__layer parallax__layer-08" data-type="parallax" data-depth="0.80"></div>
                           <div class="parallax__layer parallax__layer-03" data-type="parallax" data-depth="0.94"></div>
                           <div class="parallax__layer parallax__layer-04" data-type="parallax" data-depth="0.80"></div>
-                          <div class="parallax__layer parallax__layer-09" data-type="parallax" data-depth="1.00"></div>
                           <div class="parallax__layer parallax__layer-05" data-type="parallax" data-depth="0.90"></div>
                           <div class="parallax__layer parallax__layer-07" data-type="parallax" data-depth="0.95"></div>
 
                         </div>
-                        <img class="layer-mask" src="<?php bloginfo('template_directory'); ?>/assets/img/parallax/mask.svg" alt="">
-                        <!-- <nav class="menu">
-                              <a href="<?php echo get_home_url(); ?>" class="header__logo">Logo</a>
+                        <!-- <img class="layer-mask" src="<?php bloginfo('template_directory'); ?>/assets/img/parallax/mask.svg" alt=""> -->
+                        <nav class="menu">
+                              <!-- <a href="<?php echo get_home_url(); ?>" class="header__logo">Logo</a> -->
                               <input type="checkbox" class="menu__icon" id="menu__icon">
                               <label for="menu__icon" class="menu__icon__label" id="menu__icon__label"><?php _e('Menu','b');?>
                                     <span></span>
                               </label>
                               <div class="menu__container">
                                     <h2 class="menu__title" aria-level="2"><?php _e('Menu de navigation','b');?></h2>
-                                    <div class="menu__lang__deskopt">
+                                    <!-- <div class="menu__lang__deskopt">
                                           <a href="http://baobab.letecheur.me/fr/" class="menu__lang__deskopt__item" lang="fr">FR</a>
                                           <a href="http://baobab.letecheur.me/es/" class="menu__lang__deskopt__item" lang="es">ES</a>
                                           <a href="http://baobab.letecheur.me/en/" class="menu__lang__deskopt__item" lang="en">EN</a>
-                                    </div>
+                                    </div> -->
                                     <div class="menu__lang">
                                           <a href="http://baobab.letecheur.me/fr/" class="menu__lang__item" lang="fr">Français</a>
                                           <a href="http://baobab.letecheur.me/es/" class="menu__lang__item" lang="es">Spanish</a>
@@ -86,19 +80,22 @@ Template Name: Homepage
                           						$thePostID = $post->ID;
                           					?>
                                     <?php foreach (b_get_menu_items('main-nav') as $navItem): ?>
-                                          <a href="<?php echo $navItem->url;?>" class="menu__link"><span class="menu__item menu__item-<?php echo $navItem->icon;?> menu__item--<?php echo $thePostID == $navItem->id ? "active" : "" ;?>" title="Vers la page <?php echo $navItem->label;?>"><?php echo $navItem->label;?></span></a>
+                                          <a href="<?php echo $navItem->url;?>" class="menu__link">
+                                            <span class="menu__item menu__item-<?php echo $navItem->icon;?> menu__item--<?php echo $thePostID == $navItem->id ? "active" : "" ;?>" title="Vers la page <?php echo $navItem->label;?>">
+                                              <?php echo $navItem->label;?>
+                                            </span>
+                                          </a>
                                     <?php endforeach; ?>
                               </div>
                               <span aria-hidden="true" class="menu__icon-bg"></span>
-                        </nav> -->
-
+                        </nav>
 </header>
 
 <div class="site-content">
       <div class="container">
 
             <section class="intro-text">
-                  <h2 class="intro-text__title">Rencontrer. Animer. Aider.</h2>
+                  <h2 class="intro-text__title">Qui sommes nous&nbsp;?</h2>
                   <div class="intro-text__container">
                         <img class="intro-text__img" src="<?php bloginfo('template_directory'); ?>/assets/img/svg/baobab_logo_svg.svg" alt="Logo Surunbaobab"
                              width="220"

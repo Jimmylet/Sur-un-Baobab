@@ -47,10 +47,10 @@ Template Name: Homepage
                               <span class="header__title__sub header__title-main__sub">Animation Workshop</span>
                         </div> -->
                         <div class="parallax">
-                          <div class="parallax__layer parallax__layer-01" data-type="parallax" data-depth="-0.3"></div>
-                          <div class="parallax__layer parallax__layer-02" data-type="parallax" data-depth="-0.2"></div>
-                          <div class="parallax__layer parallax__layer-03" data-type="parallax" data-depth="-0.1"></div>
-                          <div class="parallax__layer parallax__layer-04" data-type="parallax" data-depth="0"></div>
+                          <div class="parallax__layer parallax__layer-01" data-type="parallax" data-depth="0"></div>
+                          <div class="parallax__layer parallax__layer-02" data-type="parallax" data-depth="0.025"></div>
+                          <div class="parallax__layer parallax__layer-03" data-type="parallax" data-depth="0.05"></div>
+                          <div class="parallax__layer parallax__layer-04" data-type="parallax" data-depth="0.075"></div>
                           <div class="parallax__layer parallax__layer-05" data-type="parallax" data-depth="0.1"></div>
                           <div class="parallax__layer parallax__layer-06" data-type="parallax" data-depth="0.2"></div>
                           <div class="parallax__layer parallax__layer-07" data-type="parallax" data-depth="0.3"></div>

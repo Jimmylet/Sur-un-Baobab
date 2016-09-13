@@ -11,11 +11,10 @@ get_header();
 <div class="site-content">
     <div class="container">
 
-        <?php the_breadcrumb(); ?>
-
         <main>
             <section class="desc-projet">
                 <div class="desc-projet__container">
+                <?php the_breadcrumb(); ?>
 								<span itemprop="legalName" class="desc-projet__subtitle">
 									<?php the_field('about_subtitle'); ?>
 								</span>

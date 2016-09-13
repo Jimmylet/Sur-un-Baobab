@@ -10,25 +10,26 @@ get_header();
 <div class="site-content">
     <div class="container">
 
-        <ol class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-            <li class="breadcrumb__link" itemprop="title">
-                <a href="<?php echo get_home_url();?>" class="breadcrumb__link__text" itemprop="url">
-                    Accueil
-                </a>
-            </li>
-            <li class="breadcrumb__link" itemprop="title">
-                <a href="<?php echo the_permalink(291);?>" class="breadcrumb__link__text" itemprop="url">
-                    Ateliers
-                </a>
-            </li>
-            <li class="breadcrumb__link" itemprop="title">
-                <a href="<?php echo the_permalink();?>" class="breadcrumb__link__text" itemprop="url">
-                    <?php echo the_title();?>
-                </a>
-            </li>
-        </ol>
+
         <main>
             <section class="ateliers-view">
+                <ol class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <li class="breadcrumb__link" itemprop="title">
+                        <a href="<?php echo get_home_url();?>" class="breadcrumb__link__text" itemprop="url">
+                            Accueil
+                        </a>
+                    </li>
+                    <li class="breadcrumb__link" itemprop="title">
+                        <a href="<?php echo the_permalink(291);?>" class="breadcrumb__link__text" itemprop="url">
+                            Ateliers
+                        </a>
+                    </li>
+                    <li class="breadcrumb__link" itemprop="title">
+                        <a href="<?php echo the_permalink();?>" class="breadcrumb__link__text" itemprop="url">
+                            <?php echo the_title();?>
+                        </a>
+                    </li>
+                </ol>
                 <h2 aria-level="2" class="ateliers-view__section-title">Les étapes pour la réalisation de l'atelier</h2>
 
                 <?php if( have_rows('ateliers') ): ?>

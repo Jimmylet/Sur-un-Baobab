@@ -20,24 +20,27 @@ get_header();?>
 <div class="site-content">
     <div class="container">
 
-        <ol class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-            <li class="breadcrumb__link" itemprop="title">
-                <a href="<?php echo get_home_url(); ?>" class="breadcrumb__link__text" itemprop="url">
-                    Accueil
-                </a>
-            </li>
-            <li class="breadcrumb__link" itemprop="title">
-                <a href="<?php echo get_permalink();?>" class="breadcrumb__link__text" itemprop="url">
-                    Productions
-                </a>
-            </li>
-        </ol>
+
         <main>
             <section class="productions">
+
                 <h2 aria-level="2" class="productions__sectiontitle">
-                    Les productions de Surunbaobab
+                    <?php _e('Les productions de Surunbaobab','b');?>
                 </h2>
                 <div class="productions__container">
+
+                  <ol class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                      <li class="breadcrumb__link" itemprop="title">
+                          <a href="<?php echo get_home_url(); ?>" class="breadcrumb__link__text" itemprop="url">
+                              Accueil
+                          </a>
+                      </li>
+                      <li class="breadcrumb__link" itemprop="title">
+                          <a href="<?php echo get_permalink();?>" class="breadcrumb__link__text" itemprop="url">
+                              Productions
+                          </a>
+                      </li>
+                  </ol>
 
                     <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
                     <article class="productions__article">
@@ -62,21 +65,31 @@ get_header();?>
                                     <span class="productions__text-infos__item productions__text-infos__date"><?php the_field('prod_creation');?></span>
                                 </div>
                                 <ul class="productions__details">
+                                    <?php if( get_field('prod_theme') ): ?>
                                     <li class="productions__details__item">
                                         <b><?php _e('Thème','b');?>&nbsp;: </b><?php the_field('prod_theme');?>
                                     </li>
+                                    <?php endif; ?>
+                                    <?php if( get_field('prod_participants') ): ?>
                                     <li class="productions__details__item">
                                         <b><?php _e('Participants','b');?>&nbsp;: </b><?php the_field('prod_participants');?>
                                     </li>
+                                    <?php endif; ?>
+                                    <?php if( get_field('prod_technique') ): ?>
                                     <li class="productions__details__item">
                                         <b><?php _e('Technique','b');?>&nbsp;: </b><?php the_field('prod_technique');?>
                                     </li>
+                                    <?php endif; ?>
+                                    <?php if( get_field('prod_langue') ): ?>
                                     <li class="productions__details__item">
                                         <b><?php _e('Langue','b');?>&nbsp;: </b><?php the_field('prod_langue');?>
                                     </li>
+                                    <?php endif; ?>
+                                    <?php if( get_field('prod_sous-titres') ): ?>
                                     <li class="productions__details__item">
                                         <b><?php _e('Sous-titres','b');?>&nbsp;: </b><?php the_field('prod_sous-titres');?>
                                     </li>
+                                    <?php endif; ?>
                                 </ul>
                                 <div class="productions__synopsis">
 													<span class="productions__synopsis__title">

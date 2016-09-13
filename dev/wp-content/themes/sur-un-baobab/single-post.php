@@ -11,9 +11,9 @@ get_header();
 
       <div class="site-content">
             <div class="container">
-                  <?php the_breadcrumb_article(); ?>
                   <main>
                         <div class="news-view__container">
+                          <?php the_breadcrumb_article(); ?>
                               <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
                               <article class="news-view__article">
                                     <figure class="news-view__img-container">

@@ -15,37 +15,43 @@ get_header();
       <div class="site-content">
       <div class="container">
 
-      <ol class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-            <li class="breadcrumb__link" itemprop="title">
-                  <a href="<?php echo get_home_url();?>" class="breadcrumb__link__text" itemprop="url">
-                        Accueil
-                  </a>
-            </li>
-            <li class="breadcrumb__link" itemprop="title">
-                  <a href="<?php echo get_page_link(200); ?>" class="breadcrumb__link__text" itemprop="url">
-                        Productions
-                  </a>
-            </li>
-            <li class="breadcrumb__link" itemprop="title">
-                  <a href="<?php the_permalink();?>" class="breadcrumb__link__text" itemprop="url">
-                        <?php the_title();?>
-                  </a>
-            </li>
-      </ol>
       <main>
 
             <section class="prod-view">
+
+              <ol class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <li class="breadcrumb__link" itemprop="title">
+
+                          <a href="<?php echo get_home_url();?>" class="breadcrumb__link__text" itemprop="url">
+                                <span class="visuallyhidden">Accueil</span>
+                          </a>
+                    </li>
+                    <li class="breadcrumb__link" itemprop="title">
+                          <a href="<?php echo get_page_link(200); ?>" class="breadcrumb__link__text" itemprop="url">
+                                Productions
+                          </a>
+                    </li>
+                    <li class="breadcrumb__link" itemprop="title">
+                          <a href="<?php the_permalink();?>" class="breadcrumb__link__text" itemprop="url">
+                                <?php the_title();?>
+                          </a>
+                    </li>
+              </ol>
+
                   <h2 aria-level="2" class="prod-view__title">
                         <?php the_title();?>
                   </h2>
-								<span class="prod-view__subtitle">
-									<?php the_field('prod_association');?>
-								</span>
+                  <?php if (isset(the_field('prod_association'))): ?>
+                    <span class="prod-view__subtitle">
+  									<?php the_field('prod_association');?>
+                    </span>
+                  <?php endif; ?>
+
+
                   <div class="prod-view__videoplayer video-container">
                         <?php the_field('prod_video');?>
                   </div>
                   <div class="prod-view__synopsis-container">
-                        <span class="prod-view__synopsis"><?php _e('Synopsis','b');?>&nbsp;:</span>
                         <p class="prod-view__synopsis-paragraph">
                               <?php the_field('prod_synopsis');?>
                         </p>
@@ -76,7 +82,7 @@ get_header();
                                           </svg>
 
 
-                                            Partenaires</a>
+                                            Soutiens</a>
                                     </li>
                               </ul>
                         </div>

@@ -10,7 +10,7 @@ get_header();
 <div class="site-content">
     <div class="container">
 
-        <?php the_breadcrumb();?>
+
 
         <main>
 
@@ -19,6 +19,7 @@ get_header();
                   <?php _e('Nos partenaires','b');?>
               </h2>
               <div class="partenaires__container">
+              <?php the_breadcrumb();?>
 
               <?php if( have_rows('partner-fiche') ): ?>
               <?php while( have_rows('partner-fiche') ): the_row();

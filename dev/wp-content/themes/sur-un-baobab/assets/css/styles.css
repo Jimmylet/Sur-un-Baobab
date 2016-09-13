@@ -385,11 +385,11 @@ img {
   margin-right: 2em;
 }
 .wp-caption-text {
-  color: #2e4157;
+  color: #757371;
   font-style: italic;
-  font-size: 1.5em;
-  border-left: 3px solid #2e4157;
-  margin-top: 0.667em;
+  font-size: 1em;
+  text-align: center;
+  margin-top: 0.35em;
   padding-left: 0.667em;
 }
 .comment-respond {
@@ -1327,7 +1327,7 @@ h3#comments {
   .menu__icon-bg {
     position: absolute;
     z-index: 1;
-    top: 1em;
+    top: 0em;
     width: 100%;
     height: 60px;
     background: #243445;
@@ -1337,7 +1337,7 @@ h3#comments {
     position: absolute;
     z-index: 2;
     right: 3.3em;
-    top: 2.3em;
+    top: 1.3em;
     height: 60px;
     width: 60px;
     color: transparent;
@@ -1418,13 +1418,23 @@ h3#comments {
     text-align: left;
     margin-right: 15px;
   }
+  .menu__item:hover:before,
+  .menu__item:focus:before,
+  .menu__item:active:before {
+    color: #fff;
+  }
+  .menu__item:hover,
+  .menu__item:focus,
+  .menu__item:active {
+    color: #fff;
+  }
   .menu__container {
     position: relative;
     display: block;
     height: 0;
     overflow: hidden;
     width: 100%;
-    top: 7em;
+    top: 6em;
     text-align: center;
     background-color: #2e4157;
     margin-right: 0;
@@ -1441,6 +1451,7 @@ h3#comments {
     margin-right: 0;
     display: block;
     font-size: 16.2px;
+    padding-top: 0.7em;
   }
   .menu__link:hover {
     background-color: #486688;
@@ -1469,13 +1480,13 @@ h3#comments {
 .with--sidebar .site-content {
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
-  -webkit-transform: translateY(430px);
-  -ms-transform: translateY(430px);
-  transform: translateY(430px);
+  -webkit-transform: translateY(499px);
+  -ms-transform: translateY(499px);
+  transform: translateY(499px);
 }
 .with--sidebar .menu__container {
   overflow: hidden;
-  height: 430px;
+  height: 499px;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
 }
@@ -1540,7 +1551,7 @@ h3#comments {
   bottom: -12em;
 }
 .breadcrumb {
-  margin: 3.5em 0 6em 6.1em;
+  margin: 3.5em 0 6em 0;
 }
 .breadcrumb__link {
   display: inline-block;
@@ -1570,19 +1581,21 @@ h3#comments {
   position: relative;
   top: 6px;
 }
-.breadcrumb__link:first-child:before {
+.breadcrumb__link:first-child .breadcrumb__link__text {
+  margin: 0 0.617em 0 0;
+}
+.breadcrumb__link:first-child .breadcrumb__link__text:before {
   font-family: glyphs;
   content: "\e917";
-  font-size: 1.7em;
+  font-size: 1.2em;
   position: relative;
-  right: -3px;
 }
 .breadcrumb__link:last-child:after {
   display: none;
 }
 @media only screen and (max-width: 807px) {
   .breadcrumb {
-    margin: 3.5em 0 6em 2.5em;
+    margin: 3.5em 0 6em 0;
   }
 }
 .intro-text {
@@ -3911,10 +3924,8 @@ h3#comments {
     margin-bottom: 1em;
   }
 }
-.error404 {
-  padding: 10em 4em;
-}
 .error404__title {
+  padding: 1em 0 0em 4em;
   font-size: 3.33em;
   font-weight: bold;
   color: #2e4157;
@@ -3922,6 +3933,7 @@ h3#comments {
 }
 .error404__description,
 .error404__return {
+  padding: 0 5em;
   font-size: 2.62em;
   color: #222;
   margin-bottom: 1.908em;

@@ -199,9 +199,10 @@ function the_breadcrumb() {
       if (!is_home()) {
             echo '<li class="breadcrumb__link"  itemprop="title"><a class="breadcrumb__link__text" itemprop="link" href="';
             echo get_home_url();
-            echo '">';
+            echo '"><span class=';
+            echo 'visuallyhidden>';
             echo _e('Accueil','b');
-            echo "</a></li>";
+            echo "</span></a></li>";
             if (is_category() || is_single()) {
                   echo '<li class="breadcrumb__link" itemprop="title">';
                   echo '<a class="breadcrumb__link__text" itemprop="link" href="';
@@ -233,14 +234,17 @@ function the_breadcrumb() {
 function the_breadcrumb_article(){
       echo '<ol class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">';
       if (!is_home()) {
-            echo '<li class="breadcrumb__link"  itemprop="title"><a class="breadcrumb__link__text" itemprop="url" href="';
+            echo '<li class="breadcrumb__link"  itemprop="title"><a class="breadcrumb__link__text" itemprop="link" href="';
             echo get_home_url();
-            echo '">';
+            echo '"><span class=';
+            echo 'visuallyhidden>';
             echo _e('Accueil','b');
             echo "</a></li>";
             if (is_category() || is_single()) {
                   echo '<li class="breadcrumb__link" itemprop="title">';
-                  echo '<a class="breadcrumb__link__text" itemprop="url" href="">';
+                  echo '<a class="breadcrumb__link__text" itemprop="url" href="';
+                  echo get_page_link(147);
+                  echo '">';
                   echo _e('Actualités','b');
                   echo '</a>';
                   echo '</li>';
@@ -252,7 +256,7 @@ function the_breadcrumb_article(){
                   }
             } elseif (is_page()) {
                   echo '<li class="breadcrumb__link" itemprop="title"><a class="breadcrumb__link__text" itemprop="url" href="';
-                  echo get_permalink();
+                  echo get_page_link(147);
                   echo '">';
                   echo the_title();
                   echo '</a>';

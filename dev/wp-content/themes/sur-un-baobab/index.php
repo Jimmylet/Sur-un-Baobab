@@ -95,7 +95,7 @@ Template Name: Homepage
       <div class="container">
 
             <section class="intro-text">
-                  <h2 class="intro-text__title">Qui sommes nous&nbsp;?</h2>
+                  <h2 class="intro-text__title">Sur un baobab</h2>
                   <div class="intro-text__container">
                         <img class="intro-text__img" src="<?php bloginfo('template_directory'); ?>/assets/img/svg/baobab_logo_svg.svg" alt="Logo Surunbaobab"
                              width="220"

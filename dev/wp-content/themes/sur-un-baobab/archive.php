@@ -11,18 +11,20 @@ get_header(); ?>
 </header>
 <div class="site-content">
     <div class="container">
-        <?php the_breadcrumb_article();?>
-        <?php
-          if(is_page()){
-            query_posts([
-              'posts_per_page' => 3,
-              'orderby' => 'date',
-              'order' => 'DESC',
-              'post_type' => 'post',
-              'paged' => get_query_var('paged')
-            ]);
-          }
-        ?>
+
+      <?php the_breadcrumb_article();?>
+      <?php
+        if(is_page()){
+          query_posts([
+            'posts_per_page' => 3,
+            'orderby' => 'date',
+            'order' => 'DESC',
+            'post_type' => 'post',
+            'paged' => get_query_var('paged')
+          ]);
+        }
+      ?>
+
 
         <main>
             <section class="news">
@@ -30,6 +32,7 @@ get_header(); ?>
                     <?php _e('Les articles sur notre actualité','b');?>
                 </h2>
                 <div class="news__container">
+
 
                     <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
 

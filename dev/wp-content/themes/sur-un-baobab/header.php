@@ -18,19 +18,19 @@
             <div class="site-container">
                   <div class="site-pusher">
                         <header class="header">
-                              <div class="header__title header__title-main">
+                              <!-- <div class="header__title header__title-main">
                                     <h1 class="header__title__main header__title-main__main" aria-level="1">Sur un Baobab</h1>
                                     <span class="header__title__sub header__title-main__sub">Animation Workshop</span>
-                              </div>
+                              </div> -->
                               <nav class="menu">
-                                    <a href="<?php echo get_home_url(); ?>" class="header__logo">Logo</a>
+                                    <!-- <a href="<?php echo get_home_url(); ?>" class="header__logo">Logo</a> -->
                                     <input type="checkbox" class="menu__icon" id="menu__icon">
                                     <label for="menu__icon" class="menu__icon__label" id="menu__icon__label"><?php _e('Menu','b');?>
                                           <span></span>
                                     </label>
                                     <div class="menu__container">
                                           <h2 class="menu__title" aria-level="2"><?php _e('Menu de navigation','b');?></h2>
-                                          <div class="menu__lang__deskopt">
+                                          <!-- <div class="menu__lang__deskopt">
                                                 <a href="" class="menu__lang__deskopt__item" lang="fr">FR</a>
                                                 <a href="" class="menu__lang__deskopt__item" lang="es">ES</a>
                                                 <a href="" class="menu__lang__deskopt__item" lang="en">EN</a>
@@ -39,7 +39,7 @@
                                                 <a href="" class="menu__lang__item" lang="fr">Français</a>
                                                 <a href="" class="menu__lang__item" lang="es">Spanish</a>
                                                 <a href="" class="menu__lang__item" lang="en">English</a>
-                                          </div>
+                                          </div> -->
                                           <?php
                                 						global $post;
                                 						$thePostID = $post->ID;

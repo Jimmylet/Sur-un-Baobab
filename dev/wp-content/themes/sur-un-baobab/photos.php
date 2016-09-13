@@ -11,7 +11,7 @@ get_header();
 <div class="site-content">
     <div class="container">
 
-        <?php the_breadcrumb();?>
+
 
         <main>
             <section class="photos">
@@ -19,6 +19,7 @@ get_header();
                     <?php _e('Quelques-unes de nos photos','b');?>
                 </h2>
                 <div class="photos__container">
+                  <?php the_breadcrumb();?>
                     <div class="photos__intro-container">
                         <div class="photos__intro">
                             <p class="photos__intro__paragraph">

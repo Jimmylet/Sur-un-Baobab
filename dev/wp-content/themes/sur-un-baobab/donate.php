@@ -46,7 +46,7 @@ include 'head.php';
 <div class="site-content">
     <div class="container">
 
-        <?php the_breadcrumb();?>
+
 
         <main>
             <section class="makedonate">
@@ -59,6 +59,8 @@ include 'head.php';
 									</span>
                 </div>
                 <div class="makedonate__container" id="donate">
+                  <?php the_breadcrumb();?>
+                    
                     <div class="fixancre"></div>
                     <section class="makedonate__donate">
                         <h3 aria-level="3" class="makedonate__title">

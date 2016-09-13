@@ -47,16 +47,24 @@ Template Name: Homepage
                               <span class="header__title__sub header__title-main__sub">Animation Workshop</span>
                         </div> -->
                         <div class="parallax">
-                          <div class="parallax__layer parallax__layer-01" data-type="parallax" data-depth="0.65"></div>
-                          <div class="parallax__layer parallax__layer-02" data-type="parallax" data-depth="0.69"></div>
-                          <div class="parallax__layer parallax__layer-08" data-type="parallax" data-depth="0.80"></div>
-                          <div class="parallax__layer parallax__layer-03" data-type="parallax" data-depth="0.94"></div>
-                          <div class="parallax__layer parallax__layer-04" data-type="parallax" data-depth="0.80"></div>
-                          <div class="parallax__layer parallax__layer-05" data-type="parallax" data-depth="0.90"></div>
-                          <div class="parallax__layer parallax__layer-07" data-type="parallax" data-depth="0.95"></div>
+                          <div class="parallax__layer parallax__layer-01" data-type="parallax" data-depth="-0.3"></div>
+                          <div class="parallax__layer parallax__layer-02" data-type="parallax" data-depth="-0.2"></div>
+                          <div class="parallax__layer parallax__layer-03" data-type="parallax" data-depth="-0.1"></div>
+                          <div class="parallax__layer parallax__layer-04" data-type="parallax" data-depth="0"></div>
+                          <div class="parallax__layer parallax__layer-05" data-type="parallax" data-depth="0.1"></div>
+                          <div class="parallax__layer parallax__layer-06" data-type="parallax" data-depth="0.2"></div>
+                          <div class="parallax__layer parallax__layer-07" data-type="parallax" data-depth="0.3"></div>
+                          <div class="parallax__layer parallax__layer-08" data-type="parallax" data-depth="0.4"></div>
+                          <div class="parallax__layer parallax__layer-09" data-type="parallax" data-depth="0.5"></div>
+                          <div class="parallax__layer parallax__layer-10" data-type="parallax" data-depth="0.6"></div>
+                          <div class="parallax__layer parallax__layer-11" data-type="parallax" data-depth="0.7"></div>
+                          <div class="parallax__layer parallax__layer-12" data-type="parallax" data-depth="0.8"></div>
+                          <div class="parallax__layer parallax__layer-13" data-type="parallax" data-depth="1"></div>
+                          <div class="fix-parallax"></div>
 
                         </div>
                         <!-- <img class="layer-mask" src="<?php bloginfo('template_directory'); ?>/assets/img/parallax/mask.svg" alt=""> -->
+
                         <nav class="menu">
                               <!-- <a href="<?php echo get_home_url(); ?>" class="header__logo">Logo</a> -->
                               <input type="checkbox" class="menu__icon" id="menu__icon">

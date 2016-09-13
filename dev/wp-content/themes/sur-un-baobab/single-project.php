@@ -41,11 +41,9 @@ get_header();
                   <h2 aria-level="2" class="prod-view__title">
                         <?php the_title();?>
                   </h2>
-                  <?php if (isset(the_field('prod_association'))): ?>
                     <span class="prod-view__subtitle">
   									<?php the_field('prod_association');?>
                     </span>
-                  <?php endif; ?>
 
 
                   <div class="prod-view__videoplayer video-container">

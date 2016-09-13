@@ -12,11 +12,11 @@ get_header(); ?>
 <div class="site-content">
     <div class="container">
 
-      <?php the_breadcrumb_article();?>
+
       <?php
         if(is_page()){
           query_posts([
-            'posts_per_page' => 3,
+            'posts_per_page' => 4,
             'orderby' => 'date',
             'order' => 'DESC',
             'post_type' => 'post',
@@ -32,6 +32,20 @@ get_header(); ?>
                     <?php _e('Les articles sur notre actualité','b');?>
                 </h2>
                 <div class="news__container">
+
+                  <ol class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                        <li class="breadcrumb__link" itemprop="title">
+
+                              <a href="<?php echo get_home_url();?>" class="breadcrumb__link__text" itemprop="url">
+                                    <span class="visuallyhidden">Accueil</span>
+                              </a>
+                        </li>
+                        <li class="breadcrumb__link" itemprop="title">
+                              <a href="<?php the_permalink();?>" class="breadcrumb__link__text" itemprop="url">
+                                    <?php the_title();?>
+                              </a>
+                        </li>
+                  </ol>
 
 
                     <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>

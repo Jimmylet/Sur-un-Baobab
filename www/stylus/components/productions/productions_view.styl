@@ -190,12 +190,8 @@
   line-height 1.4em
 .table__row
   background-color color-grey-background
-.table__row:hover
-  background-color color-grey-background - 5%
 .table__row:nth-child(even)
-  background-color #FFF
-.table__row:nth-child(even):hover
-  background-color #FFF - 10%
+  background-color color-grey-background - 5%
 
 
 /************************************\
@@ -207,6 +203,11 @@
     flex-direction column
   .prod-view__tabs-list
     width 100%
+  .prod-view__sections__affiche
+    max-width: 70%
+  .productions__img
+    width: 100%
+    height: auto
 
 
 +media-query( only screen, max-width 570px )

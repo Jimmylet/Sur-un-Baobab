@@ -1,127 +1,11 @@
 @import "kouto-swiss"
 
-
-/**************************\
-  MENU CENTER
-/**************************/
-
-
-/* MODIFICATION CLIENT, SUPPRESSION DU SUBHEADER
-.header
-  .subheader
-    background-color color-background-subheader
-    color color-elements-subheader
-    line-height 5.6em
-    &__mail
-      border-left 1px solid color-border-subheader
-      border-right 1px solid color-border-subheader
-      padding 0 2em
-      white-space nowrap
-      margin-left 4.4em
-      &__item
-        font-size 1.27em
-        transition trans
-        &:focus
-        &:hover
-          color color-elements-subheader - 20%
-          transition trans
-        &:before
-          content "\e918";
-          font-family glyphs
-          font-size: 1.3em
-          position: relative
-          top .14em
-          line-height 0
-          padding-right 0.882em
-    &__lang
-      padding 0 2em
-      border-right 1px solid color-border-subheader
-      &__item
-        font-size 1.27em
-        transition trans
-        &:focus
-        &:hover
-          color color-elements-subheader - 20%
-          transition trans
-        &:nth-child(2):after
-        &:nth-child(2):before
-          content " - "
-        &:nth-child(3):after
-          content ""
-        &--active
-          font-weight bold
-    &__form
-      padding 0 .7em 0 2em
-      border-right 1px solid color-border-subheader
-      &__label
-        display none
-      &__search
-        background-color color-background-subheader
-        border none
-        font-size: 1.27em
-        width 7.2em
-        color white
-        line-height 2em
-      &__submit
-        margin-right .5em
-    &__social
-      text-align right
-      &__link
-        height: 6em;
-        margin-left: 1.5em;
-        padding-left: 2.5em;
-        display: inline-block;
-        position: relative;
-        max-width: 2.5em;
-        overflow hidden
-        transition: 0.7s;
-      &__logo
-        position: absolute;
-        left: 0;
-      &__text
-        font-size: 1.27em
-        display: inline-block;
-        overflow: hidden;
-        white-space: nowrap;
-        color color-main-yellow
-        margin-left .3em
-      &__logo:before
-        font-family glyphs
-        font-size: 2.4em
-      &__logo-fb:before
-        content "\e91e"
-      &__logo-tw:before
-        content "\e91d"
-      &__logo-inst:before
-        content "\e900"
-      &__logo-vi:before
-        content "\e91f"
-      &__logo-yout:before
-        content "\e920"
-      &__link:hover
-        max-width 100%
-        color color-main-yellow
-        text-align left
-*/
-
-
-/************************************\
-  NAV PRINCPALE
-\************************************/
-//
-// .header
-//   &__logo
-//     retina-image( "../img/png/Baobab_logo.png", 80px 64px, "@2x" );
-//     background-repeat no-repeat
-//     background-position center center
-//     color transparent
-
-// .header > .menu
-//   background-color #2E4157
-// .header-main > .menu
-//   background-color rgba(46, 65, 87, 1)
 .menu
-  background: #F9F7F1
+  background: #FFF
+  position fixed
+  z-index: 2
+  width 100%
+  top: 0em
   &__lang
     display none
   &__bloc
@@ -175,31 +59,71 @@
 
 .menu
   &__lang__deskopt
-    color white
+    color color-background-footer
     position: absolute
-    left: 0
-    background-color color-blue - 30%
+    top 1.3em
+    right: 0em
+    background-color rgba(255, 255, 255, 0.94)
     &__item
       display block
       margin-bottom .41em
       font-size: 1.3em
-      background-color color-blue - 30%
+      background-color rgba(255, 255, 255, 0.94)
       padding 5px 5px
       transition trans
       &:hover
       &:focus
-        background-color color-blue
-        transition trans
+        text-decoration: underline;
     &__item:last-child
       margin-bottom 0
 
 
-+media-query( only screen, max-width 885px )
+
+.minheader
+  background: rgba(255, 255, 255, 0.94);
+  padding: 1em 0 1.4em 0
+  transition: all .3s ease
+  .menu__item
+    &:before
+      display: none
+  .menu__lang__deskopt
+    display: none
+
+
+.no-index
+  .site-content
+    position relative
+    bottom -12em
+
+.home
+  .menu
+    position relative
+    z-index: 99
+    background: color-white
+
+.home
+  .headerwhite
+    background: rgba(255, 255, 255, 0.94);
+    position: fixed;
+    transition: background .3s ease
+  .withfixed
+    position relative
+    .intro-text__title
+      padding-top: 4.1em
+
+
+.home
+  .headerwhite--min
+    padding: 1em 0 1.4em 0
+    transition: all .3s ease
+    .menu__item
+      &:before
+        display: none
+
++media-query( only screen, max-width 1000px )
   .subheader
     display none
-  .header
-    &__logo
-      margin-left 2.4em
+
   .menu
     position: relative
     padding 0
@@ -316,10 +240,23 @@
     height: 100%
     overflow-scrolling touch
 
+  .home
+    .headerwhite
+      position: relative;
+      margin-bottom 4.1em
+    .withfixed
+      position relative
+      .intro-text__title
+        padding-top: 2.1em
+
+  .intro-text
+    margin-top 4em
+
+
+
 .with--sidebar
   .site-content
     transition: trans
-    transform translateY(499px)
   .menu__container
     overflow: hidden
     height: 499px;

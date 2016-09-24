@@ -239,7 +239,7 @@ function the_breadcrumb_article(){
             echo '"><span class=';
             echo 'visuallyhidden>';
             echo _e('Accueil','b');
-            echo "</a></li>";
+            echo "</span></a></li>";
             if (is_category() || is_single()) {
                   echo '<li class="breadcrumb__link" itemprop="title">';
                   echo '<a class="breadcrumb__link__text" itemprop="url" href="';

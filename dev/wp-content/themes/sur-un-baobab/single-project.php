@@ -4,12 +4,22 @@
       Template Name: Single Project
 */
 
-get_header();
+include('head.php');
 
 ?>
-
-
-
+<body <?php body_class('no-index'); ?>>
+      <div class="site-container">
+            <div class="site-pusher">
+                  <header class="header">
+                        <div class="header__title header__title-main">
+                              <h1 class="header__title__main header__title-main__main visuallyhidden" aria-level="1"><?php the_title(); ?> - Sur un Baobab</h1>
+                        </div>
+                        <nav class="menu">
+                              <input type="checkbox" class="menu__icon" id="menu__icon">
+                              <label for="menu__icon" class="menu__icon__label" id="menu__icon__label"><?php _e('Menu','b');?>
+                                    <span></span>
+                              </label>
+<?php get_header(); ?>
       <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
       </header>
       <div class="site-content">
@@ -71,7 +81,7 @@ get_header();
                                     </li><!--
 										--><li class="prod-view__tabs-list">
                                           <a href="#section_presse" data-tab-target="tab-five" class="prod-view__tabs-link prod-view__tabs-link-5">
-                                            Soutiens</a>
+                                            Équipe</a>
                                     </li>
                               </ul>
                         </div>

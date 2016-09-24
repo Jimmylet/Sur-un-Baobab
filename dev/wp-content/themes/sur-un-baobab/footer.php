@@ -11,29 +11,32 @@
         </section>
         <section class="footer__section footer__contact-us">
             <div class="footer__container-section footer__container-section-2">
-                <h2 class="footer__section__title footer__contact-us__title"><?php _e('Contactez-nous','b');?></h2>
-                <a href="tel:<?php echo $easy_options['footer_tel-link'];?>"
-                   class="footer__contact-us__item footer__contact-us__item-tel"><?php echo $easy_options['footer_tel'];?></a>
-                <a href="tel:<?php echo $easy_options['footer_whatsapp-link'];?>"
-                   class="footer__contact-us__item footer__contact-us__item-wa"><?php echo $easy_options['footer_whatsapp'];?></a>
-                <a href="<?php the_permalink('142');?>"
-                   class="footer__contact-us__item footer__contact-us__item-form"><?php _e('Envoyer un mail','b');?></a>
+                <h2 class="footer__section__title footer__contact-us__title"><?php _e('Nos derniers articles','b');?></h2>
+
+                <?php
+                $posts = new WP_Query( ['posts_per_page' => 3, 'post_type' => 'post'] );
+                if ( $posts->have_posts() ): while ( $posts->have_posts() ): $posts->the_post();
+                ?>
+
+                <a href="<?php the_permalink();?>"
+                   class="footer__last-article__item"
+                   title="<?php _e('Vers l’article');?> <?php echo the_title();?>"
+                >
+                  <?php echo the_title();?>
+                </a>
+                <?php wp_reset_postdata(); ?>
+                <?php endwhile; endif; ?>
             </div>
+
         </section>
         <div class="footer__section__newsletter-social-container">
-            <section class="footer__section footer__newsletter">
+            <section class="footer__section footer__contact-us">
                 <div class="footer__container-section footer__container-section-3">
-                    <h2 class="footer__section__title footer__newsletter__title">Ne ratez rien
-                        &nbsp;!</h2>
-                    <form action="get" class="footer__section__form">
-                        <label for="newsfooter" class="footer__section__newsletter-label"><?php _e('S’inscrire à la newsletters','b');?></label>
-                        <input type="email" class="footer__section__newsletter-input"
-                               placeholder="<?php _e('Votre adresse email','b');?>"
-                               id="newsfooter" name="newsfooter">
-                        <input type="image" class="footer__section__newsletter-submit"
-                               src="<?php echo get_template_directory_uri() . '/assets/img/svg/newsletter-button-footer.svg';?>" alt="S’inscrire"
-                               width="40" height="40" name="submit">
-                    </form>
+                    <h2 class="footer__section__title footer__contact-us__title"><?php _e('Contactez-nous','b');?></h2>
+                        <a href="<?php the_permalink('142');?>"
+                           class="footer__contact-us__item footer__contact-us__item-form">
+                           <?php _e('Envoyer un e-mail','b');?>
+                        </a>
                 </div>
             </section>
             <section class="footer__section footer__social">
@@ -98,6 +101,21 @@
     })
 
   })(jQuery);
+</script>
+<script type="text/javascript">
+  $(function() {
+    //caches a jQuery object containing the header element
+    var header = $(".menu");
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 300) {
+            header.addClass("minheader");
+        } else {
+            header.removeClass("minheader");
+        }
+    });
+  });
 </script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri() . '/assets/scripts/tabs2.js';?>"></script>
 </body>

@@ -2,46 +2,22 @@
 /*
 Template Name: Faire un don
 */
-include 'head.php';
+include('head.php');
+
 ?>
-
-
-<body>
-    <div class="site-container">
-        <div class="site-pusher">
-            <header class="header header-main header-makedonate">
-                <div class="header__title">
-                    <h1 class="header__title__main header__title-main__main" aria-level="1">Sur un Baobab</h1>
-                    <span class="header__title__sub header__title-main__sub">Animation Workshop</span>
-                </div>
-                <nav class="menu">
-                    <a href="<?php echo get_home_url(); ?>" class="header__logo">Logo</a>
-                    <input type="checkbox" class="menu__icon" id="menu__icon">
-                    <label for="menu__icon" class="menu__icon__label" id="menu__icon__label"><?php _e('Menu','b');?>
-                        <span></span>
-                    </label>
-                    <div class="menu__container">
-                        <h2 class="menu__title" aria-level="2"><?php _e('Menu de navigation','b');?></h2>
-                        <div class="menu__lang__deskopt">
-                            <a href="" class="menu__lang__deskopt__item" lang="fr">FR</a>
-                            <a href="" class="menu__lang__deskopt__item" lang="es">ES</a>
-                            <a href="" class="menu__lang__deskopt__item" lang="en">EN</a>
+<body <?php body_class('no-index'); ?>>
+      <div class="site-container">
+            <div class="site-pusher">
+                  <header class="header">
+                        <div class="header__title header__title-main">
+                              <h1 class="header__title__main header__title-main__main visuallyhidden" aria-level="1"><?php the_title(); ?> - Sur un Baobab</h1>
                         </div>
-                        <div class="menu__lang">
-                            <a href="" class="menu__lang__item" lang="fr">Français</a>
-                            <a href="" class="menu__lang__item" lang="es">Spanish</a>
-                            <a href="" class="menu__lang__item" lang="en">English</a>
-                        </div>
-                        <?php
-                          global $post;
-                          $thePostID = $post->ID;
-                        ?>
-                        <?php foreach (b_get_menu_items('main-nav') as $navItem): ?>
-                              <a href="<?php echo $navItem->url;?>" class="menu__link"><span class="menu__item menu__item-<?php echo $navItem->icon;?> menu__item--<?php echo $thePostID == $navItem->id ? "active" : "" ;?>" title="Vers la page <?php echo $navItem->label;?>"><?php echo $navItem->label;?></span></a>
-                        <?php endforeach; ?>
-                    </div>
-                    <span aria-hidden="true" class="menu__icon-bg"></span>
-                </nav>
+                        <nav class="menu">
+                              <input type="checkbox" class="menu__icon" id="menu__icon">
+                              <label for="menu__icon" class="menu__icon__label" id="menu__icon__label"><?php _e('Menu','b');?>
+                                    <span></span>
+                              </label>
+<?php get_header(); ?>
 </header>
 <div class="site-content">
     <div class="container">
@@ -60,7 +36,7 @@ include 'head.php';
                 </div>
                 <div class="makedonate__container" id="donate">
                   <?php the_breadcrumb();?>
-                    
+
                     <div class="fixancre"></div>
                     <section class="makedonate__donate">
                         <h3 aria-level="3" class="makedonate__title">

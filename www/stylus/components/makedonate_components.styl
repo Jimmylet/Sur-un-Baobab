@@ -28,23 +28,19 @@
   &__button
     box-sizing content-box
     display: inline-block
-    padding 0.495em 1.485em// 10px, 30px
-    background: #DEDEDE
-    box-shadow: inset 0px 1px 0px 0px rgba(0,0,0,0.10)
-    border-radius: 4px
     font-weight: 500
     font-size: 2.02em
-    color: #363636;
     letter-spacing: 0.5px
     margin-right 1.485em // 30px
     margin-bottom 0.743em // 15px
+    {button-style}
     &:last-child
       margin-right 0
     &:hover
     &:focus
-      background-color #DEDEDE - 5%
+      {button-style-hover}
   &__link
-    color #E0C331
+    color color-blue
     font-weight: 500
     &:hover
     &:focus
@@ -104,4 +100,3 @@
     &__title
       position static
       margin-bottom 1em
-

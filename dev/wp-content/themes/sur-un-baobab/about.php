@@ -3,9 +3,22 @@
 Template Name: A propos de notre projet
 */
 
-get_header();
+include('head.php');
 
 ?>
+<body <?php body_class('no-index'); ?>>
+      <div class="site-container">
+            <div class="site-pusher">
+                  <header class="header">
+                        <div class="header__title header__title-main">
+                              <h1 class="header__title__main header__title-main__main visuallyhidden" aria-level="1">Sur un Baobab - Notre projet</h1>
+                        </div>
+                        <nav class="menu">
+                              <input type="checkbox" class="menu__icon" id="menu__icon">
+                              <label for="menu__icon" class="menu__icon__label" id="menu__icon__label"><?php _e('Menu','b');?>
+                                    <span></span>
+                              </label>
+<?php get_header(); ?>
 
 </header>
 <div class="site-content">
@@ -15,7 +28,7 @@ get_header();
             <section class="desc-projet">
                 <div class="desc-projet__container">
                 <?php the_breadcrumb(); ?>
-								<span itemprop="legalName" class="desc-projet__subtitle">
+								<span class="desc-projet__subtitle">
 									<?php the_field('about_subtitle'); ?>
 								</span>
                     <h2 aria-level="2" class="desc-projet__title">
@@ -77,14 +90,7 @@ get_header();
                                 <p class="whoarewe__about__text">
                                     <?php the_field('about_elena');?>
                                 </p>
-                                <div class="whoarewe__about__button-container">
-                                    <a itemprop="email" title="<?php _e('Téléphoner à Elena Gabedo Garcia','b');?>" href="mailto:<?php the_field('about_elena_email');?>"
-                                       class="whoarewe__about__button whoarewe__about__button-mail"><span
-                                            class="visuallyhidden"><?php _e('Envoyer un email à Éléna Gabedo Garcia','b');?></span></a>
-                                    <a itemprop="telephone" title="<?php _e('Envoyer un email à Elena Gabedo Garcia','b');?>" href="tel:+<?php the_field('about_elena_tel');?>"
-                                       class="whoarewe__about__button whoarewe__about__button-tel"><span
-                                            class="visuallyhidden"><?php _e('Téléphoner à Éléna','b');?></span></a>
-                                </div>
+
 
                             </section>
                             <section itemscope itemtype="http://schema.org/Person" class="whoarewe__about whoarewe__about-francois">
@@ -98,14 +104,6 @@ get_header();
                                 <p class="whoarewe__about__text">
                                     <?php the_field('about_francois');?>
                                 </p>
-                                <div class="whoarewe__about__button-container">
-                                    <a itemprop="email" title="<?php _e('Envoyer un email à François Chenot','b');?>" href="mailto:<?php the_field('about_francois_email');?>"
-                                       class="whoarewe__about__button whoarewe__about__button-mail"><span
-                                            class="visuallyhidden"><?php _e('Téléphoner à François','b');?></span></a>
-                                    <a itemprop="telephone" title="<?php _e('Téléphoner à François Chenot','b');?>" href="tel:+<?php the_field('about_francois_tel');?>"
-                                       class="whoarewe__about__button whoarewe__about__button-tel"><span
-                                            class="visuallyhidden"><?php _e('Téléphoner à François Chenot','b');?></span></a>
-                                </div>
                             </section>
                         </div>
                         <div class="whoarewe__background"></div>

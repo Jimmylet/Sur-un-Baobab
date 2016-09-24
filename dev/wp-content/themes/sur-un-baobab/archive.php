@@ -5,8 +5,21 @@ Template Name: archive
 */
 
 
-get_header(); ?>
-
+include('head.php');
+?>
+<body <?php body_class('no-index'); ?>>
+      <div class="site-container">
+            <div class="site-pusher">
+                  <header class="header">
+                        <div class="header__title header__title-main">
+                              <h1 class="header__title__main header__title-main__main visuallyhidden" aria-level="1">Actualités - Sur un Baobab</h1>
+                        </div>
+                        <nav class="menu">
+                              <input type="checkbox" class="menu__icon" id="menu__icon">
+                              <label for="menu__icon" class="menu__icon__label" id="menu__icon__label"><?php _e('Menu','b');?>
+                                    <span></span>
+                              </label>
+<?php get_header(); ?>
 
 </header>
 <div class="site-content">
@@ -28,7 +41,7 @@ get_header(); ?>
 
         <main>
             <section class="news">
-                <h2 aria-level="2" class="news-titlesection">
+                <h2 aria-level="2" class="visuallyhidden">
                     <?php _e('Les articles sur notre actualité','b');?>
                 </h2>
                 <div class="news__container">
@@ -53,13 +66,13 @@ get_header(); ?>
                       <article class="article__container" style="transition: translateZ(0);">
                         <a title="<?php _e('Vers l’article','b');?> <?php the_title();?>" href="<?php the_permalink();?>" class="article__main-link">
                         <div class="article__title-container">
-                            <span class="article__title-link">
+                            <div class="article__title-link">
                                 <h3 aria-level="3" class="article__title">
                                     <?php the_title();?>
                                 </h3>
-                          </span>
+                          </div>
                         </div>
-                        <span class="article__img-link">
+                        <div class="article__img-link">
                             <figure class="article__img-container">
                                 <!-- Recup thumbnail et size -->
                                 <?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'thumb-article-list' ); ?>
@@ -70,7 +83,7 @@ get_header(); ?>
                                      src="<?php echo $url[0] ?>"
                                      alt="<?php echo $alt;?>" width="<?php echo $url[1] ?>" height="<?php echo $url[2] ?>">
                             </figure>
-                        </span>
+                        </div>
                         <div class="article__text-container">
                             <div class="article__infos">
                                 <span class="article__infos__author"><?php _e('Par','b');?> <?php the_author();?></span>
@@ -90,7 +103,7 @@ get_header(); ?>
                 <?php wp_pagenavi();?>
 
 
-
+              </div>
             </section>
         </main>
 <?php

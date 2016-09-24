@@ -21,35 +21,19 @@
         transition background-color .3s ease-out
   &__contact-us
     &__item
-      font-size: 2.06em
-      margin-bottom 0.971em
+      font-size: 1.86em
+      margin-bottom: 1.2em
+      width: 300px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: left;
       &:before
-        font-family: glyphs
-        font-size: 1em
-        margin-right 0.485em
-      &-tel:before
-        content "\e91b"
-      &-wa:before
-        content "\e91a"
-      &-form:before
-        content "\e91c"
-        font-size: .8em
-  &__section
-    &__newsletter-label
-      display none
-    &__newsletter-input
-      background-color #243445
-      border none
-      outline none
-      font-size: 2.1em
-      color #A6ACB3
-      letter-spacing .67px
-      font-weight: 300
-      padding 0.388em .826em 0.3888em 0.647em
-    &__newsletter-submit
-      position: relative
-      top 1.10em
-      right: .3em
+        content: "\e91c"
+        display: inline-block;
+        font-family "glyphs"
+        font-size .8em
+        margin-right .3em
   &__social
     &__item:before
       color #FFF
@@ -71,6 +55,15 @@
     &__item-yout:before
       content "\e920"
       margin-right 0
+
+.footer__last-article__item
+  font-size: 1.86em
+  margin-bottom: 1.2em
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
 
 .footer__newsletter__title
   margin-bottom .2em

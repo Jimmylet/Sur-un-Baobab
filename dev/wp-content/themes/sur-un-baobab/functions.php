@@ -59,7 +59,7 @@ register_post_type( 'ateliers', [
  */
 
 register_nav_menu( 'main-nav', __('Menu principal, affiché dans le header.','b') );
-
+register_nav_menu( 'menu-lang', __('Menu des langues, affiché dans le header.','b') );
 /*
  * Generates a custom excerpt, used on the homepage
  */

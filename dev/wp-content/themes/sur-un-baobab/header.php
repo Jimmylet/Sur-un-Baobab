@@ -3,18 +3,7 @@
 
 <div class="menu__container">
       <h2 class="menu__title" aria-level="2"><?php _e('Menu de navigation','b');?></h2>
-      <div class="menu__lang__deskopt">
 
-            <a href="<?php echo get_home_url(); ?>" class="menu__lang__deskopt__item" lang="fr">FR</a>
-            <a href="<?php echo get_home_url(); ?>" class="menu__lang__deskopt__item" lang="es">ES</a>
-            <a href="<?php echo get_home_url(); ?>" class="menu__lang__deskopt__item" lang="en">EN</a>
-      </div>
-      <!--
-      <div class="menu__lang">
-            <a href="" class="menu__lang__item" lang="fr">Français</a>
-            <a href="" class="menu__lang__item" lang="es">Spanish</a>
-            <a href="" class="menu__lang__item" lang="en">English</a>
-      </div> -->
       <?php
 				global $post;
 				$thePostID = $post->ID;

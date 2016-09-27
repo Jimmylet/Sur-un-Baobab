@@ -21,6 +21,13 @@ include('head.php');
       <div class="site-container">
             <div class="site-pusher">
                   <header class="header">
+                      <div class="header__lang">
+                          <?php foreach (b_get_menu_items('menu-lang') as $navItem): ?>
+                              <a href="<?php echo $navItem->url;?>" class="header__lang__link">
+                                  <?php echo $navItem->label; ?>
+                              </a>
+                          <?php endforeach; ?>
+                      </div>
                         <div class="header__title header__title-main">
                               <h1 class="header__title__main header__title-main__main visuallyhidden" aria-level="1"><?php the_title(); ?> - Sur un Baobab</h1>
                         </div>

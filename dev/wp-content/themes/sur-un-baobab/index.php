@@ -23,6 +23,13 @@ Template Name: Homepage
             <div class="site-pusher">
                   <?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID()), 'full' ); ?>
                   <header class="header header-main">
+                      <div class="header__lang">
+                          <?php foreach (b_get_menu_items('menu-lang') as $navItem): ?>
+                              <a href="<?php echo $navItem->url;?>" class="header__lang__link">
+                                  <?php echo $navItem->label; ?>
+                              </a>
+                          <?php endforeach; ?>
+                      </div>
                         <div class="header__title header__title-main">
                               <h1 class="header__title__main header__title-main__main visuallyhidden" aria-level="1">Sur un Baobab - Animation Workshop</h1>
                         </div>
@@ -377,6 +384,10 @@ Template Name: Homepage
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
             width = $(window).width();
+
+        /*if (scroll >= 30 ) {
+            $(".header__lang").css({"display":"none"});
+        }*/
 
         if (scroll >= 736 && width >= 1000  ) {
             header.addClass("headerwhite");

@@ -198,6 +198,7 @@ html {
   height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: #363636;
 }
 a {

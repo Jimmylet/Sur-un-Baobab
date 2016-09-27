@@ -84,6 +84,12 @@ function custom_excerpt($new_length = 25, $new_more = '…') {
       echo $output;
 }
 
+// Autoriser l'upload des svg
+function cc_mime_types($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
 /*
  * Generates a custom excerpt, used on the homepage
  */

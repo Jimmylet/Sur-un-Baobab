@@ -1293,17 +1293,26 @@ h3#comments {
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: #f5f1e7;
+  background-color: #f9f7f1;
 }
 .header-main .header__lang__link {
-  background-color: #f5f1e7;
+  background-color: #f9f7f1;
   color: #5c5c5c;
+  margin-left: 0.4em;
 }
 .header-main .header__lang__link:hover,
 .header-main .header__lang__link:focus {
-  background-color: #f9f7f1;
-  -webkit-transition: background-color 0.3s ease-out;
-  transition: background-color 0.3s ease-out;
+/*background-color #F9F7F1
+        transition background-color .3s ease-out*/
+  text-decoration: underline;
+}
+@media screen and (max-width: 1357px) {
+  .header-main .header__lang {
+    padding: 0;
+  }
+  .header-main .header__lang__link {
+    padding: 0.8em 1em 0 1em;
+  }
 }
 .minheader {
   background: rgba(255,255,255,0.94);

@@ -51,7 +51,7 @@ include('head.php');
                                     <div class="news-view__the-content">
                                           <?php the_content(); ?>
                                     </div>
-                                    
+
                                     <!-- TAGS-->
 									<span class="news-view__tags">Tags&nbsp;:
                                           <?php the_tags(''); ?>

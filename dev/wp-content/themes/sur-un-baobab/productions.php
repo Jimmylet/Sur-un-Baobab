@@ -114,9 +114,7 @@ include('head.php');
                                     <?php endif; ?>
                                 </ul>
                                 <div class="productions__synopsis">
-													<span class="productions__synopsis__title">
-														<?php _e('Synopsis','b');?>&nbsp;:
-													</span>
+
                                     <p class="productions__synopsis__paragraph">
                                         <?php the_field('prod_synopsis');?>
                                     </p>

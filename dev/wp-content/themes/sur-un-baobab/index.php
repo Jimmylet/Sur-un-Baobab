@@ -8,7 +8,6 @@ Template Name: Homepage
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <?php wp_enqueue_script( 'jquery' ); ?>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - <?php _e('Sur un Baobab','b');?></title>
@@ -353,7 +352,6 @@ Template Name: Homepage
     });
 
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script type="text/javascript">
   (function($){
 

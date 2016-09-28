@@ -54,7 +54,7 @@
                         </div>
                     </div>
 
-                    <?php the_field('photos_gallery'); ?>
+                    <?php echo do_shortcode('[FinalTilesGallery id=\'1\']');?>
 
 
 

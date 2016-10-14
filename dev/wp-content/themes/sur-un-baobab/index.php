@@ -16,6 +16,7 @@ Template Name: Homepage
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ie8/2.9.10/ie8.js"></script>
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/assets/css/ie8.css';?>">
     <![endif]-->
+    <?php wp_head(); ?>
   </head>
 <body <?php echo body_class(); ?>>
       <div class="site-container">

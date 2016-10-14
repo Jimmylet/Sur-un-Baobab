@@ -59,6 +59,13 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'iconsmenu';
+  src: url("../fonts/iconsmenu/iconsmenu.eot?82dtlg");
+  src: url("../fonts/iconsmenu/iconsmenu.eot?82dtlg#iefix") format('embedded-opentype'), url("../fonts/iconsmenu/iconsmenu.ttf?82dtlg") format('truetype'), url("../fonts/iconsmenu/iconsmenu.woff?82dtlg") format('woff'), url("../fonts/iconsmenu/iconsmenu.svg?82dtlg#iconsmenu") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 html,
 body,
 div,
@@ -1217,8 +1224,8 @@ h3#comments {
   transition: color 0.3s ease-out;
 }
 .menu__item:before {
-  font-family: glyphs;
-  font-size: 1.3em;
+  font-family: iconsmenu;
+  font-size: 2em;
   display: block;
   margin-bottom: 0.5em;
 }
@@ -1226,28 +1233,28 @@ h3#comments {
   color: #388ab8;
 }
 .menu__item-home:before {
-  content: "\e917";
-}
-.menu__item-projet:before {
-  content: "\e901";
-}
-.menu__item-news:before {
-  content: "\e905";
-}
-.menu__item-prod:before {
   content: "\e904";
 }
-.menu__item-pics:before {
+.menu__item-projet:before {
+  content: "\e906";
+}
+.menu__item-news:before {
   content: "\e903";
+}
+.menu__item-prod:before {
+  content: "\e900";
+}
+.menu__item-pics:before {
+  content: "\e901";
 }
 .menu__item-tutos:before {
   content: "\e902";
 }
 .menu__item-contact:before {
-  content: "\e91c";
+  content: "\e905";
 }
 .menu__item-partner:before {
-  content: "\e923";
+  content: "\e902";
 }
 .menu__item:hover:before,
 .menu__item:focus:before {

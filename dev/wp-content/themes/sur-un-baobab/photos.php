@@ -3,7 +3,8 @@
  * Template Name: Photos
  */
 
- include('head.php');
+include('head.php');
+wp_head();
 
  ?>
  <body <?php body_class('no-index'); ?>>

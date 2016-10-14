@@ -42,11 +42,13 @@ Template Name: Homepage
                           <div class="parallax__layer parallax__layer-06" data-type="parallax" data-depth="0.2"></div>
                           <div class="parallax__layer parallax__layer-07" data-type="parallax" data-depth="0.3"></div>
                           <div class="parallax__layer parallax__layer-08" data-type="parallax" data-depth="0.4"></div>
-                          <div class="parallax__layer parallax__layer-09" data-type="parallax" data-depth="0.5"></div>
                           <div class="parallax__layer parallax__layer-10" data-type="parallax" data-depth="0.6"></div>
                           <div class="parallax__layer parallax__layer-11" data-type="parallax" data-depth="0.7"></div>
                           <div class="parallax__layer parallax__layer-12" data-type="parallax" data-depth="0.8"></div>
                           <div class="parallax__layer parallax__layer-13" data-type="parallax" data-depth="1"></div>
+                          <div class="parallax__layer parallax__layer-14" data-type="parallax" data-depth="1"></div>
+                          <div class="parallax__layer parallax__layer-15" data-type="parallax" data-depth="1"></div>
+                          <div class="parallax__layer parallax__layer-09" data-type="parallax" data-depth="0.5"></div>
                           <div class="fix-parallax"></div>
 
                         </div>
@@ -60,11 +62,7 @@ Template Name: Homepage
                               </label>
                               <div class="menu__container">
                                     <h2 class="menu__title" aria-level="2"><?php _e('Menu de navigation','b');?></h2>
-                                    <!-- <div class="menu__lang__deskopt">
-                                          <a href="http://baobab.letecheur.me/fr/" class="menu__lang__deskopt__item" lang="fr">FR</a>
-                                          <a href="http://baobab.letecheur.me/es/" class="menu__lang__deskopt__item" lang="es">ES</a>
-                                          <a href="http://baobab.letecheur.me/en/" class="menu__lang__deskopt__item" lang="en">EN</a>
-                                    </div> -->
+
                                     <div class="menu__lang">
                                           <a href="http://baobab.letecheur.me/fr/" class="menu__lang__item" lang="fr">Français</a>
                                           <a href="http://baobab.letecheur.me/es/" class="menu__lang__item" lang="es">Spanish</a>

@@ -1592,43 +1592,49 @@ h3#comments {
   z-index: -1;
 }
 .parallax__layer-01 {
-  background-image: url("../img/parallax/SurUnBaobab_Parrallax_14.svg");
+  background-image: url("../img/parallax/SurUnBaobab_Parrallax_15.svg");
 }
 .parallax__layer-02 {
-  background-image: url("../img/parallax/SurUnBaobab_Parrallax_12.svg");
+  background-image: url("../img/parallax/SurUnBaobab_Parrallax_14.svg");
 }
 .parallax__layer-03 {
-  background-image: url("../img/parallax/SurUnBaobab_Parrallax_11.svg");
+  background-image: url("../img/parallax/SurUnBaobab_Parrallax_13.svg");
 }
 .parallax__layer-04 {
-  background-image: url("../img/parallax/SurUnBaobab_Parrallax_10.svg");
+  background-image: url("../img/parallax/SurUnBaobab_Parrallax_12.svg");
 }
 .parallax__layer-05 {
-  background-image: url("../img/parallax/SurUnBaobab_Parrallax_09.svg");
+  background-image: url("../img/parallax/SurUnBaobab_Parrallax_11.svg");
 }
 .parallax__layer-06 {
-  background-image: url("../img/parallax/SurUnBaobab_Parrallax_08.svg");
+  background-image: url("../img/parallax/SurUnBaobab_Parrallax_10.svg");
 }
 .parallax__layer-07 {
-  background-image: url("../img/parallax/SurUnBaobab_Parrallax_07.svg");
+  background-image: url("../img/parallax/SurUnBaobab_Parrallax_09.svg");
 }
 .parallax__layer-08 {
-  background-image: url("../img/parallax/SurUnBaobab_Parrallax_06.svg");
+  background-image: url("../img/parallax/SurUnBaobab_Parrallax_08.svg");
 }
 .parallax__layer-09 {
-  background-image: url("../img/parallax/SurUnBaobab_Parrallax_05.svg");
+  background-image: url("../img/parallax/SurUnBaobab_Parrallax_07.svg");
 }
 .parallax__layer-10 {
-  background-image: url("../img/parallax/SurUnBaobab_Parrallax_04.svg");
+  background-image: url("../img/parallax/SurUnBaobab_Parrallax_06.svg");
 }
 .parallax__layer-11 {
-  background-image: url("../img/parallax/SurUnBaobab_Parrallax_03.svg");
+  background-image: url("../img/parallax/SurUnBaobab_Parrallax_05.svg");
 }
 .parallax__layer-12 {
-  background-image: url("../img/parallax/SurUnBaobab_Parrallax_02.svg");
+  background-image: url("../img/parallax/SurUnBaobab_Parrallax_04.svg");
 }
 .parallax__layer-13 {
-  background-image: url("../img/parallax/SurUnBaobab_Parrallax_07.svg");
+  background-image: url("../img/parallax/SurUnBaobab_Parrallax_03.svg");
+}
+.parallax__layer-14 {
+  background-image: url("../img/parallax/SurUnBaobab_Parrallax_02.svg");
+}
+.parallax__layer-15 {
+  background-image: url("../img/parallax/SurUnBaobab_Parrallax_01.svg");
   background-size: 1402px;
 }
 .fix-parallax {

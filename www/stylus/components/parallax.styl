@@ -17,12 +17,14 @@
       background-image: url('../img/parallax/SurUnBaobab_Parrallax_15.svg');
     &-02
       background-image: url('../img/parallax/SurUnBaobab_Parrallax_14.svg');
+      animation: cloudAnimation2 200s .5s ease infinite
     &-03
-      background-image: url('../img/parallax/SurUnBaobab_Parrallax_13.svg');
+      {parallax3}
+      animation: cloudAnimation1 200s 1s linear infinite;
     &-04
-      background-image: url('../img/parallax/SurUnBaobab_Parrallax_12.svg');
+      {parallax4}
     &-05
-      background-image: url('../img/parallax/SurUnBaobab_Parrallax_11.svg');
+      {parallax5}
     &-06
       background-image: url('../img/parallax/SurUnBaobab_Parrallax_10.svg');
     &-07
@@ -30,7 +32,7 @@
     &-08
       background-image: url('../img/parallax/SurUnBaobab_Parrallax_08.svg');
     &-09
-      background-image: url('../img/parallax/SurUnBaobab_Parrallax_07.svg');
+      {parallax9}
     &-10
       background-image: url('../img/parallax/SurUnBaobab_Parrallax_06.svg');
     &-11
@@ -49,13 +51,11 @@
 .fix-parallax
   height: 736px
   width: 100%
-  background-image: url('../img/parallax/SurUnBaobab_Parrallax_Header.svg');
+  {parallaxheader}
   background-size: 1402px
   background-position: bottom center;
   background-repeat: no-repeat;
   z-index: -1
-  // position: relative;
-  // top: -200px
 
 
 
@@ -67,6 +67,27 @@
   width: 100%;
 
 
+/************************************\
+  ANIMATION CLOUD
+\************************************/
+
+@keyframes cloudAnimation1 {
+  0%, 100% {
+    transform: translateX(0)
+  }
+  50% {
+    transform: translateX(-800px)
+  }
+}
+
+@keyframes cloudAnimation2 {
+  0%, 100% {
+    transform: translateX(0)
+  }
+  50% {
+    transform: translateX(800px)
+  }
+}
 
 
 // @media screen and ( max-width: 1408px )

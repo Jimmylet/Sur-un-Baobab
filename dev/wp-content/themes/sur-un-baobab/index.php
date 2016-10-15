@@ -16,6 +16,24 @@ Template Name: Homepage
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ie8/2.9.10/ie8.js"></script>
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/assets/css/ie8.css';?>">
     <![endif]-->
+      <script type="text/javascript">
+          window.addEventListener('scroll', function(event) {
+              var depth, i, layer, layers, len, movement, topDistance, translate3d;
+              topDistance = this.pageYOffset;
+              layers = document.querySelectorAll("[data-type='parallax']");
+              for (i = 0, len = layers.length; i < len; i++) {
+                  layer = layers[i];
+                  depth = layer.getAttribute('data-depth');
+                  movement = -(topDistance * depth);
+                  translate3d = 'translate3d(0, ' + movement + 'px, 0)';
+                  layer.style['-webkit-transform'] = translate3d;
+                  layer.style['-moz-transform'] = translate3d;
+                  layer.style['-ms-transform'] = translate3d;
+                  layer.style['-o-transform'] = translate3d;
+                  layer.style.transform = translate3d;
+              }
+          });
+      </script>
     <?php wp_head(); ?>
   </head>
 <body <?php echo body_class(); ?>>
@@ -35,20 +53,20 @@ Template Name: Homepage
                         </div>
                         <div class="parallax">
                           <div class="parallax__layer parallax__layer-01" data-type="parallax" data-depth="0"></div>
-                          <div class="parallax__layer parallax__layer-02" data-type="parallax" data-depth="0.025"></div>
-                          <div class="parallax__layer parallax__layer-03" data-type="parallax" data-depth="0.05"></div>
-                          <div class="parallax__layer parallax__layer-04" data-type="parallax" data-depth="0.075"></div>
-                          <div class="parallax__layer parallax__layer-05" data-type="parallax" data-depth="0.1"></div>
+                          <!--<div class="parallax__layer parallax__layer-02" data-type="parallax" data-depth="0.025"></div>-->
+                          <div class="parallax__layer parallax__layer-03" data-type="parallax" data-depth=""0.75"></div>
+                          <div class="parallax__layer parallax__layer-04" data-type="parallax" data-depth="0.1"></div>
+                          <div class="parallax__layer parallax__layer-05" data-type="parallax" data-depth="0.15"></div>
                           <div class="parallax__layer parallax__layer-06" data-type="parallax" data-depth="0.2"></div>
                           <div class="parallax__layer parallax__layer-07" data-type="parallax" data-depth="0.3"></div>
                           <div class="parallax__layer parallax__layer-08" data-type="parallax" data-depth="0.4"></div>
-                          <div class="parallax__layer parallax__layer-10" data-type="parallax" data-depth="0.6"></div>
-                          <div class="parallax__layer parallax__layer-11" data-type="parallax" data-depth="0.7"></div>
-                          <div class="parallax__layer parallax__layer-12" data-type="parallax" data-depth="0.8"></div>
-                          <div class="parallax__layer parallax__layer-13" data-type="parallax" data-depth="1"></div>
-                          <div class="parallax__layer parallax__layer-14" data-type="parallax" data-depth="1"></div>
+                          <div class="parallax__layer parallax__layer-10" data-type="parallax" data-depth="0.5"></div>
+                          <div class="parallax__layer parallax__layer-11" data-type="parallax" data-depth="0.6"></div>
+                          <div class="parallax__layer parallax__layer-12" data-type="parallax" data-depth="0.7"></div>
+                          <div class="parallax__layer parallax__layer-13" data-type="parallax" data-depth="0.8"></div>
+                          <div class="parallax__layer parallax__layer-14" data-type="parallax" data-depth="0.9"></div>
                           <div class="parallax__layer parallax__layer-15" data-type="parallax" data-depth="1"></div>
-                          <div class="parallax__layer parallax__layer-09" data-type="parallax" data-depth="0.5"></div>
+                          <div class="parallax__layer parallax__layer-09" data-type="parallax" data-depth="1"></div>
                           <div class="fix-parallax"></div>
 
                         </div>
@@ -332,25 +350,6 @@ Template Name: Homepage
 </div>
 </div>
 <?php wp_enqueue_script( 'jquery' ); ?>
-<script type="text/javascript">
-  window.addEventListener('scroll', function(event) {
-    var depth, i, layer, layers, len, movement, topDistance, translate3d;
-    topDistance = this.pageYOffset;
-    layers = document.querySelectorAll("[data-type='parallax']");
-    for (i = 0, len = layers.length; i < len; i++) {
-      layer = layers[i];
-      depth = layer.getAttribute('data-depth');
-      movement = -(topDistance * depth);
-      translate3d = 'translate3d(0, ' + movement + 'px, 0)';
-      layer.style['-webkit-transform'] = translate3d;
-      layer.style['-moz-transform'] = translate3d;
-      layer.style['-ms-transform'] = translate3d;
-      layer.style['-o-transform'] = translate3d;
-      layer.style.transform = translate3d;
-    }
-    });
-
-</script>
 <script type="text/javascript">
   (function($){
 
